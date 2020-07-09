@@ -1,0 +1,763 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    transition: all 300ms ease-in-out;
+}
+
+section {
+    /*background-image: url("../../images/barg-bg.png");*/
+    /*background-repeat: repeat;*/
+    /*background-position: center;*/
+    /*background-size: auto;*/
+}
+
+
+/*=============================
+            Header
+===============================*/
+
+header {
+    position: relative;
+}
+
+header nav {
+    background-color: #EDF3E0 !important;
+    box-shadow: 0 7px 15px -5px rgba(0, 0, 0, 0.07) !important;
+}
+
+header .bg-primary {
+    font-family: "Roboto", sans-serif;
+}
+
+.sd-farm-logo {
+    width: 120px;
+}
+
+header .our-quote {
+    color: #ffffff;
+    text-transform: capitalize;
+}
+
+header ul.navbar-nav .nav-item:hover .nav-link {
+    color: #52ADB9 !important;
+}
+
+header ul.navbar-nav .nav-item.active .nav-link {
+    color: #52ADB9;
+}
+
+.ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {
+    color: #88AD3F;
+}
+
+/*Google translate*/
+
+.goog-te-gadget-simple {
+    background-color: transparent !important;
+    border: none !important;
+    border-radius: 10px;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span {
+    color: #fff !important;
+    border: none !important;
+}
+
+.goog-te-gadget-simple .goog-te-menu-value span:first-child {
+    display: none;
+}
+
+.goog-te-menu-value img {
+    display: none;
+}
+
+.goog-text-highlight {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.goog-te-gadget img {
+    background-image: url("../images/global.png") !important;
+    background-position: 0 0 !important;
+    background-size: cover !important;
+}
+
+.goog-te-banner-frame {
+    height: 0;
+    display: none;
+}
+
+.goog-te-menu2 {
+    border: none !important;
+}
+
+div#goog-gt-tt {
+    display: none !important;
+}
+
+.goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div {
+    color: #313841 !important;
+}
+
+body {
+    top: 0 !important;
+}
+
+.topper:nth-child(2) {
+    text-transform: unset;
+}
+
+.topper:last-child {
+    justify-content: flex-end;
+}
+
+
+/*=============================
+            Home Slider
+===============================*/
+
+main.main {
+    min-height: 100vh;
+}
+
+main .ftco-section {
+    padding-bottom: 0;
+}
+
+section#home-section {
+    position: relative;
+}
+
+.owl-carousel .owl-stage, .owl-carousel.owl-drag .owl-item {
+    -ms-touch-action: auto;
+    touch-action: auto;
+}
+
+.owl-carousel.home-slider .slider-item .slider-text h1 {
+    /*background-color: rgba(255,87,34, 0.15);*/
+    background-color: transparent;
+}
+
+.home-slider .carousel .control-dots .dot {
+    width: 12px;
+    height: 12px;
+}
+
+/*=============================
+           Add Post
+===============================*/
+
+section.admin-add-post {
+    padding: 5% 0;
+}
+
+
+/*=============================
+            Login
+===============================*/
+
+section.login-user {
+    padding: 5% 0;
+}
+
+section.login-user form.login-box {
+    margin: 0 auto;
+    width: 60%;
+    padding: 0 5% 5% 5%;
+    background: transparent;
+    text-align: center;
+    border-radius: 10px;
+}
+
+section.login-user form.login-box h2 {
+    color: #3F8794;
+    margin-bottom: 20px;
+}
+
+section.login-user form.login-box .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3CAEB7;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+section.login-user form.login-box .form-group svg {
+    font-size: 20px;
+}
+
+section.login-user form.login-box .form-group .form-control.box-input {
+    background: none;
+    border: none;
+}
+
+.login-box .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.login-box .buttons button.form-control {
+
+}
+
+.login-box button.form-control, .login-box a.form-control {
+    background: #FF690F !important;
+    color: #ffffff !important;
+    border: 2px solid #E95A00;
+    transition: 0.25s;
+    width: 45%;
+    border-radius: 20px;
+}
+
+.login-box a.form-control {
+    background: #FF8224 !important;
+    line-height: 35px;
+}
+
+.login-box button.form-control:hover,
+.login-box a.form-control:hover {
+    background: #E95A00 !important;
+    color: #ffffff !important;
+}
+
+
+/*=======================================
+             Products Container
+========================================*/
+.products-container {
+    padding: 5% 0;
+}
+
+.products-container .product-in-category {
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,.2);
+    border-radius: 5px;
+    margin-bottom: 20px;
+    position: relative;
+    transition: all 200ms ease-in-out;
+}
+
+.products-container .product-in-category a {
+    display: flex;
+    border-radius: 5px;
+    color: #323841;
+    font-size: 16px;
+    transition: all 200ms ease;
+}
+
+.products-container .product-in-category .cart-buttons {
+    display: none;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transition: all 200ms ease;
+}
+
+.products-container .product-in-category .cart-buttons button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.products-container .product-in-category .cart-buttons button svg{
+    font-size: 25px;
+    fill: #E95A00;
+    transition: all 200ms ease;
+}
+
+.products-container .product-in-category .cart-buttons button:last-child svg {
+    fill: #52ADB9;
+    transition: all 200ms ease;
+}
+
+.products-container .product-in-category:hover .cart-buttons {
+    display: block;
+}
+
+.products-container .product-in-category a div {
+    padding: 15px;
+}
+
+.products-container .product-in-category a img {
+    width: 120px;
+    height: 120px;
+}
+/*warning*/
+.products-container .alert-animation {
+    animation: 3s ease 0s normal forwards 1 cssAnimation;
+}
+/*========================================
+    Products HomePage Category sidebar
+=========================================*/
+
+.category-products-sidebar {
+
+}
+
+.category-products-sidebar nav ul {
+    font-size: 16px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+
+.category-products-sidebar nav ul li {
+    background-color: #E9F3F5;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.category-products-sidebar nav ul li a{
+    display: block;
+    color: #323841;
+    padding: 15px;
+    transition: all 300ms ease;
+    border-radius: 5px;
+    border: 1px solid #778497;
+}
+
+.category-products-sidebar nav ul li a.active {
+    background-color: #F45900;
+    color: #ffffff;
+}
+
+.category-products-sidebar nav ul li a:hover {
+    background-color: #F45900;
+    color: #ffffff;
+}
+
+/*=============================
+            Register
+===============================*/
+section.register-user {
+    padding: 5% 0;
+}
+
+section.register-user form.register-box {
+    margin: 0 auto;
+    width: 100%;
+    padding: 0 5% 5% 5%;
+    background: transparent;
+    text-align: center;
+    border-radius: 10px;
+}
+
+section.register-user form.register-box h2 {
+    color: #3F8794;
+    margin-bottom: 20px;
+}
+
+section.register-user form.register-box .form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #3CAEB7;
+    padding: 0 20px;
+    border-radius: 20px;
+}
+
+section.register-user form.register-box .form-group svg {
+    font-size: 20px;
+}
+
+section.register-user form.register-box .form-group .form-control.box-input {
+    background: none;
+    border: none;
+}
+
+.register-box .buttons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.register-box button.form-control, .register-box a.form-control {
+    background: #FF690F !important;
+    color: #ffffff !important;
+    border: 2px solid #E95A00;
+    transition: 0.25s;
+    width: 50%;
+    border-radius: 20px;
+}
+
+.register-box a.form-control {
+    line-height: 35px;
+}
+
+.register-box .buttons a.check-rules {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.register-box .buttons a.check-rules input {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+
+.register-box button.form-control:hover,
+.register-box a.form-control:hover {
+    background: #E95A00 !important;
+    color: #ffffff !important;
+}
+
+form .alert {
+    padding: 0.25rem 0 0 0;
+    margin-bottom: 0;
+    height: 40px;
+}
+
+.register-box .message {
+    /*animation: FadeAnimation 5s ease-in .2s forwards;*/
+}
+
+@keyframes FadeAnimation {
+    0% {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+/*=============================
+            About
+===============================*/
+
+section.about-company {
+    padding: 0;
+}
+
+section.about-company .hero-wrap {
+    position: relative;
+}
+
+section.about-company .hero-wrap .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    opacity: .2;
+    width: 100%;
+}
+
+
+section.about-company .hero-wrap h1 {
+    font-size: 5vw !important;
+    font-family: "Amatic SC", cursive !important;
+}
+
+/*=============================
+        Products HomePage
+===============================*/
+
+section.main-products {
+    padding-top: 0;
+}
+
+.product {
+    cursor: pointer;
+    height: 240px;
+    overflow: hidden;
+}
+
+.product .text {
+    border-top: 2px solid #F0F0F0;
+}
+
+.product .img-prod {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+
+.col-md-6:nth-child(1) .product a.img-prod {
+    background-color: #3C70B3;
+}
+
+.col-md-6:nth-child(2) .product a.img-prod {
+    background-color: #ED9673;
+}
+
+.col-md-6:nth-child(3) .product a.img-prod {
+    background-color: #6EE477;
+}
+
+.col-md-6:nth-child(4) .product a.img-prod {
+    background-color: #F0C500;
+}
+
+.col-md-6:nth-child(5) .product a.img-prod {
+    background-color: #6AB6D7;
+}
+
+.col-md-6:nth-child(6) .product a.img-prod {
+    background-color: #FBE23A;
+}
+
+.col-md-6:nth-child(7) .product a.img-prod {
+    background-color: #F9C287;
+}
+
+.col-md-6:nth-child(8) .product a.img-prod {
+    background-color: #B0D26E;
+}
+
+.product:hover .img-prod .cover {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 10px;
+}
+
+.product .img-prod .cover {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 0;
+    transition: all 350ms ease-in-out;
+    overflow: hidden;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.product:hover .pricing {
+    opacity: 1;
+}
+
+
+.title-wrap {
+    padding: 10px 0;
+    background: rgba(82, 173, 185, 0.25);
+    color: #eeeeee;
+    margin-bottom: 15px;
+}
+
+.loadmore-btn {
+    background-color: #E95A00;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius: 5px;
+}
+
+.loadmore-btn:hover {
+    background-color: #C64A00;
+}
+
+
+/*=============================
+            Contacts
+===============================*/
+
+section.company-contacts .hero-wrap h1 {
+    font-size: 5vw !important;
+    font-family: "Amatic SC", cursive !important;
+}
+
+section.company-contacts .hero-wrap .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000000;
+    opacity: .2;
+    width: 100%;
+}
+
+
+/*=============================
+            Profile
+===============================*/
+.user-profile {
+    padding: 5% 0;
+}
+
+.user_container .avatar {
+    text-align: center;
+}
+
+.user_container .avatar img {
+    width: 200px;
+}
+
+.user_container .info {
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.user_container .info div {
+    font-size: 23px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    color: #a4a4a4;
+}
+
+.user_container .info div span {
+    font-weight: 500;
+    color: #02bcd4;
+}
+
+/*=============================
+        Product detail
+===============================*/
+
+section.product-detail-page {
+    padding: 5% 0;
+}
+
+
+section.product-detail-page .prod-img {
+    border-radius: 10px;
+}
+
+section.product-detail-page .product-details span {
+    color: #88AD3F;
+}
+
+/*=============================
+            Partners
+===============================*/
+section.partners {
+    padding: 5rem 0;
+}
+
+/*=============================
+         Not Found 404
+===============================*/
+.not-found {
+    padding: 6% 0;
+}
+/*=============================
+            News Letter
+===============================*/
+
+.news-letter form small {
+    opacity: 0;
+}
+
+.news-letter .newsLetter-display {
+    animation: 3s ease 0s normal forwards 1 cssAnimation;
+}
+
+@keyframes cssAnimation {
+    from {opacity: 1}
+    to   { opacity: 0; }
+}
+
+/*=============================
+            Footer
+===============================*/
+
+footer {
+    background-color: #52ADB9;
+    color: #eeeeee !important;
+}
+
+footer h2 {
+    color: #ffffff;
+}
+
+footer .ftco-footer-widget.mb-4 ul li svg.f-icon {
+    font-size: 20px;
+}
+
+footer .ftco-footer-widget.mb-4 ul li:first-child svg.f-icon {
+    color: #eeeeee;
+}
+
+footer .ftco-footer-widget.mb-4 ul li:nth-child(2) svg.f-icon {
+    color: #eeeeee;
+}
+
+footer .ftco-footer-widget.mb-4 ul li:last-child svg.f-icon {
+    color: #eeeeee;
+}
+
+
+footer ul.ftco-footer-social li a {
+    background: transparent;
+}
+
+.ftco-footer-social li a {
+    height: 30px;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ftco-footer-social li a svg {
+    font-size: 20px;
+}
+
+footer ul.ftco-footer-social li:first-child a {
+    border-radius: 50%;
+    background-color: #4FAEE5;
+}
+
+footer ul.ftco-footer-social li:first-child a svg {
+    fill: #ffffff;
+}
+
+footer ul.ftco-footer-social li:nth-child(2) a {
+    border-radius: 50%;
+    background-color: #3F589F;
+    margin-left: 10px;
+}
+
+footer ul.ftco-footer-social li:nth-child(2) a svg {
+    fill: #ffffff;
+    font-size: 15px;
+}
+
+
+footer ul.ftco-footer-social li:last-child a {
+    border-radius: 50%;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    margin-left: 10px;
+}
+
+footer ul.ftco-footer-social li:last-child a svg {
+    fill: #ffffff;
+    font-size: 18px;
+}
+
+footer .switch-case span {
+    color: #C82C00;
+}
+
+.ftco-footer .ftco-footer-widget ul li a {
+    text-decoration: none;
+    transition: all 200ms ease;
+}
+
+.ftco-footer .ftco-footer-widget ul li a:hover {
+    color: #F45900;
+    font-weight: bold;
+}
+
+
+@media (max-width: 991.98px) {
+    section.login-user form.login-box {
+        width: 90%;
+    }
+}

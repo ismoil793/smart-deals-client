@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
+  </component>
+  <component name="ProjectId" id="1e4uMOUiCeUZFGn70AwXNOZifR3" />
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../FOR TESTING/herbal-teas-products" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="yarn" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.1\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\React\smart-deals-client\src\containers\Categories" />
+      <recent name="C:\Programming\React\smart-deals-client\src\containers\Login_Logout" />
+      <recent name="C:\Programming\React\smart-deals-client\src\store" />
+      <recent name="C:\Programming\React\smart-deals-client\src\hoc" />
+      <recent name="C:\Programming\React\smart-deals-client\src\components\Home\HomeSlider" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="" />
+      <created>1593593137832</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1593593137832</updated>
+      <workItem from="1593593138924" duration="933000" />
+      <workItem from="1593628150151" duration="7439000" />
+      <workItem from="1593679217941" duration="8345000" />
+      <workItem from="1593688421872" duration="17954000" />
+      <workItem from="1593770333075" duration="11074000" />
+      <workItem from="1593851549452" duration="4852000" />
+      <workItem from="1593925835063" duration="5469000" />
+      <workItem from="1593951006328" duration="827000" />
+      <workItem from="1593958300160" duration="1211000" />
+      <workItem from="1594021079030" duration="29961000" />
+      <workItem from="1594122789260" duration="15801000" />
+      <workItem from="1594181580657" duration="17936000" />
+      <workItem from="1594309534840" duration="914000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>
