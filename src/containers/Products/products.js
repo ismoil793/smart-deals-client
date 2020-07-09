@@ -1,5 +1,5 @@
 import React from 'react';
-import CategoriesProducts from "./CategoriesProducts/CategoriesProducts";
+import Categories from "../Categories/Categories";
 import Search from "./Search";
 import {withRouter} from "react-router-dom";
 import RenderProducts from "./RenderProducts/renderProducts";
@@ -19,7 +19,7 @@ class Products extends React.Component {
              <div className="container">
                 <div className="row">
                    <div className="col-md-3">
-                      <CategoriesProducts/>
+                      <Categories componentName={"Products"}/>
                    </div>
 
                    <div className="col-md-9">

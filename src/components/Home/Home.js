@@ -1,6 +1,6 @@
 import React from 'react';
 import HomeSlider from "./HomeSlider/HomeSlider";
-import Categories from "../../containers/CategoriesHome/CategoriesHome";
+import Categories from "../../containers/Categories/Categories";
 import Partners from "./Partners";
 import ServiceTypes from "./ServiceTypes";
 import {connect} from "react-redux";
@@ -46,7 +46,7 @@ class Home extends React.Component {
                 </div>
              </div>
 
-             <Categories/>
+             <Categories componentName={"Home"}/>
 
              <Partners/>
 

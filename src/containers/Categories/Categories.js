@@ -7,7 +7,7 @@ import Loader from "../../UI/Preloader/loader";
 import LoaderDots from "../../UI/Preloader/LoaderDots";
 
 
-class CategoriesHome extends React.Component {
+class Categories extends React.Component {
 
    componentDidMount() {
       this.props.dispatch(getCategories())
@@ -291,4 +291,4 @@ function mapStateToProps(state) {
    }
 }
 
-export default withRouter(connect(mapStateToProps)(CategoriesHome));
+export default withRouter(connect(mapStateToProps)(Categories));
