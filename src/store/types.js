@@ -4,7 +4,7 @@ const CORS = 'https://cors-anywhere.herokuapp.com/';
 
 //https://cors-anywhere.herokuapp.com/
 
-const URL = `${CORS}http://164.90.216.97`;
+const URL = `http://164.90.216.97`;
 
 // Products
 const ALL_PRODUCTS = 'ALL_PRODUCTS';

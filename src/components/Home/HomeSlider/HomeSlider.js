@@ -18,13 +18,13 @@ const HomeSlider = () => {
 
       const data = [
          {
-            img: "smart_deals_banner_1.jpg"
+            img: "smart_deals_1.jpg"
          },
          {
-            img: "smart_deals_banner_2.jpg"
+            img: "smart_deals_2.jpg"
          },
          {
-            img: "smart_deals_banner_3.jpg"
+            img: "smart_deals_3.jpg"
          }
       ];
 
