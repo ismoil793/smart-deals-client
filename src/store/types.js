@@ -1,6 +1,6 @@
 //URL
 
-const CORS = 'https://thingproxy.freeboard.io/fetch/';
+const CORS = 'https://cors-anywhere.herokuapp.com/';
 
 //https://cors-anywhere.herokuapp.com/
 
