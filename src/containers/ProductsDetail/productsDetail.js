@@ -16,7 +16,6 @@ class ProductsDetail extends Component {
    }
 
    render() {
-
       if (this.props.product && this.props.product.oneProduct) {
          let product = this.props.product.oneProduct;
          return (
@@ -77,7 +76,11 @@ class ProductsDetail extends Component {
              </section>
          );
       } else {
-         return <SkeletonUI comp="productDetail"/>
+         return (
+             <section className="product-detail-page">
+                <SkeletonUI comp="productDetail"/>
+             </section>
+             )
       }
 
    }

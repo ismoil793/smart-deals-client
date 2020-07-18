@@ -55,13 +55,7 @@ export function auth() {
    } else {
       const request = axios.get(
           `${URL}/api/v1/account/auth/`,
-          {
-             headers: {
-                Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`,
-                "Access-Control-Allow-Origin": "*",
-                "Access-Control-Allow-Credentials": "true"
-             }
-          }
+          {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
       ).then(response => response.data);
 
       return {

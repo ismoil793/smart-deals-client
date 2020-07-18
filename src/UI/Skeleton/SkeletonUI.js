@@ -28,12 +28,32 @@ const SkeletonUI = (props) => {
       return skeleton;
    };
 
+   const renderproductDetailSkeleton = () => {
+      return (
+          <div className="container">
+             <div className="row">
+
+                <div className="col-md-4">
+                   <Skeleton width="100%" count={1} height={350}/>
+                </div>
+
+                <div className="col-md-1"></div>
+
+                <div className="col-md-7">
+                   <Skeleton className="d-block mb-2" width="50%" count={5} height={30}/>
+                </div>
+
+             </div>
+          </div>
+      )
+   };
+
    const switchCaseSkeleton = (comp) => {
       switch (comp) {
          case('renderProducts'):
             return renderProductsSkeleton();
          case('productDetail'):
-            return (<Skeleton count={1} height={20}/>);
+            return renderproductDetailSkeleton();
          default:
             return null
       }
