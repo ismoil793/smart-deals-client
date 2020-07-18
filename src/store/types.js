@@ -1,5 +1,10 @@
 //URL
-const URL = 'https://thingproxy.freeboard.io/fetch/http://164.90.216.97';
+
+const CORS = 'https://api.allorigins.win/get?url=';
+
+//https://thingproxy.freeboard.io/fetch/
+
+const URL = `${CORS}http://164.90.216.97`;
 
 // Products
 const ALL_PRODUCTS = 'ALL_PRODUCTS';
