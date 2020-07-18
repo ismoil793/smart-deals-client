@@ -5,8 +5,8 @@ import {URL, USER_AUTH, USER_LOGIN, USER_LOGOUT, USER_REGISTER} from "../types";
             User
 ===============================*/
 
-// axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
-// axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
+axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
 
 export function registerUser(data) {
    const request = axios.post(`${URL}/api/v1/account/create/`, data).then(response => response.data);
