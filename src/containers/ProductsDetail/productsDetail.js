@@ -26,7 +26,7 @@ class ProductsDetail extends Component {
 
                       <div className="col-md-4">
                          <div className="product-detail-left">
-                            <div className="breadcrumbs b">
+                            <div className="breadcrumbs">
                                <span>Категория:</span> <Link to={`/products/${product.category.slug}`}>{product.category.name}</Link>
                             </div>
                             <ReactImageMagnify {...{
