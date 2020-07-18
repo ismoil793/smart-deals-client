@@ -1,5 +1,5 @@
 //URL
-const URL = 'https://cors-anywhere.herokuapp.com/http://164.90.216.97';
+const URL = 'https://thingproxy.freeboard.io/fetch/http://164.90.216.97';
 
 // Products
 const ALL_PRODUCTS = 'ALL_PRODUCTS';
