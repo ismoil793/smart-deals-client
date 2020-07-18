@@ -41,7 +41,7 @@ export default function (ComposedClass, reload) {
 
       render() {
          if (this.state.loading) {
-            return <Loader />
+            return <Loader/>
          }
          return (
              <ComposedClass {...this.props} user={this.props.user}/>

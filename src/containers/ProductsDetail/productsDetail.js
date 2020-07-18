@@ -33,10 +33,10 @@ class ProductsDetail extends Component {
                                smallImage: {
                                   alt: `${product.name}`,
                                   isFluidWidth: true,
-                                  src: `http://164.90.216.97${product.image}`,
+                                  src: `${product.image}`,
                                },
                                largeImage: {
-                                  src: `http://164.90.216.97${product.image}`,
+                                  src: `${product.image}`,
                                   width: 1200,
                                   height: 1800
                                },
