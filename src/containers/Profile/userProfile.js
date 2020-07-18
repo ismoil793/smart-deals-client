@@ -3,10 +3,6 @@ import {connect} from "react-redux"
 
 class UserProfile extends Component {
 
-   componentDidMount() {
-      console.log(this.props.user_r)
-   }
-
    render() {
 
       return (

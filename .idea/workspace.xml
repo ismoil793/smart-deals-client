@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="" />
+    <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/NewsLetter/newsLetter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/NewsLetter/newsLetter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contacts/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contacts/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/headerSmall.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerSmall.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeSlider/HomeSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeSlider/HomeSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/ServiceTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/ServiceTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Categories/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Categories/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Products/RenderProducts/renderProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Products/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/Search.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Products/products.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/products.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ProductsDetail/productsDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductsDetail/productsDetail.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/user.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +52,12 @@
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectId" id="1e4uMOUiCeUZFGn70AwXNOZifR3" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FOR TESTING/herbal-teas-products" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -34,11 +69,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\React\smart-deals-client\src\containers\Products" />
       <recent name="C:\Programming\React\smart-deals-client\src\containers\Categories" />
       <recent name="C:\Programming\React\smart-deals-client\src\containers\Login_Logout" />
       <recent name="C:\Programming\React\smart-deals-client\src\store" />
       <recent name="C:\Programming\React\smart-deals-client\src\hoc" />
-      <recent name="C:\Programming\React\smart-deals-client\src\components\Home\HomeSlider" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -75,11 +110,35 @@
       <workItem from="1594021079030" duration="29961000" />
       <workItem from="1594122789260" duration="15801000" />
       <workItem from="1594181580657" duration="17936000" />
-      <workItem from="1594309534840" duration="1471000" />
+      <workItem from="1594309534840" duration="2618000" />
+      <workItem from="1594363497608" duration="254000" />
+      <workItem from="1594539657975" duration="7741000" />
+      <workItem from="1594556865032" duration="18238000" />
+      <workItem from="1594586037275" duration="3420000" />
+      <workItem from="1594626559448" duration="5453000" />
+      <workItem from="1594647009839" duration="15866000" />
+      <workItem from="1594665730688" duration="1581000" />
+      <workItem from="1594719625450" duration="10156000" />
+      <workItem from="1594814768106" duration="1882000" />
+      <workItem from="1594997731641" duration="4081000" />
+      <workItem from="1595056371808" duration="2287000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

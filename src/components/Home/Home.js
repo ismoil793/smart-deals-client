@@ -3,7 +3,7 @@ import HomeSlider from "./HomeSlider/HomeSlider";
 import Categories from "../../containers/Categories/Categories";
 import Partners from "./Partners";
 import ServiceTypes from "./ServiceTypes";
-import {connect} from "react-redux";
+// import {connect} from "react-redux";
 import Benefits from "./Benefits";
 import NewsLetter from "../../UI/NewsLetter/newsLetter";
 import $ from "jquery";
@@ -57,10 +57,10 @@ class Home extends React.Component {
    }
 }
 
-function mapStateToProps(state) {
-   return {
-      products: state.product_r
-   }
-}
+// function mapStateToProps(state) {
+//    return {
+//       products: state.product_r
+//    }
+// }
 
-export default connect(mapStateToProps)(Home);
+export default Home; //connect(mapStateToProps)(Home);

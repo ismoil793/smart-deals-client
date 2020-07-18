@@ -33,7 +33,7 @@ const Routes = () => {
              <Route path="/rules" exact component={Auth(Rules, null)}/>
              <Route path="/profile" exact component={Auth(UserProfile, true)}/>
              <Route path="/cart" exact component={Auth(Cart, true)}/>
-             <Route path="/products-detail/:slug/:id" exact component={Auth(ProductsDetail, true)}/>
+             <Route path="/products/:slug/:id" exact component={Auth(ProductsDetail, true)}/>
              <Route path="/products/:slug" exact component={Auth(Products, true)}/>
              <Route path="/" exact component={Auth(Home, null)}/>
              <Route path="*" component={Auth(NotFound, null)}/>

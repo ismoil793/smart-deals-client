@@ -34,13 +34,13 @@ const ServiceTypes = () => {
                          <div className="category-wrap img mb-4 d-flex align-items-end"
                               style={{backgroundImage: "url(/images/businesses/restaurant.jpg)"}}>
                             <div className="text px-3 py-1">
-                               <h2 className="mb-0"><a>Рестораны</a></h2>
+                               <h2 className="mb-0"><span>Рестораны</span></h2>
                             </div>
                          </div>
                          <div className="category-wrap img d-flex align-items-end"
                               style={{backgroundImage: "url(/images/businesses/cafe.jpg)"}}>
                             <div className="text px-3 py-1">
-                               <h2 className="mb-0"><a>Кафе</a></h2>
+                               <h2 className="mb-0"><span>Кафе</span></h2>
                             </div>
                          </div>
                       </div>
@@ -51,13 +51,13 @@ const ServiceTypes = () => {
                    <div className="category-wrap img mb-4 d-flex align-items-end"
                         style={{backgroundImage: "url(/images/businesses/bar.jpg)"}}>
                       <div className="text px-3 py-1">
-                         <h2 className="mb-0"><a>Бары</a></h2>
+                         <h2 className="mb-0"><span>Бары</span></h2>
                       </div>
                    </div>
                    <div className="category-wrap img d-flex align-items-end"
                         style={{backgroundImage: "url(/images/businesses/hotel.jpg)"}}>
                       <div className="text px-3 py-1">
-                         <h2 className="mb-0"><a>Гостиницы</a></h2>
+                         <h2 className="mb-0"><span>Гостиницы</span></h2>
                       </div>
                    </div>
                 </div>

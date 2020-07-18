@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux"
-import {loginUser} from "../../store/actions";
+import {loginUser} from "../../store/actions/user";
 import {FaUserAlt, FaLock} from "react-icons/fa"
 import {Link} from "react-router-dom";
 
@@ -33,7 +33,7 @@ class Login extends Component {
 
    UNSAFE_componentWillReceiveProps(nextProps) {
       if (nextProps.user && nextProps.user.login && nextProps.user.login.isAuth) {
-         this.props.history.push("/products")
+         this.props.history.push("/products/napitki")
       }
    }
 

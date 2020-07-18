@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import {connect} from "react-redux";
-import {auth} from "../store/actions";
+import {auth} from "../store/actions/user";
 import Loader from "../UI/Preloader/loader";
 
 

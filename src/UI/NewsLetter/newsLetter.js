@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {useState} from 'react';
 import $ from "jquery"
 
 const NewsLetter = () => {
 
+   const [email, setEmail] = useState('');
+
+   const emailHandler = (e) => {
+      setEmail(e.target.value)
+   };
+
    const submitForm = (e) => {
       e.preventDefault();
-      $('#smallHide').addClass("newsLetter-display");
-      setTimeout(() => {
-         $('#smallHide').removeClass("newsLetter-display")
-      }, 1500)
+      if(email !== '') {
+         $('#smallHide').addClass("newsLetter-display");
+         setTimeout(() => {
+            $('#smallHide').removeClass("newsLetter-display")
+         }, 1500)
+      }
+      setEmail('')
    };
 
 
@@ -23,7 +32,7 @@ const NewsLetter = () => {
                 <div className="col-md-6 d-flex align-items-center">
                    <form onSubmit={submitForm} className="subscribe-form">
                       <div className="form-group d-flex">
-                         <input type="text" className="form-control" placeholder="Ваш email"/>
+                         <input required={true} type="email" value={email} onChange={emailHandler} className="form-control" placeholder="Ваш email"/>
                          <input type="submit" value="Подписаться"
                                 className="newsLetter submit px-3"/>
                       </div>

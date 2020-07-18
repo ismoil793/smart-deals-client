@@ -8,7 +8,7 @@ const HeaderMainItems = (props) => {
       {
          type: "nav-item",
          text: "Продукты",
-         to: "/products"
+         to: "/products/napitki"
       },
       {
          type: "nav-item",
@@ -36,7 +36,7 @@ const HeaderMainItems = (props) => {
       {
          type: "nav-item",
          text: "Продукты",
-         to: "/products"
+         to: "/products/napitki"
       },
       {
          type: "nav-item",
@@ -47,6 +47,11 @@ const HeaderMainItems = (props) => {
          type: "nav-item",
          text: "Выйти",
          to: "/logout"
+      },
+      {
+         type: "nav-item",
+         text: "",
+         to: "/cart"
       }
    ];
 
@@ -56,15 +61,27 @@ const HeaderMainItems = (props) => {
 
          let active = "";
 
-         if (props.location.pathname === item.to) {
-            active = "active";
+         // if (props.location.pathname === item.to) {
+         //    active = "active";
+         // }
+
+         if (item.to === '/cart') {
+            return (
+                <li key={i} className={`nav-item cta cta-colored ${active}`}>
+                   <Link to="/cart" className="nav-link"><FaShoppingCart/> [0]</Link>
+                </li>
+            )
+         } else {
+            return (
+                <li key={i} className={`nav-item ${active}`}>
+                   <Link to={item.to} className="nav-link">
+                      {item.text}
+                   </Link>
+                </li>
+            )
          }
 
-         return (
-             <li key={i} className={`nav-item ${active}`}>
-                <Link to={item.to} className="nav-link">{item.text}</Link>
-             </li>
-         )
+
       })
    };
 
@@ -91,15 +108,7 @@ const HeaderMainItems = (props) => {
                        <ul className="navbar-nav ml-auto">
 
                           {renderLinks(privateLinks)}
-                          {/*<li className="nav-item"><Link to="/list/products" className="nav-link">Список*/}
-                          {/*   товаров</Link></li>*/}
-                          {/*<li className="nav-item"><Link to="/addPost" className="nav-link">Добавить пост</Link>*/}
-                          {/*</li>*/}
-                          {/*<li className="nav-item"><Link to="/logout" className="nav-link">Выйти</Link></li>*/}
 
-                          <li className="nav-item cta cta-colored">
-                             <Link to="/cart" className="nav-link"><FaShoppingCart/> [0]</Link>
-                          </li>
                        </ul>
 
 
@@ -107,17 +116,7 @@ const HeaderMainItems = (props) => {
                        <ul className="navbar-nav ml-auto">
 
                           {renderLinks(publicLinks)}
-                          {/*<li className="nav-item"><Link to="/" className="nav-link">Главная</Link></li>*/}
-                          {/*<li className="nav-item"><Link to="/products" className="nav-link">Продукты</Link></li>*/}
-                          {/*<li className="nav-item"><Link to="/about" className="nav-link">О нас</Link></li>*/}
-                          {/*<li className="nav-item"><Link to="/contacts" className="nav-link">Контакты</Link></li>*/}
-                          {/*<li className="nav-item">*/}
-                          {/*   <Link to="/login" className="nav-link">авторизоваться</Link>*/}
-                          {/*</li>*/}
 
-                          {/*<li className="nav-item cta cta-colored">*/}
-                          {/*   <Link to="/cart" className="nav-link"><FaShoppingCart/> [0]</Link>*/}
-                          {/*</li>*/}
                        </ul>
                 }
 

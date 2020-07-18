@@ -18,29 +18,35 @@ const HomeSlider = () => {
 
       const data = [
          {
-            img: "test-slider.jpg"
+            img: "smart_deals_banner_1.jpg"
          },
          {
-            img: "bg_1.jpg"
+            img: "smart_deals_banner_2.jpg"
          },
          {
-            img: "bg_2.jpg"
+            img: "smart_deals_banner_3.jpg"
          }
       ];
 
       template = data.map((item, i) => {
          return (
              <div key={i}>
-                <div className="slider-item" style={{backgroundImage: `url(/images/${item.img})`}}>
+                <div className="slider-item" style={{backgroundImage: `url(/images/banners/${item.img})`}}>
                    <div className="overlay"></div>
                    <div className="container">
                       <div className="row slider-text justify-content-center align-items-center"
                            data-scrollax-parent="true">
 
-                         <div className="col-md-12 text-center">
-                            <h1 className="mb-2">Наши продукты</h1>
-                            {/*<h2 className="subheading mb-4">We deliver organic vegetables &amp; fruits</h2>*/}
-                            <p><button className="btn btn-primary watch-products">Посмотреть</button></p>
+                         <div className={`col-md-12 ${i === 0 ? 'text-center' : 'text-left'}`}>
+                            <h1 className="mb-2">Smart Deals</h1>
+                            <h2 className="subheading mb-4">
+                               {i === 0 ? 'Чем больше покупок, тем выгоднее' //'big sizes. bigger savings'
+                                   : i === 1 ? 'Решение во время карантина!'
+                                       : 'Решение для вашего бизнеса!'}
+                            </h2>
+                            <p>
+                               <button className="btn btn-primary watch-products">Посмотреть товары</button>
+                            </p>
                          </div>
 
                       </div>

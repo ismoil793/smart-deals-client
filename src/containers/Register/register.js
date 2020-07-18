@@ -3,7 +3,7 @@ import {Link} from "react-router-dom";
 import {FaUserAlt, FaLock, FaEnvelope, FaPhoneAlt, FaTrademark} from "react-icons/fa"
 import {GrOrganization, GrDocumentPerformance} from "react-icons/gr"
 import {connect} from "react-redux";
-import {registerUser} from "../../store/actions";
+import {registerUser} from "../../store/actions/user";
 
 class Register extends Component {
 
@@ -178,7 +178,7 @@ class Register extends Component {
                                          name="phone"
                                          required={true}
                                          minLength={9}
-                                         maxLength={13}
+                                         maxLength={18}
                                          value={this.state.formData.phone}
                                          onChange={(event) => this.handleInput(event, "phone")}
                                      />

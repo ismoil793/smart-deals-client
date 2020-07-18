@@ -2,7 +2,7 @@ import React from 'react';
 import Categories from "../Categories/Categories";
 import Search from "./Search";
 import {withRouter} from "react-router-dom";
-import RenderProducts from "./RenderProducts/renderProducts";
+import RenderProducts from "./ProductsList";
 
 
 class Products extends React.Component {
@@ -18,11 +18,11 @@ class Products extends React.Component {
 
              <div className="container">
                 <div className="row">
-                   <div className="col-md-3">
+                   <div className="col-lg-3 col-md-5">
                       <Categories componentName={"Products"}/>
                    </div>
 
-                   <div className="col-md-9">
+                   <div className="col-lg-9 col-md-7">
 
                       <div className="row">
                          <div className="col-12">
@@ -32,7 +32,7 @@ class Products extends React.Component {
 
 
                       <div className="row">
-                         <RenderProducts />
+                         <RenderProducts/>
                       </div>
 
 
