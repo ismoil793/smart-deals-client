@@ -5,9 +5,6 @@ import {URL, USER_AUTH, USER_LOGIN, USER_LOGOUT, USER_REGISTER} from "../types";
             User
 ===============================*/
 
-axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-
 export function registerUser(data) {
    const request = axios.post(`${URL}/api/v1/account/create/`, data).then(response => response.data);
 
@@ -58,7 +55,13 @@ export function auth() {
    } else {
       const request = axios.get(
           `${URL}/api/v1/account/auth/`,
-          {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
+          {
+             headers: {
+                Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`,
+                "Access-Control-Allow-Origin": "*",
+                "Access-Control-Allow-Credentials": "true"
+             }
+          }
       ).then(response => response.data);
 
       return {

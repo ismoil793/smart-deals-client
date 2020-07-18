@@ -7,9 +7,6 @@ import {
    URL
 } from "../types";
 
-axios.defaults.headers.get['Access-Control-Allow-Origin'] = '*';
-axios.defaults.headers.post['Access-Control-Allow-Origin'] = '*';
-
 /*=============================
             Products
 ===============================*/

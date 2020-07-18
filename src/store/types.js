@@ -1,8 +1,8 @@
 //URL
 
-const CORS = 'https://api.allorigins.win/get?url=';
+const CORS = 'https://thingproxy.freeboard.io/fetch/';
 
-//https://thingproxy.freeboard.io/fetch/
+//https://cors-anywhere.herokuapp.com/
 
 const URL = `${CORS}http://164.90.216.97`;
 
