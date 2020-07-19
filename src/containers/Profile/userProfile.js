@@ -19,15 +19,15 @@ class UserProfile extends Component {
                             <div>
                                <span>Организация: </span>
                                {this.props.user.authLogin.organization}
-                               &nbsp;&nbsp;&nbsp;
-                               ({this.props.user.authLogin.trade_mark})
+                               &nbsp;&nbsp;
+                               ТМ: ({this.props.user.authLogin.trade_mark})
                             </div>
                             <div>
                                <span>Пользователь: </span>
                                {this.props.user.authLogin.first_name}&nbsp;
                                {this.props.user.authLogin.last_name}
                             </div>
-                            <div><span>ИНН: </span>{this.props.user.authLogin.itn}</div>
+                            <div><span>ИНН компании: </span>{this.props.user.authLogin.itn}</div>
                             <div><span>Email: </span>{this.props.user.authLogin.email}</div>
                          </div>
                       </div>

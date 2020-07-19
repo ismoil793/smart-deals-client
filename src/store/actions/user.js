@@ -1,16 +1,36 @@
 import axios from "axios";
-import {URL, USER_AUTH, USER_LOGIN, USER_LOGOUT, USER_REGISTER} from "../types";
+import {CLEAR_USER_REGISTER, URL, USER_AUTH, USER_LOGIN, USER_LOGOUT, USER_REGISTER} from "../types";
 
 /*=============================
             User
 ===============================*/
 
-export function registerUser(data) {
-   const request = axios.post(`${URL}/api/v1/account/create/`, data).then(response => response.data);
+export function registerUser(dataSubmit) {
 
+   return async dispatch => {
+      const request = axios.post(`${URL}/api/v1/account/create/`, dataSubmit)
+          .then(response => {
+             return response.data
+          })
+          .catch(e => {
+             return {
+                error: "Что-то пошло не так"
+             }
+          });
+
+      console.log(request)
+
+      dispatch({
+         type: USER_REGISTER,
+         payload: request
+      })
+   };
+}
+
+export function clearRegisterUser() {
    return {
-      type: USER_REGISTER,
-      payload: request
+      type: CLEAR_USER_REGISTER,
+      payload: null
    }
 }
 

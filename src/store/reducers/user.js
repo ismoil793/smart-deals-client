@@ -1,4 +1,4 @@
-import {USER_AUTH, USER_LOGIN, USER_LOGOUT, USER_REGISTER} from "../types";
+import {CLEAR_USER_REGISTER, USER_AUTH, USER_LOGIN, USER_LOGOUT, USER_REGISTER} from "../types";
 
 export default function (state = {}, action) {
    switch (action.type) {
@@ -7,6 +7,9 @@ export default function (state = {}, action) {
          return {...state, authLogin: action.payload};
 
       case(USER_REGISTER):
+         return {...state, userRegister: action.payload};
+
+      case(CLEAR_USER_REGISTER):
          return {...state, userRegister: action.payload};
 
       case(USER_LOGIN):

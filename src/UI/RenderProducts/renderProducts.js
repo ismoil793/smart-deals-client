@@ -8,7 +8,7 @@ const RenderProducts = (props) => {
 
       if (list && list.length > 0) {
          return list.map((item, i) => (
-             <div key={i} className="col-lg-4">
+             <div key={i} className="col-lg-6 col-xl-4">
                 <div className="product-in-category">
                    <Link to={`/products/${item.category.slug}/${item.id}`} className="img-prod">
                       <img className="img-fluid" src={item.image}

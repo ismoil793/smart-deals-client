@@ -3,38 +3,61 @@ import {Link} from "react-router-dom";
 import {FaUserAlt, FaLock, FaEnvelope, FaPhoneAlt, FaTrademark} from "react-icons/fa"
 import {GrOrganization, GrDocumentPerformance} from "react-icons/gr"
 import {connect} from "react-redux";
-import {registerUser} from "../../store/actions/user";
+import {clearRegisterUser, registerUser} from "../../store/actions/user";
 
 class Register extends Component {
 
    state = {
       formData: {
-         organization: "",
-         itn: "",
+         email: "",
          trade_mark: "",
+         password: "",
+         phone: "",
          first_name: "",
          last_name: "",
-         phone: "",
-         email: "",
-         password: "",
-         passwordRepeat: ""
+         organization: "",
+         itn: ""
       },
       checkRules: false,
-      message: ""
+      message: "",
+      passwordRepeat: ""
    };
+
+   componentDidMount() {
+      if (this.props.user
+          && this.props.user.userRegister
+          && this.props.user.userRegister.email) {
+         this.props.history.push('/login')
+      }
+   }
+
+   UNSAFE_componentWillReceiveProps(nextProps) {
+      if (nextProps.user && nextProps.user.userRegister && nextProps.user.userRegister.email) {
+         nextProps.history.push('/login');
+      }
+   }
+
+   componentWillUnmount() {
+      this.props.dispatch(clearRegisterUser())
+   }
 
    handleInput = (event, name) => {
       const newFormData = this.state.formData;
 
-      if (name === 'organization' || "trade_mark") {
-         newFormData[name] = event.target.value;
+      if (name === 'passwordRepeat') {
+         this.setState({
+            passwordRepeat: event.target.value
+         })
       } else {
-         newFormData[name] = event.target.value.trim();
+         if (name === 'organization' || "trade_mark") {
+            newFormData[name] = event.target.value;
+         } else {
+            newFormData[name] = event.target.value.trim();
+         }
+         this.setState({
+            formData: newFormData
+         })
       }
-
-      this.setState({
-         formData: newFormData
-      })
    };
 
    renderMessage = () => (
@@ -49,23 +72,25 @@ class Register extends Component {
       });
    };
 
-   submitForm = (e) => {
+   submitForm = async (e) => {
       e.preventDefault();
 
-      let reg = new RegExp('^[0-9]{10}$');
+      let reg = new RegExp('^[0-9]{9}$');
 
       if (this.state.checkRules) {
          this.setState({message: ""});
-         if (this.state.formData.password === this.state.formData.passwordRepeat) {
 
+         if (this.state.formData.password === this.state.passwordRepeat) {
             if (reg.test(this.state.formData.itn)) {
-               this.props.dispatch(registerUser(this.state.formData))
+               await this.props.dispatch(registerUser(this.state.formData))
+
             } else {
-               this.setState({message: "ИНН должно содержать 10 цифр"})
+               this.setState({message: "ИНН должно содержать 9 цифр"})
             }
          } else {
             this.setState({message: "Пароли не совпадают"})
          }
+
       } else {
          this.setState({message: "Ознакомьтесь с офертой"});
       }
@@ -73,19 +98,13 @@ class Register extends Component {
 
    render() {
 
-      if (this.props.user
-          && this.props.user.userRegister
-          && this.props.user.userRegister.email) {
-         this.props.history.push('/login')
-      }
-
       return (
           <section className="register-user">
              <div className="container">
                 <div className="row">
                    <div className="col-md-12">
 
-                      <form onSubmit={this.submitForm} className="register-box" autoComplete="on">
+                      <form onSubmit={(e) => this.submitForm(e)} className="register-box" autoComplete="on">
 
                          <h2>Зарегистрироваться</h2>
 
@@ -114,8 +133,8 @@ class Register extends Component {
                                          type="text"
                                          placeholder="ИНН"
                                          className="form-control box-input"
-                                         minLength={10}
-                                         maxLength={10}
+                                         minLength={9}
+                                         maxLength={9}
                                          name="itn"
                                          required={true}
                                          value={this.state.formData.itn}
@@ -220,7 +239,7 @@ class Register extends Component {
                                          name="password-repeat"
                                          required={true}
                                          minLength={6}
-                                         value={this.state.formData.passwordRepeat}
+                                         value={this.state.passwordRepeat}
                                          onChange={(event) => this.handleInput(event, "passwordRepeat")}
                                      />
                                   </div>
@@ -235,7 +254,7 @@ class Register extends Component {
                                         <input
                                             name="check-rules"
                                             type="checkbox"
-                                            checked={this.state.formData.checkRules}
+                                            checked={this.state.checkRules}
                                             onChange={event => this.handleChecked(event.target.checked)}
                                         />
                                         Ознакомлен с офертой
@@ -248,6 +267,16 @@ class Register extends Component {
 
                             </div>
                          </div>
+
+                         {
+                            this.props.user
+                            && this.props.user.userRegister
+                            && this.props.user.userRegister.error ?
+                                <div className="message alert alert-danger">
+                                   <p>{this.props.user.userRegister.error}</p>
+                                </div>
+                                : null
+                         }
 
                          {
                             this.state.message !== ""

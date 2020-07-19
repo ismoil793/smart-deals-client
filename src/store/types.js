@@ -1,6 +1,6 @@
 //URL
 
-const CORS = 'https://cors-anywhere.herokuapp.com/';
+// const CORS = 'https://cors-anywhere.herokuapp.com/';
 
 //https://cors-anywhere.herokuapp.com/
 
@@ -19,6 +19,7 @@ const CLEAR_PRODUCT = 'CLEAR_PRODUCT';
 // USER
 const USER_AUTH = 'USER_AUTH';
 const USER_REGISTER = 'USER_REGISTER';
+const CLEAR_USER_REGISTER = 'CLEAR_USER_REGISTER';
 const USER_LOGIN = 'USER_LOGIN';
 const USER_LOGOUT = 'USER_LOGOUT';
 
@@ -31,6 +32,7 @@ export {
    GET_SEARCH_PRODUCTS,
    USER_AUTH,
    USER_REGISTER,
+   CLEAR_USER_REGISTER,
    USER_LOGIN,
    USER_LOGOUT,
    GET_PRODUCT,

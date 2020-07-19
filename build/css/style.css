@@ -568,11 +568,19 @@ pre code {
     .container {
         max-width: 1140px;
     }
+    .products-container .product-in-category a.img-prod img {
+        width: 100px !important;
+        height: 120px !important;
+    }
 }
 
 @media (min-width: 1366px) {
     .container {
         max-width: 1300px;
+    }
+    .products-container .product-in-category a.img-prod img {
+        width: 140px !important;
+        height: 160px !important;
     }
 }
 
