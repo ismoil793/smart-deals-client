@@ -18,8 +18,6 @@ export function registerUser(dataSubmit) {
              }
           });
 
-      console.log(request)
-
       dispatch({
          type: USER_REGISTER,
          payload: request
