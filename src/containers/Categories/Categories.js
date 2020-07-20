@@ -36,17 +36,17 @@ class Categories extends React.Component {
                       <img className="img-fluid" src={item.image}
                            alt="Category name"/>
                    </Link>
-                   <div className="text py-3 px-3 text-center">
-                      <h3><Link to={`/products/${item.slug}`}>{item.name}</Link></h3>
-                      <div className="bottom-area d-flex px-3">
-                         <div className="m-auto d-flex">
-                            <Link to={`/products/${item.slug}`}
-                                  className="add-to-cart d-flex justify-content-center align-items-center text-center">
-                               <span>Подробнее <FaEye/></span>
-                            </Link>
-                         </div>
-                      </div>
-                   </div>
+                   {/*<div className="text py-3 px-3 text-center">*/}
+                   {/*   <h3><Link to={`/products/${item.slug}`}>{item.name}</Link></h3>*/}
+                   {/*   <div className="bottom-area d-flex px-3">*/}
+                   {/*      <div className="m-auto d-flex">*/}
+                   {/*         <Link to={`/products/${item.slug}`}*/}
+                   {/*               className="add-to-cart d-flex justify-content-center align-items-center text-center">*/}
+                   {/*            <span>Подробнее <FaEye/></span>*/}
+                   {/*         </Link>*/}
+                   {/*      </div>*/}
+                   {/*   </div>*/}
+                   {/*</div>*/}
                 </div>
              </div>
          ))

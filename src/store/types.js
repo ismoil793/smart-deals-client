@@ -4,7 +4,7 @@
 
 //https://cors-anywhere.herokuapp.com/
 
-const URL = `http://164.90.216.97`;
+const URL = `https://smartdeals.uz`;
 
 // Products
 const ALL_PRODUCTS = 'ALL_PRODUCTS';

@@ -4,11 +4,9 @@
     <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/user.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/user.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Categories/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Categories/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/ProductsDetail/productsDetail.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/ProductsDetail/productsDetail.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -104,7 +102,10 @@
       <workItem from="1595071586196" duration="7291000" />
       <workItem from="1595085795100" duration="8098000" />
       <workItem from="1595150041975" duration="825000" />
-      <workItem from="1595161746032" duration="1600000" />
+      <workItem from="1595161746032" duration="3556000" />
+      <workItem from="1595223428258" duration="368000" />
+      <workItem from="1595240826081" duration="612000" />
+      <workItem from="1595252083894" duration="604000" />
     </task>
     <servers />
   </component>

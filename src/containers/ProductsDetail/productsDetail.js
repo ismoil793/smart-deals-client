@@ -36,8 +36,8 @@ class ProductsDetail extends Component {
                                },
                                largeImage: {
                                   src: `${product.image}`,
-                                  width: 1200,
-                                  height: 1800
+                                  width: 650,
+                                  height: 700
                                },
                                enlargedImageContainerDimensions: {
                                   width: '200%',

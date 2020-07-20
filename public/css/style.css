@@ -12246,7 +12246,7 @@ h1, h2, h3, h4, h5,
     -webkit-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     transition: all 0.3s ease;
-    height: 160px;
+    height: 210px;
 }
 
 .product .img-prod:hover img, .product .img-prod:focus img {
