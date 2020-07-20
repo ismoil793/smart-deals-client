@@ -3,6 +3,23 @@
   <component name="ChangeListManager">
     <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/businesses/bar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/bar.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/businesses/business.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/businesses/cafe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/cafe.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/businesses/hotel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/hotel.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/businesses/man.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/man.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/businesses/man2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/businesses/restaurant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/restaurant.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.669a3f81782df1f6ca7f44c614b2fdab.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.09b4f48d.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.09b4f48d.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/businesses/bar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/businesses/bar.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/businesses/business.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/images/businesses/cafe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/businesses/cafe.jpg" afterDir="false" />
@@ -109,7 +126,7 @@
       <workItem from="1595161746032" duration="3556000" />
       <workItem from="1595223428258" duration="368000" />
       <workItem from="1595240826081" duration="612000" />
-      <workItem from="1595252083894" duration="1496000" />
+      <workItem from="1595252083894" duration="2345000" />
     </task>
     <servers />
   </component>
