@@ -575,8 +575,13 @@ pre code {
 }
 
 @media (min-width: 1366px) {
+
     .container {
-        max-width: 1300px;
+        max-width: 1200px;
+    }
+
+    .products-container .container.container-changed {
+        max-width: 1320px;
     }
     .products-container .product-in-category a.img-prod img {
         width: 140px !important;

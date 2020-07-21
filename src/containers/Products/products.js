@@ -16,7 +16,7 @@ class Products extends React.Component {
       return (
           <section className="products-container">
 
-             <div className="container">
+             <div className="container container-changed">
                 <div className="row">
                    <div className="col-lg-3 col-md-5">
                       <Categories componentName={"Products"}/>
