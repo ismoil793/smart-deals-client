@@ -4,7 +4,7 @@
 
 //https://cors-anywhere.herokuapp.com/
 
-const URL = `https://smartdeals.uz`;
+const URL = `https://www.smartapi.uz`;
 
 // Products
 const ALL_PRODUCTS = 'ALL_PRODUCTS';
