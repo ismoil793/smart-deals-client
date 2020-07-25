@@ -89,7 +89,7 @@ const HeaderMainItems = (props) => {
        <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
             id="ftco-navbar">
           <div className="container">
-             <Link to="/" className="navbar-brand"><img className="sd-farm-logo" src="/images/SD.png"
+             <Link to="/" className="navbar-brand"><img className="sd-logo" src="/images/SD.png"
                                                         alt="Smart Deals Logo"/></Link>
              <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
                      aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">

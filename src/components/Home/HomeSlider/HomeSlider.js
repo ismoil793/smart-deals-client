@@ -32,12 +32,12 @@ const HomeSlider = () => {
          return (
              <div key={i}>
                 <div className="slider-item" style={{backgroundImage: `url(/images/banners/${item.img})`}}>
-                   <div className="overlay"></div>
+                   {/*<div className="overlay"></div>*/}
                    <div className="container">
                       <div className="row slider-text justify-content-center align-items-center"
                            data-scrollax-parent="true">
 
-                         <div className={`col-md-12 ${i === 0 ? 'text-center' : 'text-left'}`}>
+                         <div className={`col-md-12 ${i === 2 ? 'text-left' : 'text-center'}`}>
                             <h1 className="mb-2">Smart Deals</h1>
                             <h2 className="subheading mb-4">
                                {i === 0 ? 'Чем больше покупок, тем выгоднее' //'big sizes. bigger savings'

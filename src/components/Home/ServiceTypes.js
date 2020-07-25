@@ -9,13 +9,13 @@ const ServiceTypes = () => {
              <div className="row">
                 <div className="col-md-8">
                    <div className="row">
-                      <div className="col-md-6 order-md-last align-items-stretch d-flex">
+                      <div className="col-md-6 d-none d-md-flex order-md-last align-items-stretch">
 
                          <Animation>
                             <div
                                 data-aos-once="true"
                                 data-aos="fade-up"
-                                className="category-wrap-2 img align-self-stretch d-flex"
+                                className="category-wrap-2 h-100 img align-self-stretch d-flex"
                                 style={{backgroundImage: "url(/images/businesses/man.jpg)"}}
                             >
                                <div className="text text-center">
@@ -37,7 +37,7 @@ const ServiceTypes = () => {
                             {/*   <h2 className="mb-0"><span>Рестораны</span></h2>*/}
                             {/*</div>*/}
                          </div>
-                         <div className="category-wrap img d-flex align-items-end"
+                         <div className="category-wrap img mb-4 mb-md-0 d-flex align-items-end"
                               style={{backgroundImage: "url(/images/businesses/cafe.jpg)"}}>
                             {/*<div className="text px-3 py-1">*/}
                             {/*   <h2 className="mb-0"><span>Кафе</span></h2>*/}
@@ -54,7 +54,7 @@ const ServiceTypes = () => {
                       {/*   <h2 className="mb-0"><span>Бары</span></h2>*/}
                       {/*</div>*/}
                    </div>
-                   <div className="category-wrap img d-flex align-items-end"
+                   <div className="category-wrap img mb-4 d-flex align-items-end"
                         style={{backgroundImage: "url(/images/businesses/hotel.jpg)"}}>
                       {/*<div className="text px-3 py-1">*/}
                       {/*   <h2 className="mb-0"><span>Гостиницы</span></h2>*/}

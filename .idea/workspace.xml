@@ -1,7 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="" />
+    <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/default.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/build/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/SD.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/SD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/banners/old/smart_deals_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/banners/old/smart_deals_banner_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/banners/old/smart_deals_banner_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/banners/smart_deals_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/banners/smart_deals_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/banners/smart_deals_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/banners/smart_deals_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/images/banners/smart_deals_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/banners/smart_deals_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.45865033b8a4bd8c491a1f77f9770f82.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/2.3a612f7c.chunk.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/css/2.3a612f7c.chunk.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.e3ffaf43.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.e3ffaf43.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.e3ffaf43.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.857c2eef.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.857c2eef.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/default.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/public/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/SD.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/SD.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/old/smart_deals_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/old/smart_deals_banner_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/old/smart_deals_banner_2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/smart_deals_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/smart_deals_1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/smart_deals_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/smart_deals_2.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/banners/smart_deals_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/smart_deals_3.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeSlider/HomeSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeSlider/HomeSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/ServiceTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/ServiceTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Cart/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/auth.js" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +147,13 @@
       <workItem from="1595252083894" duration="3028000" />
       <workItem from="1595347162511" duration="1227000" />
       <workItem from="1595400874978" duration="2091000" />
-      <workItem from="1595430754561" duration="345000" />
+      <workItem from="1595430754561" duration="1481000" />
+      <workItem from="1595438731155" duration="4387000" />
+      <workItem from="1595487579386" duration="9603000" />
+      <workItem from="1595576036700" duration="10527000" />
+      <workItem from="1595599724180" duration="6539000" />
+      <workItem from="1595615304504" duration="9000" />
+      <workItem from="1595655967326" duration="1256000" />
     </task>
     <servers />
   </component>

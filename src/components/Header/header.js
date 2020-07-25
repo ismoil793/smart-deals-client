@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {withRouter} from "react-router-dom";
-import HeaderSmall from "./headerSmall";
+// import HeaderSmall from "./headerSmall";
 import HeaderMainItems from "./headerMainItems";
 import {connect} from "react-redux"
 import $ from "jquery"
@@ -27,7 +27,7 @@ class Header extends Component {
       return (
           <header>
 
-             <HeaderSmall/>
+             {/*<HeaderSmall/>*/}
              <HeaderMainItems user={this.props.user}/>
 
           </header>

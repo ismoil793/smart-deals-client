@@ -568,10 +568,6 @@ pre code {
     .container {
         max-width: 1140px;
     }
-    .products-container .product-in-category a.img-prod img {
-        width: 100px !important;
-        height: 120px !important;
-    }
 }
 
 @media (min-width: 1366px) {
@@ -582,10 +578,6 @@ pre code {
 
     .products-container .container.container-changed {
         max-width: 1320px;
-    }
-    .products-container .product-in-category a.img-prod img {
-        width: 140px !important;
-        height: 160px !important;
     }
 }
 
@@ -11279,14 +11271,13 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light {
-    background: #61ADBB !important;
+    background: #313841 !important;
     z-index: 3;
-    padding: 10px 0;
+    padding: 5px 0;
 }
 
 @media (max-width: 991.98px) {
     .ftco-navbar-light {
-        background: #ffffff !important;
         position: relative;
         top: 0;
         padding: 10px 15px;
@@ -11320,10 +11311,9 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
     font-size: 14px;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-left: 20px;
-    padding-right: 20px;
+    /*padding-top: 1.5rem;*/
+    /*padding-bottom: 1.5rem;*/
+    padding: 0 20px;
     font-weight: bold;
     color: #ffffff;
     text-transform: uppercase;
@@ -11332,20 +11322,17 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: #000000;
+    /*color: #000000;*/
 }
 
 @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link {
-        padding-left: 0;
-        padding-right: 0;
-        padding-top: .9rem;
-        padding-bottom: .9rem;
-        color: #000000;
+        padding: .9rem 0;
+        text-align: center;
     }
 
     .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-        color: #313841 !important;
+        /*color: #313841 !important;*/
     }
 }
 
@@ -11431,16 +11418,15 @@ h1, h2, h3, h4, h5,
 
 .ftco-navbar-light .navbar-toggler {
     border: none;
-    color: #313841 !important;
+    color: #ffffff !important;
     cursor: pointer;
     padding-right: 0;
-    text-transform: uppercase;
-    font-size: 16px;
+    font-size: 20px;
     letter-spacing: .1em;
 }
 
 .ftco-navbar-light .navbar-toggler svg {
-    font-size: 18px;
+    font-size: 25px;
     padding-bottom: 3px;
 }
 
@@ -13463,6 +13449,9 @@ textarea.form-control {
 @media (max-width: 767.98px) {
     .ftco-counter .counter-wrap {
         margin-bottom: 20px;
+    }
+    .ftco-category .category-wrap {
+        height: 300px;
     }
 }
 

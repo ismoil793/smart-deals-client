@@ -23,13 +23,13 @@ class ProductsList extends Component {
       // Every time when store has no products to render I need to get new products from DB
       if (!this.props.products.list || !this.props.products.count) {
          this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 4, 0));
+         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 20, 0));
          this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
       }
       // When category slug changes and it is different from product.category.slug -> rerender component
       else if (this.props.products.list[0].category.slug !== this.props.match.params.slug) {
          this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 4, 0));
+         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 20, 0));
          this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
       }
    }
@@ -49,7 +49,7 @@ class ProductsList extends Component {
       if (nextProps.match.params.slug !== prevState.slug) {
 
          nextProps.products.loading = true;
-         nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 4, 0));
+         nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 20, 0));
          nextProps.dispatch(getCountProductCategory(nextProps.match.params.slug));
 
          return ({slug: nextProps.match.params.slug})
@@ -78,7 +78,7 @@ class ProductsList extends Component {
 
    loadMore = () => {
       let count = this.props.products.list.length;
-      this.props.dispatch(getProductsInCategory(this.state.slug, 2, count, this.props.products.list));
+      this.props.dispatch(getProductsInCategory(this.state.slug, 10, count, this.props.products.list));
 
       if (this.count) {
          if (count === this.count) {
@@ -108,7 +108,7 @@ class ProductsList extends Component {
                 <div className="row">
                    {this.renderWarning()}
                    {
-                      this.count > 3 ?
+                      this.count > 20 ?
                           <div className="col-lg-12">
                              <button className="btn btn-info loadmore-btn" onClick={this.loadMore}>
                                 Показать больше

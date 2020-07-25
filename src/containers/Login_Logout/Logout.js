@@ -16,7 +16,7 @@ class Logout extends Component {
 
                       <div className="logout_container text-center">
                          <h1>Уже уходите ? <br/>:(</h1>
-                         <button className="mt-5 w-25 button btn btn-danger" onClick={this.logOut}>Log out!</button>
+                         <button className="mt-5 w-25 button btn btn-danger" onClick={this.logOut}>Выйти!</button>
                       </div>
 
                    </div>
