@@ -4,6 +4,7 @@ import {clearProduct, getProduct} from "../../store/actions/product";
 import SkeletonUI from "../../UI/Skeleton/SkeletonUI";
 import {Link} from "react-router-dom";
 import ReactImageMagnify from 'react-image-magnify';
+import {Helmet} from "react-helmet";
 
 class ProductsDetail extends Component {
 
@@ -20,6 +21,13 @@ class ProductsDetail extends Component {
          let product = this.props.product.oneProduct;
          return (
              <section className="product-detail-page">
+
+                <Helmet>
+                   <title>Продукты и Товары на любой вкус</title>
+                   <meta name="description" content="Продукты по категориям" />
+                </Helmet>
+
+
                 <div className="container">
                    <div className="row">
 

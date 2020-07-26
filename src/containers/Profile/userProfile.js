@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux"
+import {Helmet} from "react-helmet";
 
 class UserProfile extends Component {
 
@@ -7,6 +8,12 @@ class UserProfile extends Component {
 
       return (
           <section className="user-profile">
+
+             <Helmet>
+                <title>Личный кабинет Smart Deals</title>
+                <meta name="description" content="Личный кабинет Smart Deals" />
+             </Helmet>
+
              <div className="container">
                 <div className="row">
                    <div className="col-lg-12">

@@ -3,6 +3,7 @@ import {connect} from "react-redux"
 import {loginUser} from "../../store/actions/user";
 import {FaUserAlt, FaLock} from "react-icons/fa"
 import {Link} from "react-router-dom";
+import {Helmet} from "react-helmet";
 
 class Login extends Component {
 
@@ -43,6 +44,12 @@ class Login extends Component {
 
       return (
           <section className="login-user">
+
+             <Helmet>
+                <title>Авторизация</title>
+                <meta name="description" content="Авторизация Smart Deals" />
+             </Helmet>
+
              <div className="container">
                 <div className="row">
                    <div className="col-md-12">

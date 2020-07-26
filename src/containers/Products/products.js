@@ -3,6 +3,7 @@ import Categories from "../Categories/Categories";
 import Search from "./Search";
 import {withRouter} from "react-router-dom";
 import RenderProducts from "./ProductsList";
+import {Helmet} from "react-helmet";
 
 
 class Products extends React.Component {
@@ -15,6 +16,11 @@ class Products extends React.Component {
 
       return (
           <section className="products-container">
+
+             <Helmet>
+                <title>Продукты и Товары на любой вкус</title>
+                <meta name="description" content="Продукты по категориям" />
+             </Helmet>
 
              <div className="container container-changed">
                 <div className="row">

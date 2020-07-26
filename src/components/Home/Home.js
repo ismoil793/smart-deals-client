@@ -1,4 +1,5 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 import HomeSlider from "./HomeSlider/HomeSlider";
 import Categories from "../../containers/Categories/Categories";
 import Partners from "./Partners";
@@ -28,6 +29,10 @@ class Home extends React.Component {
       return (
           <main className="main">
 
+             <Helmet>
+                <title>Smart Deals - Выгодные покупки</title>
+                <meta name="description" content="Продажа и покупка товаров в оптом Smart Deals UZ" />
+             </Helmet>
 
              <HomeSlider/>
 

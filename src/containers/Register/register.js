@@ -4,6 +4,7 @@ import {FaUserAlt, FaLock, FaEnvelope, FaPhoneAlt, FaTrademark} from "react-icon
 import {GrOrganization, GrDocumentPerformance} from "react-icons/gr"
 import {connect} from "react-redux";
 import {clearRegisterUser, registerUser} from "../../store/actions/user";
+import {Helmet} from "react-helmet";
 
 class Register extends Component {
 
@@ -100,6 +101,12 @@ class Register extends Component {
 
       return (
           <section className="register-user">
+
+             <Helmet>
+                <title>Регистрация в Smart Deals</title>
+                <meta name="description" content="Регистрация в Smart Deals" />
+             </Helmet>
+
              <div className="container">
                 <div className="row">
                    <div className="col-md-12">

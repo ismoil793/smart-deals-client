@@ -297,7 +297,7 @@ section.login-user form.login-box .form-group .form-control.box-input {
     align-items: center;
     justify-content: flex-end;
     width: 99%;
-    padding: 10px 0;
+    padding: 5px 0;
     opacity: 0;
     position: absolute;
     bottom: 133px;
@@ -813,6 +813,43 @@ section.partners {
     padding: 5% 0;
 }
 
+
+/*=============================
+         Product Modal
+===============================*/
+
+.product-modal {
+    width: 500px;
+    padding: 5% 0;
+}
+.product-modal img {
+    display: block;
+    width: 250px;
+    height: auto;
+    margin: 0 auto;
+}
+.product-modal h4 {
+    margin-top: 20px;
+}
+
+.product-modal .cart-buttons {
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.product-modal .cart-buttons div button{
+    outline: none;
+    box-shadow: none;
+    padding: 0 5px;
+}
+
+.product-modal .cart-buttons div button svg {
+    font-size: 26px;
+}
+
+
+
 /*=============================
        React Date Picker
 ===============================*/
@@ -977,9 +1014,24 @@ footer .switch-case span {
 @media (max-width: 767px) {
     .products-container .product-in-category .cart-buttons {
         bottom: 163px;
+        opacity: 1;
     }
     .products-container .product-in-category .product-info {
         height: 400px;
+    }
+    section.login-user form.login-box {
+        width: 100%;
+    }
+
+    section.login-user form.login-box .buttons {
+        display: block;
+    }
+
+    section.login-user form.login-box .buttons button,
+    section.login-user form.login-box .buttons a{
+        display: block;
+        margin-bottom: 10px;
+        width: 100%;
     }
 }
 
@@ -1007,9 +1059,14 @@ footer .switch-case span {
 @media (max-width: 450px) {
     .products-container .product-in-category .cart-buttons {
         bottom: 135px;
+        margin: 0;
+        width: 100%;
+        height: 40px;
+        left: -21%;
+        top: 0;
     }
     .products-container .product-in-category .product-info {
-        height: 320px;
+        height: 360px;
     }
 }
 
@@ -1019,10 +1076,6 @@ footer .switch-case span {
     }
 }
 @media (min-width: 991.98px) {
-    /*section.login-user form.login-box {*/
-    /*    width: 90%;*/
-    /*}*/
-
     .products-container .product-in-category .cart-buttons {
         bottom: 142px;
     }

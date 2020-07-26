@@ -69,7 +69,7 @@ const RenderProducts = (props) => {
        <React.Fragment>
           {renderProducts(props.list)}
           {
-             // open ? <ReactModal isOpen={open} setOpen={setOpen} productItem={productItem} /> : null
+             open ? <ReactModal isOpen={open} setOpen={setOpen} productItem={productItem} /> : null
           }
        </React.Fragment>
    );

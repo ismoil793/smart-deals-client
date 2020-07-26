@@ -2,11 +2,17 @@ import React from 'react';
 import {Link} from "react-router-dom";
 import Benefits from "../Home/Benefits";
 import YandexMap from "../../UI/contactForm/YandexMap";
+import {Helmet} from "react-helmet";
 
 const About = () => {
    return (
 
        <section className="about-company">
+
+          <Helmet>
+             <title>О компании Smart Deals</title>
+             <meta name="description" content="О компании Smart Deals" />
+          </Helmet>
 
           <div className="hero-wrap hero-bread" style={{backgroundImage: "url('images/bg_2.jpg')"}}>
              <div className="overlay"></div>

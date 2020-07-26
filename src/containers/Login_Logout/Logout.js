@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {logOutUser} from "../../store/actions/user";
+import {Helmet} from "react-helmet";
 
 class Logout extends Component {
 
@@ -10,6 +11,12 @@ class Logout extends Component {
    render() {
       return (
           <section className="pt-5 pb-5">
+
+             <Helmet>
+                <title>Выйти из профиля</title>
+                <meta name="description" content="Выйти из профиля Smart Deals" />
+             </Helmet>
+
              <div className="container pt-5 pb-5">
                 <div className="row">
                    <div className="col-lg-12">

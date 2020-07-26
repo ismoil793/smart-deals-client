@@ -1,8 +1,15 @@
 import React from 'react';
+import {Helmet} from "react-helmet";
 
 const NotFound = () => {
    return (
        <section className="not-found">
+
+          <Helmet>
+             <title>Страница не найдена!</title>
+             <meta name="description" content="По вашему запросу ничего не найдено!" />
+          </Helmet>
+
           <div className="container">
              <div className="row">
                 <div className="col-lg-12">
