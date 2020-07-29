@@ -45,7 +45,7 @@ header .our-quote {
 }
 
 header ul.navbar-nav .nav-item:hover .nav-link {
-    color: #45C0AE !important;
+    /*color: #45C0AE !important;*/
 }
 
 header ul.navbar-nav .nav-item.active .nav-link {
@@ -274,7 +274,6 @@ section.login-user form.login-box .form-group .form-control.box-input {
 
 .products-container .product-in-category .product-info div.img-prod-detail p.trade_mark {
     font-weight: 500;
-    height: 55px;
 }
 
 .products-container .product-in-category .product-info div.img-prod-detail span {
@@ -697,20 +696,22 @@ section.company-contacts .hero-wrap .overlay {
 }
 
 .user_container .avatar {
-    text-align: center;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .user_container .avatar img {
-    width: 200px;
+    width: 150px;
+    border-radius: 50%;
 }
 
 .user_container .info {
     box-sizing: border-box;
-    padding: 20px;
+    padding: 20px 10px 20px 0;
 }
 
 .user_container .info div {
-    font-size: 23px;
+    font-size: 18px;
     font-weight: 300;
     margin-bottom: 10px;
     color: #a4a4a4;
@@ -719,6 +720,12 @@ section.company-contacts .hero-wrap .overlay {
 .user_container .info div span {
     font-weight: 500;
     color: #02bcd4;
+}
+
+.profile-orders {
+    height: 500px;
+    overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 /*=============================
@@ -822,14 +829,29 @@ section.partners {
     width: 500px;
     padding: 5% 0;
 }
+
+.product-modal a {
+    width: 100%;
+}
+
 .product-modal img {
     display: block;
     width: 250px;
     height: auto;
     margin: 0 auto;
 }
+
 .product-modal h4 {
     margin-top: 20px;
+}
+
+.product-modal p.minimum-buy {
+    font-weight: bold;
+    color: #323841;
+}
+
+.product-modal p.minimum-buy span {
+    color: #3DA2BA;
 }
 
 .product-modal .cart-buttons {
@@ -838,10 +860,11 @@ section.partners {
     justify-content: space-between;
 }
 
-.product-modal .cart-buttons div button{
+.product-modal .cart-buttons div button {
     outline: none;
     box-shadow: none;
-    padding: 0 5px;
+    padding: 0;
+    margin: 0 10px;
 }
 
 .product-modal .cart-buttons div button svg {
@@ -849,23 +872,37 @@ section.partners {
 }
 
 
-
 /*=============================
        React Date Picker
 ===============================*/
+.cart .react-datepicker-wrapper {
+    height: 350px;
+}
+
 .cart .react-datepicker__navigation {
-    border: 0.65rem solid transparent;
+    border-width: .65rem;
+    border-style: solid;
     height: 20px;
     width: 20px;
+    outline: none;
+}
+
+.cart .react-datepicker-wrapper .react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+    background-color: transparent;
+    outline: none;
+    color: #000000;
 }
 
 .cart .react-datepicker__navigation--previous {
-    border-right-color: #b3b3b3;
+    border-color: transparent #b3b3b3 transparent transparent;
 }
 
 .cart .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
     right: 90px;
-    border-left-color: #b3b3b3;
+    border-color: transparent transparent transparent #b3b3b3;
 }
 
 .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box
@@ -1008,7 +1045,6 @@ footer .switch-case span {
 
 .ftco-footer .ftco-footer-widget ul li a:hover {
     color: #F45900;
-    font-weight: bold;
 }
 
 @media (max-width: 767px) {
@@ -1016,9 +1052,11 @@ footer .switch-case span {
         bottom: 163px;
         opacity: 1;
     }
+
     .products-container .product-in-category .product-info {
         height: 400px;
     }
+
     section.login-user form.login-box {
         width: 100%;
     }
@@ -1028,7 +1066,7 @@ footer .switch-case span {
     }
 
     section.login-user form.login-box .buttons button,
-    section.login-user form.login-box .buttons a{
+    section.login-user form.login-box .buttons a {
         display: block;
         margin-bottom: 10px;
         width: 100%;
@@ -1043,11 +1081,13 @@ footer .switch-case span {
         width: 60%;
         right: 75px;
     }
+
     .products-container .product-in-category .product-info {
         width: 60%;
         margin: 0 auto;
         height: 400px;
     }
+
     .products-container .product-in-category .product-info img {
         width: 250px;
         display: block;
@@ -1065,6 +1105,7 @@ footer .switch-case span {
         left: -21%;
         top: 0;
     }
+
     .products-container .product-in-category .product-info {
         height: 360px;
     }
@@ -1074,10 +1115,19 @@ footer .switch-case span {
     .products-container .product-in-category .cart-buttons {
         bottom: 171px;
     }
+
+    section.login-user form.login-box {
+        width: 70%;
+    }
 }
+
 @media (min-width: 991.98px) {
     .products-container .product-in-category .cart-buttons {
         bottom: 142px;
+    }
+
+    section.login-user form.login-box {
+        width: 62%;
     }
 }
 

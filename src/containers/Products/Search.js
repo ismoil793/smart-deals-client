@@ -14,7 +14,6 @@ class Search extends Component {
       e.preventDefault();
       if (this.state.search !== '' && this.state.search.length > 0) {
          this.props.products.loading = true;
-         console.log("search: " ,this.props.products.loading)
          this.props.dispatch(getSearchProducts(this.state.search));
       }
    };

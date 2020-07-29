@@ -2,6 +2,7 @@ import React from 'react';
 // import {Link} from "react-router-dom";
 import {FaPlusCircle, FaMinusCircle} from "react-icons/fa"
 import ReactModal from "../ReactModal/ReactModal";
+import PriceRefactor from "../PriceRefactor/PriceRefactor";
 
 const RenderProducts = (props) => {
 
@@ -12,19 +13,6 @@ const RenderProducts = (props) => {
 
       if (list && list.length > 0) {
          return list.map((item, i) => {
-
-            let price = (item.price * 12).toString();
-
-            if (price.length === 5) {
-               price = price.slice(0,2) + ' ' + price.slice(2,5)
-            }
-            else if (price.length === 4) {
-               price = price.slice(0,1) + ' ' + price.slice(1,4)
-            }
-            else if (price.length === 6) {
-               price = price.slice(0,3) + ' ' + price.slice(3,6)
-            }
-
 
             return (
                 <div key={i} className="col-sm-6 col-lg-4 col-xl-3">
@@ -43,15 +31,15 @@ const RenderProducts = (props) => {
                             <p className="trade_mark">
                                {item.trade_mark}&nbsp;
                                {
-                                  item.name.length > 32
-                                      ? `${item.name.slice(0, 32)}...`
-                                      : item.name
+                                  item.name.length > 25
+                                      ? `${item.name.slice(0, 25)}... ${item.measurement}`
+                                      : `${item.name} ${item.measurement}`
                                }
                             </p>
                             <p>
-                               1л x 12
+                               {item.minimum_quantity}шт x {item.price}
                             </p>
-                            <span>цена: {price} сум</span>
+                            <span>цена: <PriceRefactor price={item.minimum_quantity_price} /> сум</span>
                          </div>
                       </div>
                       <div className="cart-buttons">
