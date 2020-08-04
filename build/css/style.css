@@ -579,6 +579,11 @@ pre code {
     .products-container .container.container-changed {
         max-width: 1320px;
     }
+
+    section.about-company>.container.container-changed,
+    section.company-contacts>.container.container-changed{
+        max-width: 1320px;
+    }
 }
 
 .container-fluid {
@@ -2213,8 +2218,7 @@ pre code {
     background-color: #fff;
     border-color: #80bdff;
     outline: 0;
-    -webkit-box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
-    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    box-shadow: none;
 }
 
 .form-control::-webkit-input-placeholder {
@@ -11271,6 +11275,7 @@ h1, h2, h3, h4, h5,
 }
 
 .ftco-navbar-light {
+    position: fixed;
     background: #313841 !important;
     z-index: 3;
     padding: 5px 0;
@@ -11278,7 +11283,7 @@ h1, h2, h3, h4, h5,
 
 @media (max-width: 991.98px) {
     .ftco-navbar-light {
-        position: relative;
+        position: fixed;
         top: 0;
         padding: 10px 15px;
     }
@@ -11315,14 +11320,14 @@ h1, h2, h3, h4, h5,
     /*padding-bottom: 1.5rem;*/
     padding: 0 20px;
     font-weight: bold;
-    color: #ffffff;
+    color: #E3E3EA;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 1 !important;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    /*color: #000000;*/
+    color: #ffffff;
 }
 
 @media (max-width: 991.98px) {
@@ -11428,6 +11433,7 @@ h1, h2, h3, h4, h5,
 .ftco-navbar-light .navbar-toggler svg {
     font-size: 25px;
     padding-bottom: 3px;
+    fill: #ffffff;
 }
 
 .ftco-navbar-light .navbar-toggler:focus {
@@ -11564,14 +11570,11 @@ h1, h2, h3, h4, h5,
     color: #fff;
 }
 
-.hero-wrap .slider-text .bread {
-    font-weight: 800;
-    color: #fff;
-    font-size: 30px;
-    font-family: "Poppins", Arial, sans-serif;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-}
+/*.hero-wrap .slider-text .bread {*/
+/*    font-size: 5vw;*/
+/*    color: #ffffff;*/
+/*    font-family: 'Baloo Da 2', cursive;*/
+/*}*/
 
 .hero-wrap .slider-text .btn-primary {
     border: 1px solid rgba(255, 255, 255, 0.4);
@@ -11779,7 +11782,7 @@ h1, h2, h3, h4, h5,
     line-height: 1.3;
     font-weight: bold;
     text-transform: uppercase;
-    font-family: "Baloo Da 2", sans-serif;
+    font-family: 'Baloo Da 2', sans-serif;
 }
 
 @media (max-width: 767.98px) {
@@ -11942,10 +11945,10 @@ h1, h2, h3, h4, h5,
 
 .btn {
     cursor: pointer;
-    -webkit-border-radius: 30px;
-    -moz-border-radius: 30px;
-    -ms-border-radius: 30px;
-    border-radius: 30px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    border-radius: 20px;
     -webkit-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
     -moz-box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
     box-shadow: 0px 24px 36px -11px rgba(0, 0, 0, 0.09);
@@ -11956,7 +11959,7 @@ h1, h2, h3, h4, h5,
 }
 
 .btn.btn-primary {
-    background: #ff5722;
+    background: #323841;
     border: none;
     color: #fff;
 }
@@ -12838,14 +12841,14 @@ h1, h2, h3, h4, h5,
 }
 
 .subscribe-form .form-group .submit {
-    border-left: 1px solid #E95A00;
+    border-left: 1px solid #45C0AE;
     color: #fff !important;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     -ms-border-radius: 0;
     border-radius: 0;
-    font-size: 12px;
-    background: #E95A00 !important;
+    font-size: 14px;
+    background: #45C0AE !important;
 }
 
 .subscribe-form .form-group .submit:hover {
@@ -12893,13 +12896,13 @@ form.subscribe-form small {
 }
 
 .form-control {
-    height: 52px !important;
-    background: #fff !important;
-    color: #000000 !important;
+    height: 52px;
+    background: #fff;
+    color: #000000;
     font-size: 18px;
     border-radius: 0px;
-    -webkit-box-shadow: none !important;
-    box-shadow: none !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }
 
 .form-control:focus, .form-control:active {
@@ -13716,6 +13719,23 @@ textarea.form-control {
     border: 1px solid transparent;
 }
 
+.contact-section {
+    position: relative;
+}
+
+.contact-section .form-wrapper {
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px 0 rgba(50,56,65, 0.05);
+    position: relative;
+    bottom: 10em;
+    padding: 5% 3%;
+}
+
+.contact-section .form-wrapper img {
+    width: 98%;
+}
+
 .contact-section .contact-info p a {
     color: #1a1a1a;
 }
@@ -13726,6 +13746,27 @@ textarea.form-control {
 
 .contact-section .contact-form {
     width: 100%;
+}
+
+.contact-section .contact-form .form-group input{
+    border-width: 0;
+    background-color: #F7F5F6;
+    border-radius: 10px;
+    color: #D6D4D5;
+}
+
+.contact-section .contact-form .form-group textarea {
+    resize: none;
+    border-width: 0;
+    background-color: #F7F5F6;
+    border-radius: 10px;
+
+}
+
+.contact-section .contact-form .form-group input[type="submit"] {
+    width: 100%;
+    background-color: #5E606F;
+    color: #EFF2F8;
 }
 
 .block-9 .form-control {

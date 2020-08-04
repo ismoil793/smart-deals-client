@@ -8,8 +8,11 @@ import $ from "jquery"
 
 class Header extends Component {
 
-   componentDidMount() {
+   state = {
+      progress: 0
+   };
 
+   componentDidMount() {
       $('.mouse-icon').click(function () {
          $('html,body').stop().animate(
              {scrollTop: 0}, 'slow', 'swing'
@@ -20,13 +23,11 @@ class Header extends Component {
       $('.navbar-toggler').click(function () {
          $("#ftco-nav").toggle()
       })
-
    }
 
    render() {
       return (
           <header>
-
              {/*<HeaderSmall/>*/}
              <HeaderMainItems user={this.props.user}/>
 

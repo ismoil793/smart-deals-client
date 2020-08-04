@@ -23,9 +23,13 @@ section {
 
 header {
     position: relative;
+    height: 99px;
+    z-index: 10;
 }
 
 header nav {
+    position: fixed;
+    width: 100%;
     background-color: #EDF3E0 !important;
     box-shadow: 0 7px 15px -5px rgba(0, 0, 0, 0.07) !important;
 }
@@ -149,6 +153,14 @@ section#home-section {
     height: 12px;
 }
 
+.home-slider .slider-item .watch-products {
+    padding: 10px 25px;
+}
+
+.home-slider .slider-item:last-child .watch-products-sp {
+    background: #45C0AE;
+}
+
 /*=============================
            Add Post
 ===============================*/
@@ -210,22 +222,22 @@ section.login-user form.login-box .form-group .form-control.box-input {
     justify-content: space-between;
 }
 
-.login-box .buttons button.form-control {
-
-}
-
 .login-box button.form-control, .login-box a.form-control {
-    background: #FF690F !important;
+    background: #45C0AE !important;
     color: #ffffff !important;
-    border: 2px solid #E95A00;
+    /*border: 2px solid #E95A00;*/
     transition: 0.25s;
     width: 45%;
     border-radius: 20px;
 }
 
+.login-box .buttons button.form-control {
+    width: 45%;
+}
+
 .login-box a.form-control {
-    background: #FF8224 !important;
-    line-height: 35px;
+    background: rgba(50,56,65,0.6) !important;
+    line-height: 38px;
 }
 
 .login-box button.form-control:hover,
@@ -289,6 +301,10 @@ section.login-user form.login-box .form-group .form-control.box-input {
     border-radius: 5px;
     z-index: 0;
     transition: all 300ms ease;
+}
+
+.products-container .product-in-category .product-info img:hover {
+    transform: scale(1.1);
 }
 
 .products-container .product-in-category .cart-buttons {
@@ -539,6 +555,26 @@ section.about-company {
     padding: 0;
 }
 
+section.about-company .about-infos-wrapper{
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 3px 10px 0 rgba(50,56,65, 0.05);
+    position: relative;
+    bottom: 10em;
+    padding: 2% 2% 3% 2%;
+}
+
+section.about-company h3,section.about-company h4 {
+    color: #313841;
+    font-weight: bold;
+}
+
+section.about-company .phone-address p {
+    font-size: 16px;
+    color: #89898A;
+    font-weight: 500;
+}
+
 section.about-company .hero-wrap {
     position: relative;
 }
@@ -554,10 +590,19 @@ section.about-company .hero-wrap .overlay {
     width: 100%;
 }
 
+section.about-company .hero-wrap.hero-bread{
+    padding: 6em 0 18em 0;
+}
+
+section.about-company .ftco-section {
+    padding: 0 !important;
+}
 
 section.about-company .hero-wrap h1 {
-    font-size: 5vw !important;
-    font-family: "Amatic SC", cursive !important;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Fira Sans', cursive;
+    font-weight: 500;
 }
 
 /*=============================
@@ -671,9 +716,25 @@ section.main-products {
             Contacts
 ===============================*/
 
+section.company-contacts .hero-wrap.hero-bread{
+    padding: 6em 0 15em 0;
+}
+
+section.company-contacts .ftco-section {
+    padding: 0 !important;
+}
+
 section.company-contacts .hero-wrap h1 {
-    font-size: 5vw !important;
-    font-family: "Amatic SC", cursive !important;
+    font-size: 50px;
+    color: #ffffff;
+    font-family: 'Fira Sans', cursive;
+    font-weight: 500;
+}
+
+section.company-contacts h4 {
+    color: #ffffff;
+    font-family: 'Fira Sans', cursive;
+    font-weight: 400;
 }
 
 section.company-contacts .hero-wrap .overlay {
@@ -827,7 +888,7 @@ section.partners {
 
 .product-modal {
     width: 500px;
-    padding: 5% 0;
+    padding: 5%;
 }
 
 .product-modal a {
@@ -1075,6 +1136,10 @@ footer .switch-case span {
 
 
 @media (max-width: 576px) {
+    .product-modal {
+        width: 350px;
+    }
+
     .products-container .product-in-category .cart-buttons {
         bottom: 153px;
         margin: 0 auto;
@@ -1093,10 +1158,33 @@ footer .switch-case span {
         display: block;
         margin: 0 auto;
     }
+    /*contacts*/
+    .contact-section .form-wrapper {
+        bottom: 0;
+    }
+    section.company-contacts .hero-wrap.hero-bread {
+        padding: 5em 0;
+    }
+    .contact-section .form-wrapper img {
+        margin-bottom: 5%;
+    }
+    section.company-contacts .hero-wrap h1 {
+        font-size: 35px;
+    }
+    section.about-company .hero-wrap h1 {
+        font-size: 35px;
+    }
+    section.about-company iframe {
+        width: 100%;
+    }
 }
 
 
 @media (max-width: 450px) {
+    .product-modal {
+        width: 290px;
+    }
+
     .products-container .product-in-category .cart-buttons {
         bottom: 135px;
         margin: 0;

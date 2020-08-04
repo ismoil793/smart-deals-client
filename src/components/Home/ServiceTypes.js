@@ -21,7 +21,7 @@ const ServiceTypes = () => {
                                <div className="text text-center">
                                   <div className="title-wrap">
                                      <h2>Наши продукты</h2>
-                                     <p>В разных сферах деятельности</p>
+                                     <p>в разных сферах деятельности</p>
                                   </div>
                                   {/*<p><button className="btn btn-primary watch-products">Посмотреть категории</button></p>*/}
                                </div>

@@ -36,9 +36,13 @@ export function loginUser({email, password}) {
 
    return async dispatch => {
       const request = await axios.post(`${URL}/api/v1/account/login/`, {email, password})
-          .then(response => response.data);
-      localStorage.setItem("auth", JSON.stringify(request.token));
+          .then(response => response.data).catch(e => {
+             return {message: "Логин или пароль введён неверно!"}
+          });
 
+      if (request && request.token) {
+         localStorage.setItem("auth", JSON.stringify(request.token));
+      }
 
       dispatch({
          type: USER_LOGIN,
@@ -70,7 +74,7 @@ export function auth() {
          type: USER_AUTH,
          payload: {isAuth}
       }
-   } else {
+   }  else {
       const request = axios.get(
           `${URL}/api/v1/account/auth/`,
           {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
@@ -81,4 +85,13 @@ export function auth() {
          payload: request
       }
    }
+
+
+// else if (localStorage.getItem("auth").length > 15) {
+//
+//       return {
+//          type: USER_AUTH,
+//          payload: {isAuth: true}
+//       }
+//    }
 }

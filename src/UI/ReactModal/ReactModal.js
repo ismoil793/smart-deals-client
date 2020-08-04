@@ -28,7 +28,7 @@ const ReactModal = ({isOpen, productItem, setOpen}) => {
                    <span><PriceRefactor price={productItem.minimum_quantity_price} /> сум</span>
                 </p>
                 <div className="cart-buttons">
-                   <span>Количество:&nbsp;&nbsp;0</span>
+                   <span>В корзине:&nbsp;&nbsp;0</span>
                    <div>
                       <button className="btn"><AiOutlineMinusSquare /></button>
                       <button className="btn"><AiOutlinePlusSquare /></button>

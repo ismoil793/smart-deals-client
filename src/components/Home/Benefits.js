@@ -13,7 +13,7 @@ const Benefits = () => {
                 <div className="row no-gutters ftco-services">
 
 
-                   <div className="col-md-3 text-center d-flex align-self-stretch ">
+                   <div className="col-md-3 col-sm-6 text-center d-flex align-self-stretch ">
                       <div className="media block-6 services mb-md-0 mb-4">
 
                          <div
@@ -29,7 +29,7 @@ const Benefits = () => {
 
                    </div>
 
-                   <div className="col-md-3 text-center d-flex align-self-stretch ">
+                   <div className="col-md-3 col-sm-6 text-center d-flex align-self-stretch ">
                       <div className="media block-6 services mb-md-0 mb-4">
                          <div className="icon bg-color-2 d-flex justify-content-center align-items-center mb-2">
                             <GiShoppingCart/>
@@ -41,7 +41,7 @@ const Benefits = () => {
                       </div>
                    </div>
 
-                   <div className="col-md-3 text-center d-flex align-self-stretch ">
+                   <div className="col-md-3 col-sm-6 text-center d-flex align-self-stretch ">
                       <div className="media block-6 services mb-md-0 mb-4">
                          <div className="icon bg-color-3 d-flex justify-content-center align-items-center mb-2">
                             <AiFillSafetyCertificate/>
@@ -53,7 +53,7 @@ const Benefits = () => {
                       </div>
                    </div>
 
-                   <div className="col-md-3 text-center d-flex align-self-stretch ">
+                   <div className="col-md-3 col-sm-6 text-center d-flex align-self-stretch ">
                       <div className="media block-6 services mb-md-0 mb-4">
                          <div className="icon bg-color-4 d-flex justify-content-center align-items-center mb-2">
                             <MdSwapCalls/>

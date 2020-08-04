@@ -11,12 +11,13 @@ const Contacts = () => {
              <meta name="description" content="Контактные данные" />
           </Helmet>
 
-           <div className="hero-wrap hero-bread" style={{backgroundImage: "url('images/bg_2.jpg')"}}>
-              <div className="overlay"></div>
-              <div className="container">
-                 <div className="row no-gutters slider-text align-items-center justify-content-center">
+           <div className="hero-wrap hero-bread" style={{backgroundImage: "url('/images/contact-banner.jpg')"}}>
+              {/*<div className="overlay"></div>*/}
+              <div className="container container-changed">
+                 <div className="row no-gutters slider-text align-items-start justify-content-center">
                     <div className="col-md-12 text-center">
-                       <h1 className="mb-0 bread">Контакты</h1>
+                       <h1 className="mb-0 bread">Свяжитесь с нами</h1>
+                       <h4>Оставьте ваши контакты</h4>
                     </div>
                  </div>
               </div>

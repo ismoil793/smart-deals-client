@@ -1,6 +1,6 @@
 import React from 'react';
 // import {Link} from "react-router-dom";
-import {FaPlusCircle, FaMinusCircle} from "react-icons/fa"
+// import {FaPlusCircle, FaMinusCircle} from "react-icons/fa"
 import ReactModal from "../ReactModal/ReactModal";
 import PriceRefactor from "../PriceRefactor/PriceRefactor";
 
@@ -42,10 +42,10 @@ const RenderProducts = (props) => {
                             <span>цена: <PriceRefactor price={item.minimum_quantity_price} /> сум</span>
                          </div>
                       </div>
-                      <div className="cart-buttons">
-                         <button><FaMinusCircle/></button>
-                         <button><FaPlusCircle/></button>
-                      </div>
+                      {/*<div className="cart-buttons">*/}
+                      {/*   <button><FaMinusCircle/></button>*/}
+                      {/*   <button><FaPlusCircle/></button>*/}
+                      {/*</div>*/}
                    </div>
                 </div>
             )

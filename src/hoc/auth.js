@@ -2,9 +2,12 @@ import React, {Component} from "react";
 import {connect} from "react-redux";
 import {auth} from "../store/actions/user";
 import Loader from "../UI/Preloader/loader";
+import LoadingBar from "react-top-loading-bar";
 
 
 // Auth(Component, reload)
+
+// This is an HOC component, on every route change I check if user is authenticated
 
 // reload true means that if user is not authenticated it will be redirected to login page
 // if reload is false it means user is already logged in and redirected to his dashboard
@@ -14,17 +17,35 @@ export default function (ComposedClass, reload) {
 
    class AuthenticationCheck extends Component {
 
+      _isMounted = false;
+
       state = {
          loading: true,
+         progress: 0
       };
 
       //// checking if user is authenticated
-
       componentDidMount() {
-         this.props.dispatch(auth());
+         window.scrollTo(0, 0);
+         this._isMounted = true;
+
+         if (this._isMounted) {
+            setTimeout(() => {
+               this.setState({
+                  progress: 100
+               })
+            }, 200);
+         }
+
+         if (this.props.user.authLogin && this.props.user.authLogin.id) {
+            this.setState({loading: false});
+         } else {
+            this.props.dispatch(auth());
+         }
       }
 
       UNSAFE_componentWillReceiveProps(nextProps) {
+
          this.setState({loading: false});
 
          if (!nextProps.user.authLogin.isAuth) {
@@ -38,13 +59,27 @@ export default function (ComposedClass, reload) {
          }
       }
 
+      componentWillUnmount() {
+         this._isMounted = false;
+      }
+
 
       render() {
          if (this.state.loading) {
-            return <Loader />
+            return <Loader/>
          }
          return (
-             <ComposedClass {...this.props} user={this.props.user}/>
+             <React.Fragment>
+                <LoadingBar
+                    color='#45C0AE'
+                    height={4}
+                    progress={this.state.progress}
+                    // loaderSpeed={1000}
+                    onLoaderFinished={() => {
+                    }}
+                />
+                <ComposedClass {...this.props} user={this.props.user}/>
+             </React.Fragment>
          )
       }
    }
@@ -56,5 +91,4 @@ export default function (ComposedClass, reload) {
    }
 
    return connect(mapStateToProps)(AuthenticationCheck);
-
 }

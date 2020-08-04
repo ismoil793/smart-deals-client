@@ -3,56 +3,56 @@
   <component name="ChangeListManager">
     <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/banners/smart_deals_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/banners/smart_deals_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/banners/smart_deals_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/banners/smart_deals_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/banners/smart_deals_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/banners/smart_deals_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/businesses/bar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/bar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/businesses/cafe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/cafe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/businesses/hotel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/hotel.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/businesses/man.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/man.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/businesses/restaurant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/businesses/restaurant.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/partners/partner-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/partners/partner-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/partners/partner-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/partners/partner-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/partners/partner-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/partners/partner-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/partners/partner-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/partners/partner-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/images/partners/partner-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/build/images/partners/partner-5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.8a741ad18a0aae038152595e3c57c6d7.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.7ee8042f.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.7ee8042f.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.7ee8042f.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.17244d6a.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.17244d6a.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banners/smart_deals_1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/smart_deals_1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banners/smart_deals_2.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/smart_deals_2.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/banners/smart_deals_3.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/banners/smart_deals_3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/businesses/bar.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/businesses/bar.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/businesses/cafe.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/businesses/cafe.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/businesses/hotel.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/businesses/hotel.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/businesses/man.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/businesses/man.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/businesses/restaurant.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/businesses/restaurant.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/partner-1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/partners/partner-1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/partner-2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/partners/partner-2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/partner-3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/partners/partner-3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/partner-4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/partners/partner-4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/partners/partner-5.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/partners/partner-5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/backup.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/Flaticon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/Flaticon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/Flaticon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/Flaticon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/Flaticon.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/_flaticon.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/flaticon.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/font/flaticon.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/flaticon/license/license.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/icomoon/icomoon.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/ionicons/css/_ionicons.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/ionicons/css/ionicons.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/ionicons/fonts/ionicons.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/ionicons/fonts/ionicons.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/ionicons/fonts/ionicons.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/ionicons/fonts/ionicons.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/ionicons/fonts/ionicons.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/open-iconic/open-iconic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/open-iconic/open-iconic.otf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/open-iconic/open-iconic.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/open-iconic/open-iconic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/fonts/open-iconic/open-iconic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg_1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/bg_2.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/ReactDatePicker/ReactDatePicker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ReactDatePicker/ReactDatePicker.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/ReactModal/ReactModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ReactModal/ReactModal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Cart/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Cart/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Products/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/Search.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/post.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/contactForm/contactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/contactForm/contactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/About/about.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/About/about.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contacts/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contacts/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/header.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/header.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/Benefits.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/Benefits.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/HomeSlider/HomeSlider.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/HomeSlider/HomeSlider.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Home/ServiceTypes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Home/ServiceTypes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Categories/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Categories/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/layout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/layout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/user.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/user.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,6 +64,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -82,6 +83,7 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../FOR TESTING/herbal-teas-products" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -168,7 +170,16 @@
       <workItem from="1595779037281" duration="2000" />
       <workItem from="1595865476413" duration="1414000" />
       <workItem from="1595927934819" duration="4369000" />
-      <workItem from="1596012624907" duration="3971000" />
+      <workItem from="1596012624907" duration="4152000" />
+      <workItem from="1596099400326" duration="15074000" />
+      <workItem from="1596131320866" duration="758000" />
+      <workItem from="1596185927438" duration="6130000" />
+      <workItem from="1596374271681" duration="1183000" />
+      <workItem from="1596380881960" duration="2271000" />
+      <workItem from="1596388654681" duration="6638000" />
+      <workItem from="1596437059458" duration="1382000" />
+      <workItem from="1596484061391" duration="1149000" />
+      <workItem from="1596516281805" duration="3923000" />
     </task>
     <servers />
   </component>

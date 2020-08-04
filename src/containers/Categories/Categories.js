@@ -1,7 +1,7 @@
 import React from 'react';
 import {getCategories} from "../../store/actions/product";
-import {FaEye, FaShoppingBag, FaSprayCan, FaWineBottle} from "react-icons/fa"
-import {GiWaterDrop, GiOilDrum, GiMilkCarton, GiNoodles, GiCakeSlice, GiCoffeeCup} from "react-icons/gi"
+import { FaShoppingBag, FaSprayCan, FaWineBottle} from "react-icons/fa"
+import {GiWaterDrop, GiMilkCarton, GiNoodles, GiCakeSlice, GiCoffeeCup} from "react-icons/gi"
 import {connect} from "react-redux";
 import {Link, withRouter} from "react-router-dom";
 import Loader from "../../UI/Preloader/loader";

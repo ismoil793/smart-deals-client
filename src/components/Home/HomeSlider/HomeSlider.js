@@ -45,7 +45,11 @@ const HomeSlider = () => {
                                        : 'Решение для вашего бизнеса!'}
                             </h2>
                             <p>
-                               <button className="btn btn-primary watch-products">Посмотреть товары</button>
+                               <button
+                                   className={`btn btn-primary ${i === 0 ? 'watch-products' : 'watch-products-sp'}`}
+                               >
+                                  Посмотреть товары
+                               </button>
                             </p>
                          </div>
 

@@ -57,6 +57,11 @@ const Footer = (props) => {
       },
       {
          type: "nav-item",
+         text: "Контакты",
+         to: "/contacts"
+      },
+      {
+         type: "nav-item",
          text: "Выйти",
          to: "/logout"
       }

@@ -1,8 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Link, withRouter} from "react-router-dom";
 import {FaShoppingCart, FaBars} from "react-icons/fa";
+import {IoMdClose} from "react-icons/io";
 
 const HeaderMainItems = (props) => {
+
+   const [isOpen, setIsOpen] = useState(false);
 
    const publicLinks = [
       {
@@ -42,6 +45,11 @@ const HeaderMainItems = (props) => {
          type: "nav-item",
          text: "мой Профиль",
          to: "/profile"
+      },
+      {
+         type: "nav-item",
+         text: "Контакты",
+         to: "/contacts"
       },
       {
          type: "nav-item",
@@ -91,9 +99,17 @@ const HeaderMainItems = (props) => {
           <div className="container">
              <Link to="/" className="navbar-brand"><img className="sd-logo" src="/images/SD.png"
                                                         alt="Smart Deals Logo"/></Link>
-             <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav"
-                     aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <FaBars/>
+             <button
+                 className="navbar-toggler"
+                 onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
+                 type="button"
+                 data-toggle="collapse"
+                 data-target="#ftco-nav"
+                 aria-controls="ftco-nav"
+                 aria-expanded="false"
+                 aria-label="Toggle navigation"
+             >
+                {isOpen ? <IoMdClose /> : <FaBars/>}
                 <span>&nbsp;Меню</span>
              </button>
 

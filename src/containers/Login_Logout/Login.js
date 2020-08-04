@@ -81,8 +81,8 @@ class Login extends Component {
                          </div>
 
                          <div className="buttons">
-                            <Link className="btn btn-primary form-control" to="/register">Зарегистрироваться</Link>
-                            <button className="btn btn-primary form-control" type="submit">Войти в систему</button>
+                            <Link className="btn btn-primary form-control" to="/register">Регистрация</Link>
+                            <button className="btn btn-primary form-control" type="submit">Войти</button>
                          </div>
 
 

@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import DatePicker, {registerLocale} from "react-datepicker";
 import ru from 'date-fns/locale/ru';
 import {addDays} from "date-fns"
