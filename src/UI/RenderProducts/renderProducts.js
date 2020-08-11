@@ -2,7 +2,7 @@ import React from 'react';
 import {connect} from "react-redux"
 import ReactModal from "../ReactModal/ReactModal";
 import PriceRefactor from "../Refactors/PriceRefactor";
-import {addToCart, getCart} from "../../store/actions/cart";
+import {addToCart} from "../../store/actions/cart";
 import ProductNameRefactor from "../Refactors/ProductNameRefactor";
 import "react-notifications/lib/notifications.css";
 import {NotificationContainer, NotificationManager} from 'react-notifications';
@@ -51,7 +51,7 @@ const RenderProducts = (props) => {
                          <div className="img-prod-detail">
                             <p className="trade_mark">
                                {item.trade_mark}&nbsp;
-                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={20}/>
+                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={19}/>
                             </p>
                             {
                                // if user is auth then he can see price
@@ -76,7 +76,6 @@ const RenderProducts = (props) => {
                                 if (props.user.authLogin && props.user.authLogin.isAuth) {
                                    if (!props.cart.adding) {
                                       props.dispatch(addToCart(item.id));
-                                      // props.dispatch(getCart());
                                    }
                                 } else {
                                    props.history.push('/login')

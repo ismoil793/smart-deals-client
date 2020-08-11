@@ -19,24 +19,23 @@ export default function (state = initialState, action) {
       case(GET_CART):
          return {...state, cart: action.payload};
 
-      case(CLEAR_CART):
-         return {...state, cart: action.payload};
+      case(ADD_TO_CART_START):
+         return {...state, adding: true};
+
+      case(ADD_TO_CART_SUCCESS):
+         return {...state, adding: false, cart: action.payload.request2};
 
       case(DELETE_FROM_CART_START):
          return {...state, deleting: true};
 
       case(DELETE_FROM_CART_SUCCESS):
-         return {...state, deleting: false};
-
-      case(ADD_TO_CART_START):
-         return {...state, adding: true};
-
-      case(ADD_TO_CART_SUCCESS):
-         return {...state, adding: false};
+         return {...state, deleting: false, cart: action.payload.request2};
 
       case(REMOVE_FROM_CART):
          return {...state, products: action.payload};
 
+      case(CLEAR_CART):
+         return {...state, cart: action.payload};
 
       default:
          return state;

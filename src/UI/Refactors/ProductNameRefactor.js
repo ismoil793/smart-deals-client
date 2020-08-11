@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ProductNameRefactor = ({name = "",trade_mark = "", chars = 20}) => {
+const ProductNameRefactor = ({name = "",trade_mark = "", chars = 19}) => {
 
    // display less info or more depending on screen sizes
    const deviceWidth = () => {

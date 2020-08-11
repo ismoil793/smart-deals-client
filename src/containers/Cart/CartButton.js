@@ -23,11 +23,10 @@ class CartButton extends Component {
       this.props.dispatch(clearCart())
    }
 
-   componentDidUpdate(prevProps, prevState, snapshot) {
-      if (this.props.user.authLogin && this.props.user.authLogin.isAuth) {
-         this.props.dispatch(getCart());
-      }
-   }
+   // shouldComponentUpdate(nextProps, nextState, nextContext) {
+   //    console.log(this.props)
+   //    console.log(nextProps)
+   // }
 
    countAllInCart = (products) => {
       let count = 0;
@@ -59,6 +58,8 @@ class CartButton extends Component {
    };
 
    render() {
+
+      console.log(this.props.cart)
 
       if (this.props.cart && this.props.cart.cart) {
 

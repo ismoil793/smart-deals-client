@@ -1,7 +1,11 @@
 import axios from "axios";
 import {
    ADD_TO_CART_START,
-   ADD_TO_CART_SUCCESS, CLEAR_CART, DELETE_FROM_CART_START, DELETE_FROM_CART_SUCCESS, GET_CART,
+   ADD_TO_CART_SUCCESS,
+   CLEAR_CART,
+   DELETE_FROM_CART_START,
+   DELETE_FROM_CART_SUCCESS,
+   GET_CART,
    REMOVE_FROM_CART,
    URL
 } from "../types";
@@ -35,10 +39,18 @@ export function addToCartStart() {
    }
 }
 
-export function addToCartSuccess(request) {
-   return {
-      type: ADD_TO_CART_SUCCESS,
-      payload: request
+export function addToCartSuccess(request1) {
+
+   return async dispatch => {
+      const request2 = await axios.get(
+          `${URL}/api/v1/cart/get/`,
+          {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
+      ).then(response => response.data);
+
+      dispatch({
+         type: ADD_TO_CART_SUCCESS,
+         payload: {request1, request2}
+      })
    }
 }
 
@@ -101,9 +113,17 @@ export function deleteFromCartStart() {
    }
 }
 
-export function deleteFromCartSuccess(request) {
-   return {
-      type: DELETE_FROM_CART_SUCCESS,
-      payload: request
-   }
+export function deleteFromCartSuccess(request1) {
+
+   return async dispatch => {
+      const request2 = await axios.get(
+          `${URL}/api/v1/cart/get/`,
+          {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
+      ).then(response => response.data);
+
+      dispatch({
+         type: DELETE_FROM_CART_SUCCESS,
+         payload: {request1, request2}
+      })
+   };
 }

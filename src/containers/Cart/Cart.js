@@ -48,11 +48,11 @@ class Cart extends Component {
                  <button
                      onClickCapture={this.createNotification('Продукт удалён из корзины')}
                      onClick={() => {
+                        console.log(!this.props.cart.deleting)
                         // delete product from cart btn
                         if (this.props.user.authLogin && this.props.user.authLogin.isAuth) {
                            if (!this.props.cart.deleting) {
-                              this.props.dispatch(deleteFromCart(item.id));
-                              this.props.dispatch(getCart())
+                              this.props.dispatch(deleteFromCart(item.id))
                            }
                         } else {
                            this.props.history.push('/login')

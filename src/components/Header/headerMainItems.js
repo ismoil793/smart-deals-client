@@ -94,52 +94,60 @@ const HeaderMainItems = (props) => {
    };
 
    return (
-       <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
-            id="ftco-navbar">
-          <div className="container">
-             <Link to="/" className="navbar-brand"><img className="sd-logo" src="/images/SD.png"
-                                                        alt="Smart Deals Logo"/></Link>
-             <button
-                 className="navbar-toggler"
-                 onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
-                 type="button"
-                 data-toggle="collapse"
-                 data-target="#ftco-nav"
-                 aria-controls="ftco-nav"
-                 aria-expanded="false"
-                 aria-label="Toggle navigation"
-             >
-                {isOpen ? <IoMdClose /> : <FaBars/>}
-                <span>&nbsp;Меню</span>
-             </button>
+       <React.Fragment>
+          <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
+               id="ftco-navbar">
+             <div className="container">
+                <Link to="/" className="navbar-brand"><img className="sd-logo" src="/images/SD.png"
+                                                           alt="Smart Deals Logo"/></Link>
+                <button
+                    className="navbar-toggler"
+                    onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
+                    type="button"
+                    data-toggle="collapse"
+                    data-target="#ftco-nav"
+                    aria-controls="ftco-nav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                   {isOpen ? <IoMdClose/> : <FaBars/>}
+                   <span>&nbsp;Меню</span>
+                </button>
 
-             <div className="collapse navbar-collapse" id="ftco-nav">
+                <div
+                    className="collapse navbar-collapse"
+                    id="ftco-nav"
+                    style={{display: `${isOpen ? 'block' : 'none'}` }}
+                >
+                   {
+                      props.user &&
+                      props.user.authLogin &&
+                      props.user.authLogin.isAuth ?
+                          <ul className="navbar-nav ml-auto">
 
+                             {renderLinks(privateLinks)}
 
-                {
-                   props.user &&
-                   props.user.authLogin &&
-                   props.user.authLogin.isAuth ?
+                          </ul>
+                          :
+                          <ul className="navbar-nav ml-auto">
 
-                       <ul className="navbar-nav ml-auto">
+                             {renderLinks(publicLinks)}
 
-                          {renderLinks(privateLinks)}
-
-                       </ul>
-
-
-                       :
-                       <ul className="navbar-nav ml-auto">
-
-                          {renderLinks(publicLinks)}
-
-                       </ul>
-                }
-
-
+                          </ul>
+                   }
+                </div>
              </div>
+          </nav>
+
+          <div
+              id="ftco-overlay"
+              style={{display: `${isOpen ? 'block' : 'none'}` }}
+              onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
+          >
+
           </div>
-       </nav>
+
+       </React.Fragment>
    );
 };
 

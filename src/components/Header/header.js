@@ -18,19 +18,14 @@ class Header extends Component {
              {scrollTop: 0}, 'slow', 'swing'
          );
       });
-
-
-      $('.navbar-toggler').click(function () {
-         $("#ftco-nav").toggle()
-      })
    }
+
 
    render() {
       return (
           <header>
              {/*<HeaderSmall/>*/}
              <HeaderMainItems user={this.props.user}/>
-
           </header>
       );
    }
