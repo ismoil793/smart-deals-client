@@ -1,13 +1,29 @@
 import React from 'react';
-// import {Link} from "react-router-dom";
-// import {FaPlusCircle, FaMinusCircle} from "react-icons/fa"
+import {connect} from "react-redux"
 import ReactModal from "../ReactModal/ReactModal";
-import PriceRefactor from "../PriceRefactor/PriceRefactor";
+import PriceRefactor from "../Refactors/PriceRefactor";
+import {addToCart, getCart} from "../../store/actions/cart";
+import ProductNameRefactor from "../Refactors/ProductNameRefactor";
+import "react-notifications/lib/notifications.css";
+import {NotificationContainer, NotificationManager} from 'react-notifications';
+
+// import {FaPlusCircle, FaMinusCircle, FaCartPlus} from "react-icons/fa"
+// import {FaCartPlus} from "react-icons/fa"
 
 const RenderProducts = (props) => {
 
    const [open, setOpen] = React.useState(false);
    const [productItem, setProductItem] = React.useState({});
+
+   const createNotification = (msg) => {
+      if (props.user.authLogin && props.user.authLogin.isAuth) {
+         if (!props.cart.adding) {
+            return () => {
+               NotificationManager.success(msg, '', 1500);
+            };
+         }
+      }
+   };
 
    const renderProducts = (list) => {
 
@@ -22,30 +38,55 @@ const RenderProducts = (props) => {
                          <img
                              className="img-fluid"
                              src={item.image} alt={`${item.name}`}
+                             // if user is not authenticated he can't see price and product details
                              onClick={() => {
-                                setOpen(true);
-                                setProductItem(item)
+                                if (props.user.authLogin && props.user.authLogin.isAuth) {
+                                   setOpen(true);
+                                   setProductItem(item)
+                                } else {
+                                   props.history.push('/login')
+                                }
                              }}
                          />
                          <div className="img-prod-detail">
                             <p className="trade_mark">
                                {item.trade_mark}&nbsp;
-                               {
-                                  item.name.length > 25
-                                      ? `${item.name.slice(0, 25)}... ${item.measurement}`
-                                      : `${item.name} ${item.measurement}`
-                               }
+                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={20}/>
                             </p>
-                            <p>
-                               {item.minimum_quantity}шт x {item.price}
-                            </p>
-                            <span>цена: <PriceRefactor price={item.minimum_quantity_price} /> сум</span>
+                            {
+                               // if user is auth then he can see price
+                               props.user.authLogin && props.user.authLogin.isAuth ?
+                                   <React.Fragment>
+                                      <p>
+                                         <span>{item.minimum_quantity}шт x {item.measurement}</span>
+                                         {/*<button>Добавить</button>*/}
+                                      </p>
+                                      <span> цена : <PriceRefactor price={item.minimum_quantity_price}/> сум</span>
+                                   </React.Fragment>
+                                   : null
+                            }
                          </div>
                       </div>
-                      {/*<div className="cart-buttons">*/}
-                      {/*   <button><FaMinusCircle/></button>*/}
-                      {/*   <button><FaPlusCircle/></button>*/}
-                      {/*</div>*/}
+                      <div className="cart-buttons">
+                         <button
+                             disabled={props.cart.adding}
+                             onClickCapture={createNotification('Продукт добавлен в корзину')}
+                             onClick={() => {
+                                // add product to cart btn
+                                if (props.user.authLogin && props.user.authLogin.isAuth) {
+                                   if (!props.cart.adding) {
+                                      props.dispatch(addToCart(item.id));
+                                      // props.dispatch(getCart());
+                                   }
+                                } else {
+                                   props.history.push('/login')
+                                }
+                             }}
+                         >В корзину
+                         </button>
+                         {/*<button><FaMinusCircle/></button>*/}
+                         {/*<button><FaPlusCircle/></button>*/}
+                      </div>
                    </div>
                 </div>
             )
@@ -57,10 +98,22 @@ const RenderProducts = (props) => {
        <React.Fragment>
           {renderProducts(props.list)}
           {
-             open ? <ReactModal isOpen={open} setOpen={setOpen} productItem={productItem} /> : null
+             open && props.user.authLogin && props.user.authLogin.isAuth ?
+                 <ReactModal isOpen={open} setOpen={setOpen} productItem={productItem}/>
+                 : null
           }
+          <div>
+             <NotificationContainer enterTimeout={300} leaveTimeout={300} />
+          </div>
        </React.Fragment>
    );
 };
 
-export default RenderProducts;
+function mapStateToProps(state) {
+   return {
+      user: state.user_r,
+      cart: state.cart_r
+   }
+}
+
+export default connect(mapStateToProps)(RenderProducts);

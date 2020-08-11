@@ -1,5 +1,5 @@
 import React from 'react';
-import Benefits from "../Home/Benefits";
+// import Benefits from "../Home/Benefits";
 import YandexMap from "../../UI/contactForm/YandexMap";
 import {Helmet} from "react-helmet";
 
@@ -31,7 +31,7 @@ const About = () => {
                 <div className="col-lg-5 order-2 order-lg-1">
                    <div className="phone-address">
                       <h4>Телофон</h4>
-                      <p>+998 90 168-27-00</p>
+                      <p>+998 97 754-71-17</p>
                       <h4>Адрес</h4>
                       <p>ул. Амира Темура 5А/1 100169</p>
                    </div>
@@ -54,21 +54,28 @@ const About = () => {
                             <div className="pl-5 pr-5 pb-3">
                                <strong>Smart Deals Выгодные Условия </strong>
                                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid consequuntur dicta esse
-                               quidem tenetur vitae, voluptate. Aperiam blanditiis deserunt, iure libero quo sed suscipit
+                               quidem tenetur vitae, voluptate. Aperiam blanditiis deserunt, iure libero quo sed
+                               suscipit
                                tempora.
                             </div>
                          </div>
                       </div>
 
                       <div className="col-12 mb-3">
+                         {/*
+                         If you have controls=0 at the same time as modestbranding=1
+                         the YouTube logo will show even more prominent.
+                         controls=0 and modestbranding=1 don't seem to co-exist
+                         (modestbranding gets over-ridden to 0)
+                         */}
                          <iframe
                              width="80%"
                              height="320"
-                             src="https://www.youtube.com/embed/WNInwmc7tMQ"
+                             src="https://www.youtube.com/embed/V_iBMsPfZhU?autoplay=1&rel=0&controls=1&modestbranding=1"
                              frameBorder="0"
-                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture;;"
                              allowFullScreen
-                             title="about our company"
+                             title="about company Smart Deals"
                              style={{margin: "0 auto", display: 'block'}}
                          >
                          </iframe>
@@ -81,7 +88,6 @@ const About = () => {
                    {/*      <Benefits/>*/}
                    {/*   </div>*/}
                    {/*</div>*/}
-
 
 
                 </div>

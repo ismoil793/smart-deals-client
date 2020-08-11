@@ -44,10 +44,17 @@ export function loginUser({email, password}) {
          localStorage.setItem("auth", JSON.stringify(request.token));
       }
 
-      dispatch({
-         type: USER_LOGIN,
-         payload: {...request, isAuth: true}
-      })
+      if (request.message) {
+         dispatch({
+            type: USER_LOGIN,
+            payload: {...request, isAuth: false}
+         })
+      } else {
+         dispatch({
+            type: USER_LOGIN,
+            payload: {...request, isAuth: true}
+         })
+      }
    };
 }
 
@@ -74,7 +81,7 @@ export function auth() {
          type: USER_AUTH,
          payload: {isAuth}
       }
-   }  else {
+   } else {
       const request = axios.get(
           `${URL}/api/v1/account/auth/`,
           {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}

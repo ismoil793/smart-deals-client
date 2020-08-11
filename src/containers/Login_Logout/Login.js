@@ -33,6 +33,7 @@ class Login extends Component {
    };
 
    UNSAFE_componentWillReceiveProps(nextProps) {
+      console.log(nextProps)
       if (nextProps.user && nextProps.user.login && nextProps.user.login.isAuth) {
          this.props.history.push("/products/napitki")
       }
@@ -88,13 +89,12 @@ class Login extends Component {
 
 
                          {
-                            user.login ?
+                            user.login && user.login.message && user.login.message.length ?
                                 <div className="error alert alert-danger mt-3">
                                    <div>{user.login.message}</div>
                                 </div>
                                 : null
                          }
-
                       </form>
 
                    </div>

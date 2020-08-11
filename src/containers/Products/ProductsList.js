@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import SkeletonUI from "../../UI/Skeleton/SkeletonUI";
 import RenderProducts from "../../UI/RenderProducts/renderProducts";
+import CartButton from "../Cart/CartButton";
 
 class ProductsList extends Component {
 
@@ -43,7 +44,7 @@ class ProductsList extends Component {
    }
 
 
-   // instead if UNSAFE_componentWillReceiveProps(nextProps, nextContext):
+   // instead of UNSAFE_componentWillReceiveProps(nextProps, nextContext):
    static getDerivedStateFromProps(nextProps, prevState) {
 
       if (nextProps.match.params.slug !== prevState.slug) {
@@ -102,7 +103,7 @@ class ProductsList extends Component {
              <div className="col-lg-12">
 
                 <div className="row">
-                   <RenderProducts list={this.props.products.list}/>
+                   <RenderProducts {...this.props} list={this.props.products.list}/>
                 </div>
 
                 <div className="row">
@@ -117,7 +118,6 @@ class ProductsList extends Component {
                           : null
                    }
                 </div>
-
              </div>
          );
       } else {

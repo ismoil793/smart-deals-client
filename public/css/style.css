@@ -2079,7 +2079,7 @@ pre code {
 
 .table .thead-dark th {
     color: #fff;
-    background-color: #212529;
+    background-color: #313841;
     border-color: #32383e;
 }
 
@@ -11212,7 +11212,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 body {
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
     background: #fff;
     font-size: 15px;
     line-height: 1.8;
@@ -11244,7 +11244,7 @@ h1, h2, h3, h4, h5,
     line-height: 1.5;
     font-weight: 400;
     color: #000000;
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: "Montserrat", Arial, sans-serif;
 }
 
 .text-primary {
@@ -12575,7 +12575,7 @@ h1, h2, h3, h4, h5,
 }
 
 .table tbody tr td {
-    text-align: center !important;
+    text-align: center;
     vertical-align: middle;
     padding: 10px 10px;
     border: 1px solid transparent !important;

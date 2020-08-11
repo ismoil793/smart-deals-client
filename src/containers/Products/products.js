@@ -4,6 +4,7 @@ import Search from "./Search";
 import {withRouter} from "react-router-dom";
 import RenderProducts from "./ProductsList";
 import {Helmet} from "react-helmet";
+import CartButton from "../Cart/CartButton";
 
 
 class Products extends React.Component {
@@ -45,6 +46,8 @@ class Products extends React.Component {
                    </div>
                 </div>
              </div>
+
+             <CartButton />
           </section>
       )
    }

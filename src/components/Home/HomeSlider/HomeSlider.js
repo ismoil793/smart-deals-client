@@ -1,5 +1,5 @@
 import React from 'react';
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import {Carousel} from 'react-responsive-carousel';
 import Animation from "../../../hoc/Animation/Animation";
 
@@ -9,9 +9,9 @@ const HomeSlider = () => {
       showStatus: false,
       infiniteLoop: true,
       autoPlay: true,
-      showThumbs: false
+      showThumbs: false,
+      swipeable: false
    };
-
 
    const renderTemplate = () => {
       let template;
@@ -46,7 +46,7 @@ const HomeSlider = () => {
                             </h2>
                             <p>
                                <button
-                                   className={`btn btn-primary ${i === 0 ? 'watch-products' : 'watch-products-sp'}`}
+                                   className={`btn btn-primary watch-products ${i === 0 ? '' : 'watch-products-sp'}`}
                                >
                                   Посмотреть товары
                                </button>

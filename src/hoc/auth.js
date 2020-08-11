@@ -73,6 +73,9 @@ export default function (ComposedClass, reload) {
                 <LoadingBar
                     color='#45C0AE'
                     height={4}
+                    transitionTime={200}
+                    loaderSpeed={400}
+                    waitingTime={800}
                     progress={this.state.progress}
                     // loaderSpeed={1000}
                     onLoaderFinished={() => {

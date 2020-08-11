@@ -121,7 +121,7 @@ const Footer = (props) => {
 
                    </div>
                 </div>
-                <div className="col-md">
+                <div className="col-6 col-md-4">
                    <div className="ftco-footer-widget mb-4 ml-md-5">
                       <h2 className="ftco-heading-2">Меню</h2>
                       <ul className="list-unstyled">
@@ -137,7 +137,7 @@ const Footer = (props) => {
                    </div>
                 </div>
 
-                <div className="col-md">
+                <div className="col-6 col-md-4">
                    <div className="ftco-footer-widget mb-4">
                       <h2 className="ftco-heading-2">У вас есть вопросы?</h2>
                       <div className="block-23 mb-3">
@@ -148,7 +148,7 @@ const Footer = (props) => {
                                </span>
                             </li>
                             <li><a href="tel:+998977777777"><FaPhone className="f-icon"/><span
-                                className="text pl-3">+998 97 7777777</span></a>
+                                className="text pl-3">+998 97 754-71-17</span></a>
                             </li>
                             <li><a href="mailto:hello@gmail.com"><FaEnvelope className="f-icon"/><span
                                 className="text pl-3">hello@gmail.com</span></a></li>

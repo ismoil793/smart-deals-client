@@ -30,7 +30,7 @@ class Categories extends React.Component {
 
       if (posts.categories && posts.categories.length > 0) {
          return posts.categories.map((item, i) => (
-             <div key={i} className="col-md-6 col-lg-3">
+             <div key={i} className="col-6 col-md-6 col-lg-3">
                 <div className="product">
                    <Link to={`/products/${item.slug}`} className="img-prod">
                       <img className="img-fluid" src={item.image}
@@ -64,7 +64,7 @@ class Categories extends React.Component {
          }
 
          return (
-             <li key={i}>
+             <li className="col-6 col-md-12" key={i}>
                 <Link className={`${active}`} to={`/products/${item.slug}`}>
                    {this.icons[i]}&nbsp;
                    <span>
@@ -105,7 +105,7 @@ class Categories extends React.Component {
                    <div className="category-products-sidebar">
                       <h4>Выберите категорию</h4>
                       <nav>
-                         <ul>
+                         <ul className="row">
                             {this.renderCategoriesProducts(this.props.product.categories)}
                          </ul>
                       </nav>
@@ -117,7 +117,7 @@ class Categories extends React.Component {
                       <h4>Выберите категорию</h4>
                       <nav>
                          <ul>
-                            <Skeleton count={8} height={50} width="100%" />
+                            <Skeleton count={4} height={50} width="100%" />
                          </ul>
                       </nav>
                    </div>
