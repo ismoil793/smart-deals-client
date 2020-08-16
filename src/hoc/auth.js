@@ -1,6 +1,6 @@
-import React, {Component} from "react";
-import {connect} from "react-redux";
-import {auth} from "../store/actions/user";
+import React, { Component } from "react";
+import { connect } from "react-redux";
+import { auth } from "../store/actions/user";
 import Loader from "../UI/Preloader/loader";
 import LoadingBar from "react-top-loading-bar";
 
@@ -38,15 +38,16 @@ export default function (ComposedClass, reload) {
          }
 
          if (this.props.user.authLogin && this.props.user.authLogin.id) {
-            this.setState({loading: false});
+            this.setState({ loading: false });
          } else {
             this.props.dispatch(auth());
+            this.setState({ loading: false });
          }
       }
 
-      static getDerivedStateFromProps (nextProps, prevState) {
+      static getDerivedStateFromProps(nextProps, prevState) {
 
-         if(nextProps.user.authLogin && nextProps.user.authLogin.isAuth) {
+         if (nextProps.user.authLogin && nextProps.user.authLogin.isAuth) {
             const isAuth = nextProps.user.authLogin.isAuth;
             if (!isAuth) {
                if (reload) {
@@ -57,7 +58,7 @@ export default function (ComposedClass, reload) {
                   nextProps.history.push("/profile")
                }
             }
-            return ({loading: false})
+            return ({ loading: false })
          }
          return null
       }
@@ -84,23 +85,23 @@ export default function (ComposedClass, reload) {
 
       render() {
          if (this.state.loading) {
-            return <Loader/>
+            return <Loader />
          }
          return (
-             <React.Fragment>
-                <LoadingBar
-                    color='#45C0AE'
-                    height={4}
-                    transitionTime={200}
-                    loaderSpeed={400}
-                    waitingTime={800}
-                    progress={this.state.progress}
-                    // loaderSpeed={1000}
-                    onLoaderFinished={() => {
-                    }}
-                />
-                <ComposedClass {...this.props} user={this.props.user}/>
-             </React.Fragment>
+            <React.Fragment>
+               <LoadingBar
+                  color='#45C0AE'
+                  height={4}
+                  transitionTime={200}
+                  loaderSpeed={400}
+                  waitingTime={800}
+                  progress={this.state.progress}
+                  // loaderSpeed={1000}
+                  onLoaderFinished={() => {
+                  }}
+               />
+               <ComposedClass {...this.props} user={this.props.user} />
+            </React.Fragment>
          )
       }
    }
