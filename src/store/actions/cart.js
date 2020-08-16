@@ -6,7 +6,8 @@ import {
    DELETE_FROM_CART_START,
    DELETE_FROM_CART_SUCCESS,
    GET_CART,
-   REMOVE_FROM_CART,
+   REMOVE_FROM_CART_START,
+   REMOVE_FROM_CART_SUCCESS,
    URL
 } from "../types";
 
@@ -79,15 +80,43 @@ export function clearCart() {
 }
 
 // Removing from cart
-export function removeFromCart(product) {
+export function removeFromCart(product_id) {
+   return async dispatch => {
+      dispatch(removeFromCartStart());
+      try {
+         const request = await axios.post(
+             `${URL}/api/v1/cart/remove/`,
+             {product_id},
+             {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
+         ).then(response => response.data);
 
-   const request = axios.get(`${URL}/api/v1/product/all/`).then(response => response.data);
-
-   return {
-      type: REMOVE_FROM_CART,
-      payload: request
+         dispatch(removeFromCartSuccess(request))
+      } catch (e) {
+         console.log(e)
+      }
    }
 }
+export function removeFromCartStart() {
+   return {
+      type: REMOVE_FROM_CART_START
+   }
+}
+
+export function removeFromCartSuccess(request1) {
+
+   return async dispatch => {
+      const request2 = await axios.get(
+          `${URL}/api/v1/cart/get/`,
+          {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
+      ).then(response => response.data);
+
+      dispatch({
+         type: REMOVE_FROM_CART_SUCCESS,
+         payload: {request1, request2}
+      })
+   };
+}
+
 
 // Delete from cart
 export function deleteFromCart(product_id) {

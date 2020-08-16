@@ -5,7 +5,7 @@ import NotFound from "./components/404/NotFound";
 import Home from "./components/Home/Home";
 import Login from "./containers/Login_Logout/Login";
 import Logout from "./containers/Login_Logout/Logout";
-import Cart from "./containers/Cart/Cart";
+import Cart from "./containers/Cart/CartPage/Cart";
 import About from "./components/About/about";
 import Contacts from "./components/Contacts/contacts";
 import Register from "./containers/Register/register";

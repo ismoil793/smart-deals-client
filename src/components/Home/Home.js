@@ -16,7 +16,6 @@ import $ from "jquery";
 class Home extends React.Component {
 
    componentDidMount() {
-
       $('.watch-products').click(function () {
          $('html,body').stop().animate(
              {scrollTop: $("#watch-products").offset().top}, 'slow', 'swing'

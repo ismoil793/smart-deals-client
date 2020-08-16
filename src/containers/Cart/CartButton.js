@@ -4,7 +4,7 @@ import {AiOutlineCloseCircle} from "react-icons/ai"
 import {Link} from "react-router-dom";
 import {connect} from "react-redux";
 import ProductNameRefactor from "../../UI/Refactors/ProductNameRefactor";
-import {clearCart, getCart} from "../../store/actions/cart";
+import {getCart} from "../../store/actions/cart";
 import PriceRefactor from "../../UI/Refactors/PriceRefactor";
 
 class CartButton extends Component {
@@ -19,9 +19,9 @@ class CartButton extends Component {
       }
    }
 
-   componentWillUnmount() {
-      this.props.dispatch(clearCart())
-   }
+   // componentWillUnmount() {
+   //    this.props.dispatch(clearCart())
+   // }
 
    // shouldComponentUpdate(nextProps, nextState, nextContext) {
    //    console.log(this.props)
@@ -58,8 +58,6 @@ class CartButton extends Component {
    };
 
    render() {
-
-      console.log(this.props.cart)
 
       if (this.props.cart && this.props.cart.cart) {
 

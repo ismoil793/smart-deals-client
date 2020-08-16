@@ -4,7 +4,6 @@ import {auth} from "../store/actions/user";
 import Loader from "../UI/Preloader/loader";
 import LoadingBar from "react-top-loading-bar";
 
-
 // Auth(Component, reload)
 
 // This is an HOC component, on every route change I check if user is authenticated
@@ -23,6 +22,7 @@ export default function (ComposedClass, reload) {
          loading: true,
          progress: 0
       };
+
 
       //// checking if user is authenticated
       componentDidMount() {
@@ -44,20 +44,38 @@ export default function (ComposedClass, reload) {
          }
       }
 
-      UNSAFE_componentWillReceiveProps(nextProps) {
+      static getDerivedStateFromProps (nextProps, prevState) {
 
-         this.setState({loading: false});
-
-         if (!nextProps.user.authLogin.isAuth) {
-            if (reload) {
-               this.props.history.push("/login");
+         if(nextProps.user.authLogin && nextProps.user.authLogin.isAuth) {
+            const isAuth = nextProps.user.authLogin.isAuth;
+            if (!isAuth) {
+               if (reload) {
+                  nextProps.history.push("/login")
+               }
+            } else {
+               if (reload === false) {
+                  nextProps.history.push("/profile")
+               }
             }
-         } else {
-            if (reload === false) {
-               this.props.history.push("/profile")
-            }
+            return ({loading: false})
          }
+         return null
       }
+
+      // UNSAFE_componentWillReceiveProps(nextProps) {
+      //
+      //    this.setState({loading: false});
+      //
+      //    if (!nextProps.user.authLogin.isAuth) {
+      //       if (reload) {
+      //          this.props.history.push("/login");
+      //       }
+      //    } else {
+      //       if (reload === false) {
+      //          this.props.history.push("/profile")
+      //       }
+      //    }
+      // }
 
       componentWillUnmount() {
          this._isMounted = false;

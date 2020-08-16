@@ -5,12 +5,14 @@ import {
    DELETE_FROM_CART_SUCCESS,
    DELETE_FROM_CART_START,
    GET_CART,
-   REMOVE_FROM_CART
+   REMOVE_FROM_CART_START,
+   REMOVE_FROM_CART_SUCCESS
 } from "../types";
 
 const initialState = {
    adding: false,  // if add to cart btn is pressed
    deleting: false,  // if delete from cart btn is pressed
+   removing: false
 };
 
 export default function (state = initialState, action) {
@@ -31,8 +33,11 @@ export default function (state = initialState, action) {
       case(DELETE_FROM_CART_SUCCESS):
          return {...state, deleting: false, cart: action.payload.request2};
 
-      case(REMOVE_FROM_CART):
-         return {...state, products: action.payload};
+      case(REMOVE_FROM_CART_START):
+         return {...state, removing: true};
+
+      case(REMOVE_FROM_CART_SUCCESS):
+         return {...state, removing: false, cart: action.payload.request2};
 
       case(CLEAR_CART):
          return {...state, cart: action.payload};

@@ -1,11 +1,20 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import {Link, withRouter} from "react-router-dom";
+import {connect} from "react-redux";
 import {FaShoppingCart, FaBars} from "react-icons/fa";
 import {IoMdClose} from "react-icons/io";
+import {getCart} from "../../store/actions/cart";
 
 const HeaderMainItems = (props) => {
 
    const [isOpen, setIsOpen] = useState(false);
+
+   useEffect(() => {
+      if(props.user.authLogin && props.user.authLogin.isAuth) {
+         props.dispatch(getCart())
+      }
+   }, [props.user]);
+
 
    const publicLinks = [
       {
@@ -63,6 +72,15 @@ const HeaderMainItems = (props) => {
       }
    ];
 
+   const countTotalQuantity = (products) => {
+      let total = 0;
+
+      products.forEach((p) => {
+         total += p.pack_quantity;
+      });
+      return total;
+   };
+
    const renderLinks = (links) => {
 
       return links.map((item, i) => {
@@ -76,7 +94,14 @@ const HeaderMainItems = (props) => {
          if (item.to === '/cart') {
             return (
                 <li key={i} className={`nav-item cta cta-colored ${active}`}>
-                   <Link to="/cart" className="nav-link"><FaShoppingCart/> [0]</Link>
+                   <Link to="/cart" className="nav-link">
+                      <FaShoppingCart/>&nbsp;
+                      {
+                         props.user.authLogin && props.user.authLogin.isAuth
+                         && props.cart.cart && props.cart.cart.products ?
+                             `[${countTotalQuantity(props.cart.cart.products)}]` : ''
+                      }
+                   </Link>
                 </li>
             )
          } else {
@@ -88,8 +113,6 @@ const HeaderMainItems = (props) => {
                 </li>
             )
          }
-
-
       })
    };
 
@@ -117,7 +140,7 @@ const HeaderMainItems = (props) => {
                 <div
                     className="collapse navbar-collapse"
                     id="ftco-nav"
-                    style={{display: `${isOpen ? 'block' : 'none'}` }}
+                    style={{display: `${isOpen ? 'block' : 'none'}`}}
                 >
                    {
                       props.user &&
@@ -141,7 +164,7 @@ const HeaderMainItems = (props) => {
 
           <div
               id="ftco-overlay"
-              style={{display: `${isOpen ? 'block' : 'none'}` }}
+              style={{display: `${isOpen ? 'block' : 'none'}`}}
               onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
           >
 
@@ -151,4 +174,11 @@ const HeaderMainItems = (props) => {
    );
 };
 
-export default withRouter(HeaderMainItems);
+function mapStateToProps(state) {
+   return {
+      user: state.user_r,
+      cart: state.cart_r
+   }
+}
+
+export default withRouter(connect(mapStateToProps)(HeaderMainItems));

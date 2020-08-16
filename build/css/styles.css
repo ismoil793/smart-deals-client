@@ -80,7 +80,7 @@ header #ftco-overlay {
     right: 0;
     bottom: 0;
     z-index: 2;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
 }
 
 /*Google translate*/
@@ -924,15 +924,36 @@ section.partners {
 
 }
 
-.cart-section .order-accept button {
+.cart-section .order-accept button.btn-primary {
     display: block;
     width: 50%;
     margin: 1em auto 0 0;
 }
 
-.react-datepicker-wrapper div{
+.react-datepicker-wrapper div {
     text-align: center;
 }
+
+.cart-section .cart-table .control-buttons {
+    border: none;
+    font-size: 22px;
+    padding: 0 7px;
+    border-radius: 10px;
+    line-height: 35px;
+    margin-left: 10px;
+    box-shadow: none;
+    height: 35px;
+}
+
+.cart-section .react-datepicker__day--keyboard-selected,
+.react-datepicker__month-text--keyboard-selected,
+.react-datepicker__quarter-text--keyboard-selected,
+.react-datepicker__year-text--keyboard-selected {
+    background-color: transparent;
+    color: #000;
+    outline: none;
+}
+
 
 /*===============================
    Cart Button and products inside
@@ -1199,11 +1220,11 @@ section.partners {
 /*=============================
        React Date Picker
 ===============================*/
-.cart .react-datepicker-wrapper {
+.cart-section .cart .react-datepicker-wrapper {
     height: 350px;
 }
 
-.cart .react-datepicker__navigation {
+.cart-section .cart .react-datepicker__navigation {
     border-width: .65rem;
     border-style: solid;
     height: 20px;
@@ -1211,7 +1232,7 @@ section.partners {
     outline: none;
 }
 
-.cart .react-datepicker-wrapper .react-datepicker__day--keyboard-selected,
+.cart-section .cart .react-datepicker-wrapper .react-datepicker__day--keyboard-selected,
 .react-datepicker__month-text--keyboard-selected,
 .react-datepicker__quarter-text--keyboard-selected,
 .react-datepicker__year-text--keyboard-selected {
@@ -1220,16 +1241,16 @@ section.partners {
     color: #000000;
 }
 
-.cart .react-datepicker__navigation--previous {
+.cart-section .cart .react-datepicker__navigation--previous {
     border-color: transparent #b3b3b3 transparent transparent;
 }
 
-.cart .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
+.cart-section .cart .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
     right: 90px;
     border-color: transparent transparent transparent #b3b3b3;
 }
 
-.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box
+.cart-section .react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box
 ul.react-datepicker__time-list li.react-datepicker__time-list-item--disabled {
     display: none;
 }
@@ -1263,6 +1284,7 @@ ul.react-datepicker__time-list li.react-datepicker__time-list-item--disabled {
         padding: 0;
     }
 }
+
 /*=============================
          Notifications
 ===============================*/

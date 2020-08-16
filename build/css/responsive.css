@@ -26,6 +26,12 @@
 
 @media (max-width: 767px) {
 
+    /* service types */
+    .ftco-category .category-wrap {
+        max-width: 70%;
+        margin: 0 auto;
+    }
+
     /*categories product*/
     .category-products-sidebar h4 {
         margin: 1rem 0;
@@ -88,6 +94,11 @@
         width: 250px;
         display: block;
         margin: 0 auto;
+    }
+
+    /* Category images homepahe */
+    .product .img-prod img {
+        object-fit: contain;
     }
 
     /* About and Contacts components */
