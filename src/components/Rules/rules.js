@@ -1,17 +1,15 @@
 import React from 'react';
-import {Helmet} from "react-helmet";
+import HelmetTitle from "../../UI/Helmet/Title"
 
 const Rules = () => {
    return (
-       <div>
+      <div>
 
-          <Helmet>
-             <title>Оферта Smart Deals</title>
-             <meta name="description" content="Ознакомьтесь с правилами и офертой Smart Deals" />
-          </Helmet>
+         <HelmetTitle title="Оферта Smart Deals" content="Ознакомьтесь с правилами и офертой Smart Deals" />
+
 
           Оферта
-       </div>
+      </div>
    );
 };
 

@@ -6,7 +6,7 @@ body {
 
 a {
     text-decoration: none;
-    transition: all 300ms ease-in-out;
+    transition: all 200ms ease;
 }
 
 section {
@@ -65,7 +65,7 @@ header ul.navbar-nav .nav-item:hover .nav-link {
 }
 
 header ul.navbar-nav .nav-item.active .nav-link {
-    color: #F45900;
+    color: #45C0AE;
 }
 
 .ftco-navbar-light .navbar-brand:hover, .ftco-navbar-light .navbar-brand:focus {

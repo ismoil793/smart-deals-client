@@ -1,9 +1,9 @@
 import React from 'react';
 import Categories from "../Categories/Categories";
 import Search from "./Search";
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import RenderProducts from "./ProductsList";
-import {Helmet} from "react-helmet";
+import HelmetTitle from "../../UI/Helmet/Title";
 import CartButton from "../Cart/CartButton";
 
 
@@ -16,39 +16,36 @@ class Products extends React.Component {
    render() {
 
       return (
-          <section className="products-container">
+         <section className="products-container">
 
-             <Helmet>
-                <title>Продукты и Товары на любой вкус</title>
-                <meta name="description" content="Продукты по категориям" />
-             </Helmet>
+            <HelmetTitle title="Продукты и Товары на любой вкус" content="Продукты по категориям" />
 
-             <div className="container container-changed">
-                <div className="row">
-                   <div className="col-lg-3 col-md-5">
-                      <Categories componentName={"Products"}/>
-                   </div>
+            <div className="container container-changed">
+               <div className="row">
+                  <div className="col-lg-3 col-md-5">
+                     <Categories componentName={"Products"} />
+                  </div>
 
-                   <div className="col-lg-9 col-md-7">
+                  <div className="col-lg-9 col-md-7">
 
-                      <div className="row">
-                         <div className="col-12">
-                            <Search/>
-                         </div>
-                      </div>
+                     <div className="row">
+                        <div className="col-12">
+                           <Search />
+                        </div>
+                     </div>
 
 
-                      <div className="row">
-                         <RenderProducts/>
-                      </div>
+                     <div className="row">
+                        <RenderProducts />
+                     </div>
 
 
-                   </div>
-                </div>
-             </div>
+                  </div>
+               </div>
+            </div>
 
-             <CartButton />
-          </section>
+            <CartButton />
+         </section>
       )
    }
 }

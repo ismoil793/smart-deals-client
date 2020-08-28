@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux"
-import { Helmet } from "react-helmet";
+import HelmetTitle from "../../UI/Helmet/Title"
 
 class UserProfile extends Component {
 
@@ -9,10 +9,8 @@ class UserProfile extends Component {
       return (
          <section className="user-profile">
 
-            <Helmet>
-               <title>Личный кабинет Smart Deals</title>
-               <meta name="description" content="Личный кабинет Smart Deals" />
-            </Helmet>
+            <HelmetTitle title="Личный кабинет Smart Deals" content="Личный кабинет Smart Deals" />
+
             <div className="container">
                <div className="row">
 

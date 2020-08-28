@@ -1,5 +1,4 @@
 import React from 'react';
-import {Helmet} from "react-helmet";
 import HomeSlider from "./HomeSlider/HomeSlider";
 import Categories from "../../containers/Categories/Categories";
 import Partners from "./Partners";
@@ -7,6 +6,7 @@ import ServiceTypes from "./ServiceTypes";
 // import {connect} from "react-redux";
 import Benefits from "./Benefits";
 import NewsLetter from "../../UI/NewsLetter/newsLetter";
+import HelmetTitle from "../../UI/Helmet/Title"
 import $ from "jquery";
 
 
@@ -18,7 +18,7 @@ class Home extends React.Component {
    componentDidMount() {
       $('.watch-products').click(function () {
          $('html,body').stop().animate(
-             {scrollTop: $("#watch-products").offset().top}, 'slow', 'swing'
+            { scrollTop: $("#watch-products").offset().top }, 'slow', 'swing'
          );
       });
    }
@@ -26,37 +26,37 @@ class Home extends React.Component {
    render() {
 
       return (
-          <main className="main">
+         <main className="main">
 
-             <Helmet>
-                <title>Smart Deals - Выгодные покупки</title>
-                <meta name="description" content="Продажа и покупка товаров в оптом Smart Deals UZ" />
-             </Helmet>
+            <HelmetTitle
+               title="Smart Deals - Выгодные покупки"
+               content="Продажа и покупка товаров в оптом Smart Deals UZ"
+            />
 
-             <HomeSlider/>
+            <HomeSlider />
 
-             <Benefits/>
+            <Benefits />
 
-             <ServiceTypes/>
+            <ServiceTypes />
 
-             <div className="container pt-5">
-                <div className="row justify-content-center mb-3 pb-3">
-                   <div className="col-md-12 heading-section text-center">
-                      <span id="watch-products" className="subheading mt-3"> <strong>#Продукция</strong></span>
-                      <h2 className="mb-4">Наши продукты</h2>
-                      <p>100% натуральное растительное происхождение.
+            <div className="container pt-5">
+               <div className="row justify-content-center mb-3 pb-3">
+                  <div className="col-md-12 heading-section text-center">
+                     <span id="watch-products" className="subheading mt-3"> <strong>#Продукция</strong></span>
+                     <h2 className="mb-4">Наши продукты</h2>
+                     <p>100% натуральное растительное происхождение.
                          Гарантированное качество и безопасность.</p>
-                   </div>
-                </div>
-             </div>
+                  </div>
+               </div>
+            </div>
 
-             <Categories componentName={"Home"}/>
+            <Categories componentName={"Home"} />
 
-             <Partners/>
+            <Partners />
 
-             <NewsLetter/>
+            <NewsLetter />
 
-          </main>
+         </main>
       )
    }
 }

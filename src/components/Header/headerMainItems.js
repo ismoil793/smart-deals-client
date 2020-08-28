@@ -10,7 +10,7 @@ const HeaderMainItems = (props) => {
    const [isOpen, setIsOpen] = useState(false);
 
    useEffect(() => {
-      if(props.user.authLogin && props.user.authLogin.isAuth) {
+      if (props.user.authLogin && props.user.authLogin.isAuth) {
          props.dispatch(getCart())
       }
    }, [props.user]);
@@ -87,9 +87,19 @@ const HeaderMainItems = (props) => {
 
          let active = "";
 
-         // if (props.location.pathname === item.to) {
-         //    active = "active";
-         // }
+         if (item.to === props.location.pathname) {
+            active = "active";
+         } else {
+            let regex = false;
+            if (item.to === "/products/napitki") {
+               regex = props.location.pathname.match(new RegExp(`/products`, 'gi'));
+            } else {
+               regex = props.location.pathname.match(new RegExp(`${item.to}`, 'gi'));
+            }
+            if (item.to !== "/" && regex) {
+               active = "active"
+            }
+         }
 
          if (item.to === '/cart') {
             return (

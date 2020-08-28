@@ -6,7 +6,7 @@
 }
 
 @media (max-width: 992px) {
-
+    /*Cart*/
     .cart-button {
         bottom: 5%;
         left: -100px;
@@ -22,10 +22,12 @@
         bottom: calc(5% + 50px);
         left: 3%;
     }
+    .cart-table {
+        overflow-x: scroll;
+    }
 }
 
 @media (max-width: 767px) {
-
     /* service types */
     .ftco-category .category-wrap {
         max-width: 70%;
@@ -40,7 +42,7 @@
         padding: 10px 5px;
         height: 100%;
     }
-    .category-products-sidebar nav ul li a svg{
+    .category-products-sidebar nav ul li a svg {
         padding: 5px;
         display: none;
     }
@@ -71,7 +73,6 @@
         width: 100%;
     }
 }
-
 
 @media (max-width: 576px) {
     /* render-products component */
@@ -126,7 +127,6 @@
         width: 100%;
     }
 }
-
 
 @media (max-width: 450px) {
     /* render-products component */

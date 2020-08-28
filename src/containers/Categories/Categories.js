@@ -1,9 +1,9 @@
 import React from 'react';
-import {getCategories} from "../../store/actions/product";
-import { FaShoppingBag, FaSprayCan, FaWineBottle} from "react-icons/fa"
-import {GiWaterDrop, GiMilkCarton, GiNoodles, GiCakeSlice, GiCoffeeCup} from "react-icons/gi"
-import {connect} from "react-redux";
-import {Link, withRouter} from "react-router-dom";
+import { getCategories } from "../../store/actions/product";
+import { FaShoppingBag, FaSprayCan, FaWineBottle } from "react-icons/fa"
+import { GiWaterDrop, GiMilkCarton, GiNoodles, GiCakeSlice, GiCoffeeCup } from "react-icons/gi"
+import { connect } from "react-redux";
+import { Link, withRouter } from "react-router-dom";
 import Loader from "../../UI/Preloader/loader";
 import LoaderDots from "../../UI/Preloader/LoaderDots";
 import Skeleton from "react-loading-skeleton";
@@ -15,10 +15,10 @@ class Categories extends React.Component {
       <FaWineBottle />,
       <FaShoppingBag />,
       <FaSprayCan />,
-      <GiMilkCarton style={{fontSize: '18px'}} />,
-      <GiNoodles style={{fontSize: '18px'}} />,
-      <GiCakeSlice style={{fontSize: '18px'}} />,
-      <GiCoffeeCup style={{fontSize: '18px'}} />,
+      <GiMilkCarton style={{ fontSize: '18px' }} />,
+      <GiNoodles style={{ fontSize: '18px' }} />,
+      <GiCakeSlice style={{ fontSize: '18px' }} />,
+      <GiCoffeeCup style={{ fontSize: '18px' }} />,
       <GiWaterDrop />
    ];
 
@@ -30,25 +30,25 @@ class Categories extends React.Component {
 
       if (posts.categories && posts.categories.length > 0) {
          return posts.categories.map((item, i) => (
-             <div key={i} className="col-6 col-md-6 col-lg-3">
-                <div className="product">
-                   <Link to={`/products/${item.slug}`} className="img-prod">
-                      <img className="img-fluid" src={item.image}
-                           alt="Category name"/>
-                   </Link>
-                   {/*<div className="text py-3 px-3 text-center">*/}
-                   {/*   <h3><Link to={`/products/${item.slug}`}>{item.name}</Link></h3>*/}
-                   {/*   <div className="bottom-area d-flex px-3">*/}
-                   {/*      <div className="m-auto d-flex">*/}
-                   {/*         <Link to={`/products/${item.slug}`}*/}
-                   {/*               className="add-to-cart d-flex justify-content-center align-items-center text-center">*/}
-                   {/*            <span>Подробнее <FaEye/></span>*/}
-                   {/*         </Link>*/}
-                   {/*      </div>*/}
-                   {/*   </div>*/}
-                   {/*</div>*/}
-                </div>
-             </div>
+            <div key={i} className="col-6 col-md-6 col-lg-3">
+               <div className="product">
+                  <Link to={`/products/${item.slug}`} className="img-prod">
+                     <img className="img-fluid" src={item.image}
+                        alt="Category name" />
+                  </Link>
+                  {/*<div className="text py-3 px-3 text-center">*/}
+                  {/*   <h3><Link to={`/products/${item.slug}`}>{item.name}</Link></h3>*/}
+                  {/*   <div className="bottom-area d-flex px-3">*/}
+                  {/*      <div className="m-auto d-flex">*/}
+                  {/*         <Link to={`/products/${item.slug}`}*/}
+                  {/*               className="add-to-cart d-flex justify-content-center align-items-center text-center">*/}
+                  {/*            <span>Подробнее <FaEye/></span>*/}
+                  {/*         </Link>*/}
+                  {/*      </div>*/}
+                  {/*   </div>*/}
+                  {/*</div>*/}
+               </div>
+            </div>
          ))
       }
    };
@@ -64,14 +64,14 @@ class Categories extends React.Component {
          }
 
          return (
-             <li className="col-6 col-md-12" key={i}>
-                <Link className={`${active}`} to={`/products/${item.slug}`}>
-                   {this.icons[i]}&nbsp;
+            <li className="col-6 col-md-12" key={i}>
+               <Link className={`${active}`} to={`/products/${item.slug}`}>
+                  {this.icons[i]}&nbsp;
                    <span>
-                      {item.name}
-                   </span>
-                </Link>
-             </li>
+                     {item.name}
+                  </span>
+               </Link>
+            </li>
          )
       })
    };
@@ -83,44 +83,44 @@ class Categories extends React.Component {
             if (this.props.product && this.props.product.categories && this.props.product.categories.length > 0) {
 
                return (
-                   <div className="main-products">
+                  <div className="main-products">
 
-                      <div className="container">
+                     <div className="container">
 
-                         <div className="row">
-                            {this.renderCategoriesHome(this.props.product)}
-                         </div>
+                        <div className="row">
+                           {this.renderCategoriesHome(this.props.product)}
+                        </div>
 
-                      </div>
-                   </div>
+                     </div>
+                  </div>
                )
             } else {
                return (
-                   <Loader/>
+                  <Loader />
                );
             }
          case "Products":
             if (this.props.product && this.props.product.categories && this.props.product.categories.length > 0) {
                return (
-                   <div className="category-products-sidebar">
-                      <h4>Выберите категорию</h4>
-                      <nav>
-                         <ul className="row">
-                            {this.renderCategoriesProducts(this.props.product.categories)}
-                         </ul>
-                      </nav>
-                   </div>
+                  <div className="category-products-sidebar">
+                     <h4>Выберите категорию</h4>
+                     <nav>
+                        <ul className="row">
+                           {this.renderCategoriesProducts(this.props.product.categories)}
+                        </ul>
+                     </nav>
+                  </div>
                )
             } else {
                return (
-                   <div className="category-products-sidebar">
-                      <h4>Выберите категорию</h4>
-                      <nav>
-                         <ul>
-                            <Skeleton count={4} height={50} width="100%" />
-                         </ul>
-                      </nav>
-                   </div>
+                  <div className="category-products-sidebar">
+                     <h4>Выберите категорию</h4>
+                     <nav>
+                        <ul>
+                           <Skeleton count={4} height={50} width="100%" />
+                        </ul>
+                     </nav>
+                  </div>
                )
             }
          default:

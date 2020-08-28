@@ -9,8 +9,8 @@ import {
    FaFacebookF,
    FaInstagram
 } from "react-icons/fa";
-import {Link} from "react-router-dom";
-import {connect} from "react-redux"
+import { Link } from "react-router-dom";
+import { connect } from "react-redux"
 import Animation from "../../hoc/Animation/Animation";
 
 const Footer = (props) => {
@@ -73,104 +73,105 @@ const Footer = (props) => {
 
 
          return (
-             <li key={i}>
-                <Link to={`${item.to}`} className="py-2 d-block">{item.text}</Link>
-             </li>
+            <li key={i}>
+               <Link to={`${item.to}`} className="py-2 d-block">{item.text}</Link>
+            </li>
          )
       })
    };
 
 
    return (
-       <footer className="ftco-footer ftco-section">
-          <div className="container">
-             {/*<div className="row">*/}
-             {/*   <div className="mouse">*/}
-             {/*      <div className="mouse-icon">*/}
-             {/*         <div className="mouse-wheel"><FaArrowUp name="arrow-up"/></div>*/}
-             {/*      </div>*/}
-             {/*   </div>*/}
-             {/*</div>*/}
-             <div className="row mb-5">
-                <div className="col-md">
-                   <div className="ftco-footer-widget mb-4">
-                      <h2 className="ftco-heading-2">Smart Deals</h2>
-                      <p>Высококачественные товары и услуги.</p>
+      <footer className="ftco-footer ftco-section">
+         <div className="container">
+            {/*<div className="row">*/}
+            {/*   <div className="mouse">*/}
+            {/*      <div className="mouse-icon">*/}
+            {/*         <div className="mouse-wheel"><FaArrowUp name="arrow-up"/></div>*/}
+            {/*      </div>*/}
+            {/*   </div>*/}
+            {/*</div>*/}
+            <div className="row mb-5">
+               <div className="col-md">
+                  <div className="ftco-footer-widget mb-4">
+                     <h2 className="ftco-heading-2">Smart Deals</h2>
+                     <p>Высококачественные товары и услуги.</p>
 
 
-                      <Animation>
-                         <ul
-                             className="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
-                         >
-                            <li className="" data-aos="fade-up" data-aos-delay={50}>
-                               <a href="https://google.com" rel="noopener noreferrer" target="_blank">
-                                  <FaTelegramPlane/>
-                               </a></li>
-                            <li className="" data-aos="fade-up" data-aos-delay={100}>
-                               <a href="https://google.com" rel="noopener noreferrer" target="_blank">
-                                  <FaFacebookF/>
-                               </a>
-                            </li>
-                            <li className="" data-aos="fade-up" data-aos-delay={150}>
-                               <a href="https://google.com" rel="noopener noreferrer" target="_blank">
-                                  <FaInstagram/>
-                               </a>
-                            </li>
-                         </ul>
-                      </Animation>
+                     <Animation>
+                        <ul
+                           className="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
+                        >
+                           <li className="" data-aos="fade-up" data-aos-delay={50}>
+                              <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+                                 <FaTelegramPlane />
+                              </a></li>
+                           <li className="" data-aos="fade-up" data-aos-delay={100}>
+                              <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+                                 <FaFacebookF />
+                              </a>
+                           </li>
+                           <li className="" data-aos="fade-up" data-aos-delay={150}>
+                              <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+                                 <FaInstagram />
+                              </a>
+                           </li>
+                        </ul>
+                     </Animation>
 
-                   </div>
-                </div>
-                <div className="col-6 col-md-4">
-                   <div className="ftco-footer-widget mb-4 ml-md-5">
-                      <h2 className="ftco-heading-2">Меню</h2>
-                      <ul className="list-unstyled">
+                  </div>
+               </div>
+               <div className="col-6 col-md-4">
+                  <div className="ftco-footer-widget mb-4 ml-md-5">
+                     <h2 className="ftco-heading-2">Меню</h2>
+                     <ul className="list-unstyled">
 
-                         {
-                            props.user && props.user.authLogin
-                            && props.user.authLogin.isAuth
-                                ? renderLinks(privateLinks)
-                                : renderLinks(publicLinks)
-                         }
+                        {
+                           props.user && props.user.authLogin
+                              && props.user.authLogin.isAuth
+                              ? renderLinks(privateLinks)
+                              : renderLinks(publicLinks)
+                        }
 
-                      </ul>
-                   </div>
-                </div>
+                     </ul>
+                  </div>
+               </div>
 
-                <div className="col-6 col-md-4">
-                   <div className="ftco-footer-widget mb-4">
-                      <h2 className="ftco-heading-2">У вас есть вопросы?</h2>
-                      <div className="block-23 mb-3">
-                         <ul>
-                            <li><FaMapMarkerAlt className="f-icon"/>
-                               <span className="text pl-3 pb-2">
-                                  Там где нас не найдут
+               <div className="col-6 col-md-4">
+                  <div className="ftco-footer-widget mb-4">
+                     <h2 className="ftco-heading-2">У вас есть вопросы?</h2>
+                     <div className="block-23 mb-3">
+                        <ul>
+                           <li><FaMapMarkerAlt className="f-icon" />
+                              <span className="text pl-3 pb-2">
+                                 Там где нас не найдут
                                </span>
-                            </li>
-                            <li><a href="tel:+998977777777"><FaPhone className="f-icon"/><span
-                                className="text pl-3">+998 97 754-71-17</span></a>
-                            </li>
-                            <li><a href="mailto:hello@gmail.com"><FaEnvelope className="f-icon"/><span
-                                className="text pl-3">hello@gmail.com</span></a></li>
-                         </ul>
-                      </div>
-                   </div>
-                </div>
-             </div>
-             <div className="row">
-                <div className="col-md-12 text-center">
+                           </li>
+                           <li><a href="tel:+998977777777"><FaPhone className="f-icon" /><span
+                              className="text pl-3">+998 97 754-71-17</span></a>
+                           </li>
+                           <li><a href="mailto:hello@gmail.com"><FaEnvelope className="f-icon" /><span
+                              className="text pl-3">hello@gmail.com</span></a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div className="row">
+               <div className="col-md-12 text-center">
 
-                   <p className="switch-case">
-                      Копирайт &copy;
-                      {new Date().getFullYear()}<br/>
-                      Сделано с <FaHeart/> командой <a
-                       href="https://ismoil793.github.io" target="_blank"
-                       rel="noopener noreferrer"><strong>smart-deals</strong></a>
-                   </p>
-                </div>
-             </div>
-          </div>
-       </footer>
+                  <p className="switch-case">
+                     Копирайт &copy;
+                      {new Date().getFullYear()}<br />
+                      Сделано с <FaHeart /> командой
+                      <Link to="/">
+                        <strong>&nbsp;smart-deals</strong>
+                     </Link>
+                  </p>
+               </div>
+            </div>
+         </div>
+      </footer>
    );
 };
 
