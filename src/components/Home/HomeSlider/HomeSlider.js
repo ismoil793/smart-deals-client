@@ -1,7 +1,6 @@
 import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
 import {Carousel} from 'react-responsive-carousel';
-import Animation from "../../../hoc/Animation/Animation";
 
 const HomeSlider = () => {
 
@@ -40,9 +39,9 @@ const HomeSlider = () => {
                          <div className={`col-md-12 ${i === 2 ? 'text-left' : 'text-center'}`}>
                             <h1 className="mb-2">Smart Deals</h1>
                             <h2 className="subheading mb-4">
-                               {i === 0 ? 'Чем больше покупок, тем выгоднее' //'big sizes. bigger savings'
-                                   : i === 1 ? 'Решение во время карантина!'
-                                       : 'Решение для вашего бизнеса!'}
+                               {i === 0 ? 'Решение для вашего бизнеса!' //'big sizes. bigger savings'
+                                   : i === 1 ? 'Чем больше покупок, тем выгоднее'
+                                       : 'Решение во время карантина!'}
                             </h2>
                             <p>
                                <button
@@ -64,21 +63,15 @@ const HomeSlider = () => {
    };
 
    return (
-
-       <Animation>
-          <div id="home-section" className="hero" data-aos="zoom-in">
-
-             <div className="home-slider owl-carousel">
-                <Carousel
-                    {...settings}
-                >
-                   {renderTemplate()}
-                </Carousel>
-             </div>
-
+       <div id="home-section" className="hero">
+          <div className="home-slider owl-carousel">
+             <Carousel
+                 {...settings}
+             >
+                {renderTemplate()}
+             </Carousel>
           </div>
-       </Animation>
-
+       </div>
    );
 };
 

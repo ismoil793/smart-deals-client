@@ -13,7 +13,7 @@ const HeaderMainItems = (props) => {
       if (props.user.authLogin && props.user.authLogin.isAuth) {
          props.dispatch(getCart())
       }
-   }, [props.user]);
+   });
 
 
    const publicLinks = [
@@ -160,11 +160,17 @@ const HeaderMainItems = (props) => {
 
                              {renderLinks(privateLinks)}
 
+                             <li id="google_translate_element" className={`nav-item cta cta-colored`}>
+                             </li>
+
                           </ul>
                           :
                           <ul className="navbar-nav ml-auto">
 
                              {renderLinks(publicLinks)}
+
+                             <li id="google_translate_element" className={`nav-item cta cta-colored`}>
+                             </li>
 
                           </ul>
                    }
