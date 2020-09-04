@@ -13,6 +13,7 @@ import Rules from "./components/Rules/rules";
 import Products from "./containers/Products/products";
 import ProductsDetail from "./containers/ProductsDetail/productsDetail";
 import UserProfile from "./containers/Profile/userProfile";
+import CartCheck from "./containers/Cart/Check/CartCheck";
 
 import Auth from "./hoc/auth";
 import Layout from "./hoc/layout";
@@ -33,6 +34,7 @@ const Routes = () => {
             <Route path="/rules" exact component={Auth(Rules, null)} />
             <Route path="/profile" exact component={Auth(UserProfile, true)} />
             <Route path="/cart" exact component={Auth(Cart, true)} />
+            <Route path="/profile/check/:id" exact component={Auth(CartCheck, true)} />
             <Route path="/products/:slug/:id" exact component={Auth(ProductsDetail, true)} />
             <Route path="/products/:slug" exact component={Auth(Products, null)} />
             <Route path="/" exact component={Auth(Home, null)} />

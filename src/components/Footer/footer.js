@@ -20,7 +20,7 @@ const Footer = (props) => {
       {
          type: "nav-item",
          text: "Продукты",
-         to: "/products"
+         to: "/products/napitki"
       },
       {
          type: "nav-item",

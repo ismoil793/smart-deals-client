@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from "react-redux"
 import HelmetTitle from "../../UI/Helmet/Title"
+import {Link} from "react-router-dom";
 
 class UserProfile extends Component {
 
@@ -56,6 +57,7 @@ class UserProfile extends Component {
                                     <th scope="col">Сумма</th>
                                     <th scope="col">Дата</th>
                                     <th scope="col">Статус</th>
+                                    <th scope="col"></th>
                                  </tr>
                               </thead>
                               <tbody>
@@ -64,6 +66,7 @@ class UserProfile extends Component {
                                     <td>154 000 сум</td>
                                     <td>28/07/2020</td>
                                     <td>Доставлено</td>
+                                    <td><Link to="/profile/check/1" className="">Подробнее</Link></td>
                                  </tr>
                                  <tr>
                                     <th scope="row">2</th>
