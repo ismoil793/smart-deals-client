@@ -65,7 +65,9 @@ header ul.navbar-nav .nav-item:hover .nav-link {
 }
 
 header ul.navbar-nav .nav-item.active .nav-link {
-    color: #45c0ae;
+    /*color: #45c0ae;*/
+    color: #fff;
+    font-weight: bold;
 }
 
 .ftco-navbar-light .navbar-brand:hover,
@@ -286,13 +288,14 @@ section.login-user form.login-box .form-group .form-control.box-input {
     border-radius: 5px;
     position: relative;
     overflow: hidden;
+    padding: 0 15px;
 }
 
 .products-container .product-in-category .product-info {
     display: block;
     border-radius: 5px;
     color: #323841;
-    font-size: 15px;
+    font-size: 14px;
     font-family: "Montserrat", sans-serif;
     height: 370px;
     position: relative;
@@ -311,22 +314,29 @@ section.login-user form.login-box .form-group .form-control.box-input {
     margin: 0;
 }
 
-.products-container
-    .product-in-category
-    .product-info
-    div.img-prod-detail
-    p.trade_mark {
+.products-container .product-in-category .product-info div.img-prod-detail p.trade_mark {
+    font-weight: 500;
+    line-height: 22px;
+    min-height: 22px;
+}
+
+.products-container .product-in-category .product-info div.img-prod-detail span {
+    font-size: 15px;
+    color: #536b8c;
     font-weight: 500;
 }
 
-.products-container
-    .product-in-category
-    .product-info
-    div.img-prod-detail
-    span {
-    font-size: 14px;
-    color: #536b8c;
-    font-weight: 500;
+div.img-prod-detail .price-bigger, div.img-prod-detail .price-bigger span {
+    font-size: 14px !important;
+    font-weight: bold !important;
+}
+
+div.img-prod-detail .price-bigger span {
+    font-size: 16px !important;
+}
+
+div.img-prod-detail .price-bigger .price-normal {
+    font-weight: 500 !important;
 }
 
 .products-container .product-in-category .product-info img {
@@ -335,6 +345,7 @@ section.login-user form.login-box .form-group .form-control.box-input {
     /*border: 1px solid #f0f0f0;*/
     border-radius: 5px;
     z-index: 0;
+    padding-right: 15px;
     transition: all 300ms ease;
 }
 
@@ -350,7 +361,7 @@ section.login-user form.login-box .form-group .form-control.box-input {
     padding: 2px 0;
     opacity: 0;
     position: absolute;
-    bottom: 25px;
+    bottom: 15px;
     left: 1px;
     border-radius: 3px;
     background-color: #ffffff;
@@ -942,14 +953,16 @@ section.partners {
 }
 
 .cart-section .cart-table .control-buttons {
-    border: none;
-    font-size: 22px;
+    border: 1px solid #eee;
+    font-size: 24px;
     padding: 0 7px;
     border-radius: 10px;
-    line-height: 35px;
     margin-left: 10px;
     box-shadow: none;
     height: 35px;
+    background: transparent;
+    color: #999;
+    line-height: 24px;
 }
 
 .cart-section .react-datepicker__day--keyboard-selected,
@@ -1251,9 +1264,9 @@ section.partners {
 }
 
 .cart-section
-    .cart
-    .react-datepicker-wrapper
-    .react-datepicker__day--keyboard-selected,
+.cart
+.react-datepicker-wrapper
+.react-datepicker__day--keyboard-selected,
 .react-datepicker__month-text--keyboard-selected,
 .react-datepicker__quarter-text--keyboard-selected,
 .react-datepicker__year-text--keyboard-selected {
@@ -1267,18 +1280,18 @@ section.partners {
 }
 
 .cart-section
-    .cart
-    .react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
+.cart
+.react-datepicker__navigation--next--with-time:not(.react-datepicker__navigation--next--with-today-button) {
     right: 90px;
     border-color: transparent transparent transparent #b3b3b3;
 }
 
 .cart-section
-    .react-datepicker__time-container
-    .react-datepicker__time
-    .react-datepicker__time-box
-    ul.react-datepicker__time-list
-    li.react-datepicker__time-list-item--disabled {
+.react-datepicker__time-container
+.react-datepicker__time
+.react-datepicker__time-box
+ul.react-datepicker__time-list
+li.react-datepicker__time-list-item--disabled {
     display: none;
 }
 
@@ -1413,12 +1426,12 @@ footer ul.ftco-footer-social li:last-child a {
 
 footer ul.ftco-footer-social li:last-child:hover a {
     background: linear-gradient(
-        45deg,
-        #f09433 0%,
-        #e6683c 25%,
-        #dc2743 50%,
-        #cc2366 75%,
-        #bc1888 100%
+            45deg,
+            #f09433 0%,
+            #e6683c 25%,
+            #dc2743 50%,
+            #cc2366 75%,
+            #bc1888 100%
     );
 }
 
@@ -1428,7 +1441,7 @@ footer ul.ftco-footer-social li:last-child a svg {
 }
 
 footer .switch-case span {
-    color: #c82c00;
+    color: #fff;
 }
 
 .ftco-footer .ftco-footer-widget ul li a {

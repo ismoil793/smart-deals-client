@@ -66,7 +66,7 @@ class UserProfile extends Component {
                                     <td>154 000 сум</td>
                                     <td>28/07/2020</td>
                                     <td>Доставлено</td>
-                                    <td><Link to="/profile/check/1" className="">Подробнее</Link></td>
+                                    <td><Link to="/profile/check/1" className="btn btn-secondary">Подробнее</Link></td>
                                  </tr>
                                  <tr>
                                     <th scope="row">2</th>
@@ -144,7 +144,8 @@ class UserProfile extends Component {
 
 function mapStateToProps(state) {
    return {
-      user_r: state.user_r
+      user_r: state.user_r,
+      order_r: state.order_r
    }
 }
 

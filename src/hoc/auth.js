@@ -20,7 +20,8 @@ export default function (ComposedClass, reload) {
 
       state = {
          loading: true,
-         progress: 0
+         progress: 0,
+         isAuth: false
       };
 
 
@@ -47,8 +48,9 @@ export default function (ComposedClass, reload) {
 
       static getDerivedStateFromProps(nextProps, prevState) {
 
-         if (nextProps.user.authLogin && nextProps.user.authLogin.isAuth) {
+         if (nextProps.user.authLogin) {
             const isAuth = nextProps.user.authLogin.isAuth;
+
             if (!isAuth) {
                if (reload) {
                   nextProps.history.push("/login")
@@ -90,7 +92,8 @@ export default function (ComposedClass, reload) {
          return (
             <React.Fragment>
                <LoadingBar
-                  color='#45C0AE'
+                  // color='#45C0AE'
+                   color="#fff"
                   height={4}
                   transitionTime={200}
                   loaderSpeed={400}

@@ -50,8 +50,10 @@ const RenderProducts = (props) => {
                          />
                          <div className="img-prod-detail">
                             <p className="trade_mark">
-                               {item.trade_mark}&nbsp;
-                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={19}/>
+                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={36}/>
+                            </p>
+                            <p>
+                               {item.trade_mark}
                             </p>
                             {
                                // if user is auth then he can see price
@@ -61,7 +63,9 @@ const RenderProducts = (props) => {
                                          <span>{item.minimum_quantity}шт x {item.measurement}</span>
                                          {/*<button>Добавить</button>*/}
                                       </p>
-                                      <span> цена : <PriceRefactor price={item.minimum_quantity_price}/> сум</span>
+                                      <span className="price-bigger">
+                                         <span className="price-normal">Цена:</span> <PriceRefactor price={item.minimum_quantity_price}/> сум
+                                      </span>
                                    </React.Fragment>
                                    : null
                             }
@@ -102,7 +106,7 @@ const RenderProducts = (props) => {
                  : null
           }
           <div>
-             <NotificationContainer enterTimeout={300} leaveTimeout={300} />
+             <NotificationContainer enterTimeout={300} leaveTimeout={300}/>
           </div>
        </React.Fragment>
    );

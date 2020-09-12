@@ -16,14 +16,15 @@ const HomeSlider = () => {
       let template;
 
       const data = [
+
          {
-            img: "smart_deals_1.jpg"
+            img: "smart_deals_3.jpg"
          },
          {
             img: "smart_deals_2.jpg"
          },
          {
-            img: "smart_deals_3.jpg"
+            img: "smart_deals_1.jpg"
          }
       ];
 
@@ -36,16 +37,16 @@ const HomeSlider = () => {
                       <div className="row slider-text justify-content-center align-items-center"
                            data-scrollax-parent="true">
 
-                         <div className={`col-md-12 ${i === 2 ? 'text-left' : 'text-center'}`}>
+                         <div className={`col-md-12 ${i === 0 ? 'text-left' : 'text-center'}`}>
                             <h1 className="mb-2">Smart Deals</h1>
                             <h2 className="subheading mb-4">
-                               {i === 0 ? 'Решение для вашего бизнеса!' //'big sizes. bigger savings'
+                               {i === 2 ? 'Решение для вашего бизнеса!' //'big sizes. bigger savings'
                                    : i === 1 ? 'Чем больше покупок, тем выгоднее'
                                        : 'Решение во время карантина!'}
                             </h2>
                             <p>
                                <button
-                                   className={`btn btn-primary watch-products ${i === 0 ? '' : 'watch-products-sp'}`}
+                                   className={`btn btn-primary watch-products ${i === 2 ? '' : 'watch-products-sp'}`}
                                >
                                   Посмотреть товары
                                </button>

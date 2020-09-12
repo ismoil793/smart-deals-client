@@ -610,7 +610,7 @@ pre code {
 
 @media (min-width: 1366px) {
     .products-container .container.container-changed {
-        max-width: 1320px;
+        max-width: 1500px;
     }
 
     section.about-company > .container.container-changed,
@@ -11621,13 +11621,13 @@ a {
     -webkit-transition: 0.3s all ease;
     -o-transition: 0.3s all ease;
     transition: 0.3s all ease;
-    color: #e95a00;
+    color: #fff;
 }
 
 a:hover,
 a:focus {
     text-decoration: none;
-    color: #e95a00;
+    color: #313841;
 }
 
 h1,
@@ -11674,7 +11674,7 @@ h5,
 }
 
 .ftco-navbar-light {
-    height: 100px;
+    min-height: 100px;
     position: fixed;
     background: rgb(113, 148, 200);
     background: linear-gradient(
@@ -11728,15 +11728,17 @@ h5,
     /*padding-top: 1.5rem;*/
     /*padding-bottom: 1.5rem;*/
     padding: 0 20px;
-    font-weight: bold;
-    color: #e3e3ea;
+    font-weight: 500;
+    /* color: #e3e3ea; */
+    color: #fff;
     text-transform: uppercase;
     letter-spacing: 1px;
     opacity: 1 !important;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
-    color: #45c0ae;
+    /*color: #45c0ae;*/
+    color: #313841;
 }
 
 @media (max-width: 991.98px) {
@@ -12348,15 +12350,18 @@ h5,
 }
 
 .bg-color-2 {
-    background: #556171;
+    /*background: #556171;*/
+    background: #45C0AF;
 }
 
 .bg-color-3 {
-    background: #ff853c;
+    /*background: #ff853c;*/
+    background: #6AC6E0;
 }
 
 .bg-color-4 {
-    background: #d3d3d3;
+    /*background: #d3d3d3;*/
+    background: #7695CB;
 }
 
 .btn {

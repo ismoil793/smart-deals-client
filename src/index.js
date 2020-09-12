@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
-import { createStore, applyMiddleware, compose } from "redux";
+import { createStore, applyMiddleware, compose } from "redux"; // compose for testing purposes
 import promiseMiddleware from "redux-promise";
 import ReduxThunk from "redux-thunk";  // to be able to use redux asynchronously
 

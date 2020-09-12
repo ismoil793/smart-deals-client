@@ -5,9 +5,9 @@ const ProductNameRefactor = ({name = "",trade_mark = "", chars = 19}) => {
    // display less info or more depending on screen sizes
    const deviceWidth = () => {
       let width = window.innerWidth;
-      if((width > 991 && width < 1200) || width > 1366) {
+      if((width > 991 && width < 1200) || width > 1200) {
          return true
-      } else if(width < 576) {
+      } else if(width < 991) {
          return true
       } else {
          return false

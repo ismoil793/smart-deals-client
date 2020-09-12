@@ -4,7 +4,7 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import SkeletonUI from "../../UI/Skeleton/SkeletonUI";
 import RenderProducts from "../../UI/RenderProducts/renderProducts";
-import CartButton from "../Cart/CartButton";
+// import CartButton from "../Cart/CartButton";
 
 class ProductsList extends Component {
 

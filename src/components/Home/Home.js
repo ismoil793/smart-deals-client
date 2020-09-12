@@ -44,8 +44,8 @@ class Home extends React.Component {
                   <div className="col-md-12 heading-section text-center">
                      <span id="watch-products" className="subheading mt-3"> <strong>#Продукция</strong></span>
                      <h2 className="mb-4">Наши продукты</h2>
-                     <p>100% натуральное растительное происхождение.
-                         Гарантированное качество и безопасность.</p>
+                     {/*<p>100% натуральное растительное происхождение.*/}
+                     {/*    Гарантированное качество и безопасность.</p>*/}
                   </div>
                </div>
             </div>
