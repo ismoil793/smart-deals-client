@@ -4,6 +4,8 @@ import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import SkeletonUI from "../../UI/Skeleton/SkeletonUI";
 import RenderProducts from "../../UI/RenderProducts/renderProducts";
+import LoaderDots from "../../UI/Preloader/LoaderDots";
+
 // import CartButton from "../Cart/CartButton";
 
 class ProductsList extends Component {
@@ -24,13 +26,13 @@ class ProductsList extends Component {
       // Every time when store has no products to render I need to get new products from DB
       if (!this.props.products.list || !this.props.products.count) {
          this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 20, 0));
+         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 40, 0));
          this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
       }
       // When category slug changes and it is different from product.category.slug -> rerender component
       else if (this.props.products.list[0].category.slug !== this.props.match.params.slug) {
          this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 20, 0));
+         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 40, 0));
          this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
       }
    }
@@ -49,8 +51,12 @@ class ProductsList extends Component {
 
       if (nextProps.match.params.slug !== prevState.slug) {
 
+         if(document.querySelector('.products-list-scroll')) {
+            document.querySelector('.products-list-scroll').scrollTo(0, 0);
+         }
+
          nextProps.products.loading = true;
-         nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 20, 0));
+         nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 40, 0));
          nextProps.dispatch(getCountProductCategory(nextProps.match.params.slug));
 
          return ({slug: nextProps.match.params.slug})
@@ -79,7 +85,7 @@ class ProductsList extends Component {
 
    loadMore = () => {
       let count = this.props.products.list.length;
-      this.props.dispatch(getProductsInCategory(this.state.slug, 10, count, this.props.products.list));
+      this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
 
       if (this.count) {
          if (count === this.count) {
@@ -87,6 +93,24 @@ class ProductsList extends Component {
                flag: true
             })
          }
+      }
+   };
+
+   handleScroll = (e) => {
+      const {scrollTop, clientHeight, scrollHeight} = e.currentTarget;
+      if (scrollHeight - scrollTop === clientHeight) {
+
+         let count = this.props.products.list.length;
+         if (this.count) {
+            if (count === this.count) {
+               this.setState({
+                  flag: true
+               })
+            } else {
+               this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
+            }
+         }
+
       }
    };
 
@@ -100,23 +124,40 @@ class ProductsList extends Component {
          }
 
          return (
-             <div className="col-lg-12">
+             <div
+                 className="col-lg-12 products-list-scroll"
+                 onScroll={e => this.handleScroll(e)}
+             >
 
                 <div className="row">
                    <RenderProducts {...this.props} list={this.props.products.list}/>
                 </div>
 
+
+                {
+                   this.props.products.list.length !== this.props.products.count ?
+                       <div className="row position-relative">
+                          <LoaderDots/>
+                       </div>
+                       : null
+                }
+
+                {/*<div className="row position-relative">*/}
+                {/*   <LoaderDots/>*/}
+                {/*</div>*/}
+
+
                 <div className="row">
                    {this.renderWarning()}
-                   {
-                      this.count > 20 ?
-                          <div className="col-lg-12">
-                             <button className="btn btn-info loadmore-btn" onClick={this.loadMore}>
-                                Показать больше
-                             </button>
-                          </div>
-                          : null
-                   }
+                   {/*{*/}
+                   {/*   this.count > 20 ?*/}
+                   {/*       <div className="col-lg-12">*/}
+                   {/*          <button className="btn btn-info loadmore-btn" onClick={this.loadMore}>*/}
+                   {/*             Показать больше*/}
+                   {/*          </button>*/}
+                   {/*       </div>*/}
+                   {/*       : null*/}
+                   {/*}*/}
                 </div>
              </div>
          );

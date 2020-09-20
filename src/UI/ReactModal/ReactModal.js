@@ -45,8 +45,7 @@ const ReactModal = ({isOpen, productItem, setOpen, dispatch, user, cart}) => {
                 <img src={productItem.image} alt={productItem.name}/>
                 <h4>{productItem.trade_mark} {productItem.name} {productItem.measurement}</h4>
                 <p>
-                   {productItem.description} Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero qui quia
-                   ratione sed, sint vero!
+                   {productItem.description}
                 </p>
                 <p>
                    Цена за 1 ед. {productItem.price} сум

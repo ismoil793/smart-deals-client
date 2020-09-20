@@ -63,7 +63,14 @@ export function getCart() {
    const request = axios.get(
        `${URL}/api/v1/cart/get/`,
        {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
-       ).then(response => response.data);
+   )
+       .then(response => response.data)
+       .catch(e => {
+          if (e.response.request.status === 500) {
+             let products = [];
+             return {products}
+          }
+       });
 
    return {
       type: GET_CART,
@@ -96,6 +103,7 @@ export function removeFromCart(product_id) {
       }
    }
 }
+
 export function removeFromCartStart() {
    return {
       type: REMOVE_FROM_CART_START

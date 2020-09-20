@@ -44,7 +44,7 @@ export function fetchOrder(id) {
 
 export function fetchOrderAll() {
    const request = axios.get(
-       `${URL}/api/v1/cart/get/`,
+       `${URL}/api/v1/cart/history/get/all/`,
        {headers: {Authorization: `Bearer ${JSON.parse(localStorage.getItem("auth"))}`}}
    ).then(response => response.data);
 

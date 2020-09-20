@@ -95,15 +95,24 @@
 ===============================*/
 
 
+.lds-ellipsis-wrap {
+    width: 100%;
+    background: rgba(255,255,255,0.5);
+    position: absolute;
+    top: -160px;
+    min-height: 100px;
+}
+
 .lds-ellipsis {
-    min-height: 500px;
+    min-height: 100px;
     position: relative;
     right: 0;
     bottom: 0;
     display: inline-block;
-    width: 100%;
-    left: 25%;
-    top: 50%;
+    width: 100px;
+    left: 50%;
+    top: 25px;
+    transform: translate(-50%, 0%);
 }
 .lds-ellipsis div {
     position: absolute;

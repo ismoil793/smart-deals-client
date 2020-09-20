@@ -3,11 +3,13 @@ import "./loader.css"
 
 const LoaderDots = () => {
    return (
-       <div className="lds-ellipsis">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+       <div className="lds-ellipsis-wrap">
+          <div className="lds-ellipsis">
+             <div></div>
+             <div></div>
+             <div></div>
+             <div></div>
+          </div>
        </div>
    );
 };

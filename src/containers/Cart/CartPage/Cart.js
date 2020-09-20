@@ -48,8 +48,8 @@ class Cart extends Component {
 
    render() {
 
-      console.log(this.state.deliveryDate)
-      if (this.props.cart.cart && this.props.cart.cart.products) {
+      if (this.props.cart.cart && this.props.cart.cart.products
+          && this.props.cart.cart.products.length) {
 
          const cart = this.props.cart.cart;
 
@@ -135,7 +135,7 @@ class Cart extends Component {
              </section>
          );
       }
-      return <Loader/>
+      return <div>Корзина пуста</div>
    }
 }
 
