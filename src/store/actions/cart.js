@@ -66,10 +66,7 @@ export function getCart() {
    )
        .then(response => response.data)
        .catch(e => {
-          if (e.response.request.status === 500) {
-             let products = [];
-             return {products}
-          }
+          console.log(e)
        });
 
    return {
@@ -82,7 +79,7 @@ export function getCart() {
 export function clearCart() {
    return {
       type: CLEAR_CART,
-      payload: null
+      payload: []
    }
 }
 

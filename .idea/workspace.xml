@@ -2,32 +2,36 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/containers/History/CartCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.f0586c849ec68375979c3099ba383807.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.54637edfa91065a3d1beccc7be613d07.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.54a064b8.chunk.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/css/main.54a064b8.chunk.css.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.744ba201.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.744ba201.chunk.js.LICENSE.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/2.744ba201.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e0b8977b.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.e0b8977b.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.0178629c.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.0178629c.chunk.js.map" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Preloader/LoaderDots.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Preloader/LoaderDots.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/Preloader/loader.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Preloader/loader.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/ReactModal/ReactModal.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/ReactModal/ReactModal.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Cart/CartButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Cart/CartButton.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Cart/CartPage/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Cart/CartPage/Cart.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Profile/Check/CartCheck.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Register/register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hoc/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/cart.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/actions/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/actions/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/order.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/reducers/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/product.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +61,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AVTECH/brandstore-client/brandstore.uz" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,11 +72,11 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Programming\React\smart-deals-client\src\containers" />
       <recent name="C:\Programming\React\smart-deals-client\src\containers\Profile" />
       <recent name="C:\Programming\React\smart-deals-client\src\containers\Cart\CartPage" />
       <recent name="C:\Programming\React\smart-deals-client\src\containers\Products" />
       <recent name="C:\Programming\React\smart-deals-client\src\containers\Categories" />
-      <recent name="C:\Programming\React\smart-deals-client\src\containers\Login_Logout" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -207,6 +211,13 @@
       <workItem from="1600501269792" duration="1730000" />
       <workItem from="1600623393241" duration="4991000" />
       <workItem from="1600628910109" duration="216000" />
+      <workItem from="1600629141182" duration="88000" />
+      <workItem from="1600663284641" duration="2207000" />
+      <workItem from="1600677834178" duration="2948000" />
+      <workItem from="1600749375638" duration="576000" />
+      <workItem from="1600838879101" duration="2329000" />
+      <workItem from="1600853231722" duration="13179000" />
+      <workItem from="1600923984432" duration="6454000" />
     </task>
     <servers />
   </component>

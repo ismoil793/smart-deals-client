@@ -11675,7 +11675,7 @@ h5,
 
 .ftco-navbar-light {
     min-height: 100px;
-    position: fixed;
+    position: relative;
     background: rgb(113, 148, 200);
     background: linear-gradient(
         90deg,

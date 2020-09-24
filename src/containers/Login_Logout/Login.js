@@ -33,9 +33,8 @@ class Login extends Component {
    };
 
    UNSAFE_componentWillReceiveProps(nextProps) {
-      console.log(nextProps)
       if (nextProps.user && nextProps.user.login && nextProps.user.login.isAuth) {
-         this.props.history.push("/products/napitki")
+         this.props.history.push("/profile")
       }
    }
 

@@ -13,7 +13,7 @@ import Rules from "./components/Rules/rules";
 import Products from "./containers/Products/products";
 import ProductsDetail from "./containers/ProductsDetail/productsDetail";
 import UserProfile from "./containers/Profile/userProfile";
-import CartCheck from "./containers/Profile/Check/CartCheck";
+import CartCheck from "./containers/History/CartCheck";
 
 import Auth from "./hoc/auth";
 import Layout from "./hoc/layout";

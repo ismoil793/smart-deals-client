@@ -32,11 +32,11 @@
     --breakpoint-lg: 992px;
     --breakpoint-xl: 1200px;
     --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
-        "Montserrat", "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
-        "Noto Color Emoji";
+    "Montserrat", "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+    "Noto Color Emoji";
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
-        "Liberation Mono", "Courier New", monospace;
+    "Liberation Mono", "Courier New", monospace;
 }
 
 *,
@@ -69,8 +69,8 @@ section {
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Montserrat",
-        "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
-        "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.5;
@@ -204,7 +204,7 @@ code,
 kbd,
 samp {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-        "Courier New", monospace;
+    "Courier New", monospace;
     font-size: 1em;
 }
 
@@ -2291,13 +2291,13 @@ pre code {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     -webkit-transition: border-color 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    -webkit-box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    -webkit-box-shadow 0.15s ease-in-out;
     -o-transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    -webkit-box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -2544,10 +2544,8 @@ textarea.form-control.is-valid {
 .custom-select.is-valid {
     border-color: #28a745;
     padding-right: 3.4375rem;
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-            no-repeat right 0.75rem center/8px 10px,
-        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e")
-            no-repeat center right 1.75rem/1.125rem 1.125rem;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px,
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%2328a745' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e") no-repeat center right 1.75rem/1.125rem 1.125rem;
 }
 
 .was-validated .custom-select:valid:focus,
@@ -2601,26 +2599,26 @@ textarea.form-control.is-valid {
 }
 
 .was-validated
-    .custom-control-input:valid:checked
-    ~ .custom-control-label::before,
+.custom-control-input:valid:checked
+~ .custom-control-label::before,
 .custom-control-input.is-valid:checked ~ .custom-control-label::before {
     border-color: #34ce57;
     background-color: #34ce57;
 }
 
 .was-validated
-    .custom-control-input:valid:focus
-    ~ .custom-control-label::before,
+.custom-control-input:valid:focus
+~ .custom-control-label::before,
 .custom-control-input.is-valid:focus ~ .custom-control-label::before {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
     box-shadow: 0 0 0 0.2rem rgba(40, 167, 69, 0.25);
 }
 
 .was-validated
-    .custom-control-input:valid:focus:not(:checked)
-    ~ .custom-control-label::before,
+.custom-control-input:valid:focus:not(:checked)
+~ .custom-control-label::before,
 .custom-control-input.is-valid:focus:not(:checked)
-    ~ .custom-control-label::before {
+~ .custom-control-label::before {
     border-color: #28a745;
 }
 
@@ -2700,10 +2698,8 @@ textarea.form-control.is-invalid {
 .custom-select.is-invalid {
     border-color: #dc3545;
     padding-right: 3.4375rem;
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-            no-repeat right 0.75rem center/8px 10px,
-        url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E")
-            no-repeat center right 1.75rem/1.125rem 1.125rem;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px,
+    url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23dc3545' viewBox='-2 -2 7 7'%3e%3cpath stroke='%23d9534f' d='M0 0l3 3m0-3L0 3'/%3e%3ccircle r='.5'/%3e%3ccircle cx='3' r='.5'/%3e%3ccircle cy='3' r='.5'/%3e%3ccircle cx='3' cy='3' r='.5'/%3e%3c/svg%3E") no-repeat center right 1.75rem/1.125rem 1.125rem;
 }
 
 .was-validated .custom-select:invalid:focus,
@@ -2757,26 +2753,26 @@ textarea.form-control.is-invalid {
 }
 
 .was-validated
-    .custom-control-input:invalid:checked
-    ~ .custom-control-label::before,
+.custom-control-input:invalid:checked
+~ .custom-control-label::before,
 .custom-control-input.is-invalid:checked ~ .custom-control-label::before {
     border-color: #e4606d;
     background-color: #e4606d;
 }
 
 .was-validated
-    .custom-control-input:invalid:focus
-    ~ .custom-control-label::before,
+.custom-control-input:invalid:focus
+~ .custom-control-label::before,
 .custom-control-input.is-invalid:focus ~ .custom-control-label::before {
     -webkit-box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
     box-shadow: 0 0 0 0.2rem rgba(220, 53, 69, 0.25);
 }
 
 .was-validated
-    .custom-control-input:invalid:focus:not(:checked)
-    ~ .custom-control-label::before,
+.custom-control-input:invalid:focus:not(:checked)
+~ .custom-control-label::before,
 .custom-control-input.is-invalid:focus:not(:checked)
-    ~ .custom-control-label::before {
+~ .custom-control-label::before {
     border-color: #dc3545;
 }
 
@@ -2914,17 +2910,17 @@ textarea.form-control.is-invalid {
     line-height: 1.5;
     border-radius: 0.25rem;
     -webkit-transition: color 0.15s ease-in-out,
-        background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -4275,11 +4271,11 @@ input[type="button"].btn-block {
 .input-group > .input-group-append:not(:last-child) > .btn,
 .input-group > .input-group-append:not(:last-child) > .input-group-text,
 .input-group
-    > .input-group-append:last-child
-    > .btn:not(:last-child):not(.dropdown-toggle),
+> .input-group-append:last-child
+> .btn:not(:last-child):not(.dropdown-toggle),
 .input-group
-    > .input-group-append:last-child
-    > .input-group-text:not(:last-child) {
+> .input-group-append:last-child
+> .input-group-text:not(:last-child) {
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
 }
@@ -4290,8 +4286,8 @@ input[type="button"].btn-block {
 .input-group > .input-group-prepend:not(:first-child) > .input-group-text,
 .input-group > .input-group-prepend:first-child > .btn:not(:first-child),
 .input-group
-    > .input-group-prepend:first-child
-    > .input-group-text:not(:first-child) {
+> .input-group-prepend:first-child
+> .input-group-text:not(:first-child) {
     border-top-left-radius: 0;
     border-bottom-left-radius: 0;
 }
@@ -4386,27 +4382,27 @@ input[type="button"].btn-block {
 }
 
 .custom-checkbox
-    .custom-control-input:indeterminate
-    ~ .custom-control-label::before {
+.custom-control-input:indeterminate
+~ .custom-control-label::before {
     border-color: #007bff;
     background-color: #007bff;
 }
 
 .custom-checkbox
-    .custom-control-input:indeterminate
-    ~ .custom-control-label::after {
+.custom-control-input:indeterminate
+~ .custom-control-label::after {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 4'%3e%3cpath stroke='%23fff' d='M0 2h4'/%3e%3c/svg%3e");
 }
 
 .custom-checkbox
-    .custom-control-input:disabled:checked
-    ~ .custom-control-label::before {
+.custom-control-input:disabled:checked
+~ .custom-control-label::before {
     background-color: rgba(0, 123, 255, 0.5);
 }
 
 .custom-checkbox
-    .custom-control-input:disabled:indeterminate
-    ~ .custom-control-label::before {
+.custom-control-input:disabled:indeterminate
+~ .custom-control-label::before {
     background-color: rgba(0, 123, 255, 0.5);
 }
 
@@ -4419,8 +4415,8 @@ input[type="button"].btn-block {
 }
 
 .custom-radio
-    .custom-control-input:disabled:checked
-    ~ .custom-control-label::before {
+.custom-control-input:disabled:checked
+~ .custom-control-label::before {
     background-color: rgba(0, 123, 255, 0.5);
 }
 
@@ -4443,20 +4439,20 @@ input[type="button"].btn-block {
     background-color: #adb5bd;
     border-radius: 0.5rem;
     -webkit-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-transform 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
     -o-transition: transform 0.15s ease-in-out,
-        background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
-        box-shadow 0.15s ease-in-out;
+    background-color 0.15s ease-in-out, border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
     transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: transform 0.15s ease-in-out, background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        -webkit-transform 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-transform 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -4475,8 +4471,8 @@ input[type="button"].btn-block {
 }
 
 .custom-switch
-    .custom-control-input:disabled:checked
-    ~ .custom-control-label::before {
+.custom-control-input:disabled:checked
+~ .custom-control-label::before {
     background-color: rgba(0, 123, 255, 0.5);
 }
 
@@ -4489,8 +4485,7 @@ input[type="button"].btn-block {
     line-height: 1.5;
     color: #495057;
     vertical-align: middle;
-    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e")
-        no-repeat right 0.75rem center/8px 10px;
+    background: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3e%3cpath fill='%23343a40' d='M2 0L0 2h4zm0 5L0 3h4z'/%3e%3c/svg%3e") no-repeat right 0.75rem center/8px 10px;
     background-color: #fff;
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
@@ -4650,16 +4645,16 @@ input[type="button"].btn-block {
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -o-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
     -webkit-appearance: none;
     appearance: none;
 }
@@ -4693,16 +4688,16 @@ input[type="button"].btn-block {
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -o-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
     -moz-appearance: none;
     appearance: none;
 }
@@ -4739,16 +4734,16 @@ input[type="button"].btn-block {
     border: 0;
     border-radius: 1rem;
     -webkit-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -o-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
     appearance: none;
 }
 
@@ -4809,16 +4804,16 @@ input[type="button"].btn-block {
 .custom-file-label,
 .custom-select {
     -webkit-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
     -o-transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
     transition: background-color 0.15s ease-in-out,
-        border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
-        -webkit-box-shadow 0.15s ease-in-out;
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out,
+    -webkit-box-shadow 0.15s ease-in-out;
 }
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -5662,17 +5657,17 @@ input[type="button"].btn-block {
     }
 
     .card-group
-        > .card:not(:first-child):not(:last-child):not(:only-child)
-        .card-img-top,
+    > .card:not(:first-child):not(:last-child):not(:only-child)
+    .card-img-top,
     .card-group
-        > .card:not(:first-child):not(:last-child):not(:only-child)
-        .card-img-bottom,
+    > .card:not(:first-child):not(:last-child):not(:only-child)
+    .card-img-bottom,
     .card-group
-        > .card:not(:first-child):not(:last-child):not(:only-child)
-        .card-header,
+    > .card:not(:first-child):not(:last-child):not(:only-child)
+    .card-header,
     .card-group
-        > .card:not(:first-child):not(:last-child):not(:only-child)
-        .card-footer {
+    > .card:not(:first-child):not(:last-child):not(:only-child)
+    .card-footer {
         border-radius: 0;
     }
 }
@@ -6196,34 +6191,34 @@ a.badge-dark:focus {
 
 .progress-bar-striped {
     background-image: -webkit-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.15) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.15) 50%,
-        rgba(255, 255, 255, 0.15) 75%,
-        transparent 75%,
-        transparent
+            45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
     );
     background-image: -o-linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.15) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.15) 50%,
-        rgba(255, 255, 255, 0.15) 75%,
-        transparent 75%,
-        transparent
+            45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
     );
     background-image: linear-gradient(
-        45deg,
-        rgba(255, 255, 255, 0.15) 25%,
-        transparent 25%,
-        transparent 50%,
-        rgba(255, 255, 255, 0.15) 50%,
-        rgba(255, 255, 255, 0.15) 75%,
-        transparent 75%,
-        transparent
+            45deg,
+            rgba(255, 255, 255, 0.15) 25%,
+            transparent 25%,
+            transparent 50%,
+            rgba(255, 255, 255, 0.15) 50%,
+            rgba(255, 255, 255, 0.15) 75%,
+            transparent 75%,
+            transparent
     );
     background-size: 1rem 1rem;
 }
@@ -11260,7 +11255,7 @@ button.bg-dark:focus {
 
 .text-monospace {
     font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
-        "Courier New", monospace;
+    "Courier New", monospace;
 }
 
 .text-justify {
@@ -11678,9 +11673,9 @@ h5,
     position: relative;
     background: rgb(113, 148, 200);
     background: linear-gradient(
-        90deg,
-        rgba(113, 148, 200, 1) 20%,
-        rgba(87, 199, 223, 1) 100%
+            90deg,
+            rgba(113, 148, 200, 1) 20%,
+            rgba(87, 199, 223, 1) 100%
     );
     /*
     background: #313841 !important;
@@ -11818,7 +11813,7 @@ h5,
 @media (max-width: 991.98px) {
     .ftco-navbar-light .navbar-nav > .nav-item.cta > a {
         color: #fff;
-        background: #f45900;
+        background: #51507B;
         padding-left: 15px;
     }
 }
@@ -12544,6 +12539,7 @@ h5,
     #timer {
         width: 90%;
     }
+
     header div.py-2.bg-primary {
         display: none;
     }
@@ -13895,6 +13891,7 @@ textarea.form-control {
     .ftco-counter .counter-wrap {
         margin-bottom: 20px;
     }
+
     .ftco-category .category-wrap {
         height: 300px;
     }

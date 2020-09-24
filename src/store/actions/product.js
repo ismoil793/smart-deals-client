@@ -3,7 +3,7 @@ import {
    ALL_PRODUCTS, CLEAR_PRODUCT,
    CLEAR_PRODUCTS_IN_CATEGORY, GET_ALL_CATEGORIES,
    GET_COUNT_PRODUCTS_IN_CATEGORY, GET_PRODUCT,
-   GET_PRODUCTS_IN_CATEGORY, GET_SEARCH_PRODUCTS,
+   GET_PRODUCTS_IN_CATEGORY, GET_PRODUCTS_IN_CATEGORY_LOADING, GET_SEARCH_PRODUCTS,
    URL
 } from "../types";
 
@@ -27,27 +27,39 @@ export function getAllProducts() {
 
 export function getProductsInCategory(slug, limit = 10, start = 0, list = "") {
 
-   const request = axios.get(
-       `${URL}/api/v1/product/${slug}/all/?limit=${limit}&skip=${start}`)
-       .then(response => {
+   return async dispatch => {
 
-          if (list) {
-             return {
-                list: [...list, ...response.data],
-                loading: false
+      dispatch({
+         type: GET_PRODUCTS_IN_CATEGORY_LOADING,
+         payload: true
+      });
+
+      const request = await axios.get(
+          `${URL}/api/v1/product/${slug}/all/?limit=${limit}&skip=${start}`)
+          .then(response => {
+
+             if (list) {
+                return {
+                   list: [...list, ...response.data],
+                   loading: false
+                }
+             } else {
+                return {
+                   list: response.data,
+                   loading: false
+                }
              }
-          } else {
-             return {
-                list: response.data,
-                loading: false
-             }
-          }
+          });
 
-       });
+      dispatch({
+         type: GET_PRODUCTS_IN_CATEGORY_LOADING,
+         payload: false
+      });
 
-   return {
-      type: GET_PRODUCTS_IN_CATEGORY,
-      payload: request
+      dispatch({
+         type: GET_PRODUCTS_IN_CATEGORY,
+         payload: request
+      })
    }
 }
 

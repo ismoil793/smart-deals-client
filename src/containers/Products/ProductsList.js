@@ -17,11 +17,18 @@ class ProductsList extends Component {
 
    count = 0;
 
+   deviceWidth = () => {
+      let width = window.innerWidth;
+      return width < 991;
+   };
+
    componentDidMount() {
 
       this.setState({
          flag: false
       });
+
+      window.addEventListener('scroll', this.handleScroll, true);
 
       // Every time when store has no products to render I need to get new products from DB
       if (!this.props.products.list || !this.props.products.count) {
@@ -43,6 +50,7 @@ class ProductsList extends Component {
       *  to this.props.match.params.slug I should dispatch clearProducts
       *  so that next time componentDidMount will get data from DB
       */
+      window.removeEventListener('scroll', this.handleScroll, false)
    }
 
 
@@ -51,7 +59,7 @@ class ProductsList extends Component {
 
       if (nextProps.match.params.slug !== prevState.slug) {
 
-         if(document.querySelector('.products-list-scroll')) {
+         if (document.querySelector('.products-list-scroll')) {
             document.querySelector('.products-list-scroll').scrollTo(0, 0);
          }
 
@@ -97,21 +105,44 @@ class ProductsList extends Component {
    };
 
    handleScroll = (e) => {
-      const {scrollTop, clientHeight, scrollHeight} = e.currentTarget;
-      if (scrollHeight - scrollTop === clientHeight) {
-
-         let count = this.props.products.list.length;
-         if (this.count) {
+      // const {scrollTop, clientHeight, scrollHeight} = e.currentTarget;
+      // if (scrollHeight - scrollTop === clientHeight) {
+      //    let count = this.props.products.list.length;
+      //    if (this.count) {
+      //       if (count === this.count) {
+      //          this.setState({
+      //             flag: true
+      //          })
+      //       } else {
+      //          this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
+      //       }
+      //    }
+      // }
+      if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1500)) {
+         let count = this.props.products.list ? this.props.products.list.length : 0;
+         if (this.count && count) {
             if (count === this.count) {
                this.setState({
                   flag: true
                })
-            } else {
+            } else if(!this.props.products.getting) {
                this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
             }
          }
-
       }
+
+      // if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1500)) {
+      //    let count = this.props.products.list ? this.props.products.list.length : 0;
+      //    if (this.count) {
+      //       if (count === this.count) {
+      //          this.setState({
+      //             flag: true
+      //          })
+      //       } else {
+      //          this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
+      //       }
+      //    }
+      // }
    };
 
 
@@ -126,7 +157,7 @@ class ProductsList extends Component {
          return (
              <div
                  className="col-lg-12 products-list-scroll"
-                 onScroll={e => this.handleScroll(e)}
+                 // onScroll={e => this.handleScroll(e)}
              >
 
                 <div className="row">

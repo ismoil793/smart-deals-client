@@ -47,7 +47,6 @@ export default function (ComposedClass, reload) {
       }
 
       static getDerivedStateFromProps(nextProps, prevState) {
-
          if (nextProps.user.authLogin) {
             const isAuth = nextProps.user.authLogin.isAuth;
 

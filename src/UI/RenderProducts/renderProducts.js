@@ -19,7 +19,7 @@ const RenderProducts = (props) => {
       if (props.user.authLogin && props.user.authLogin.isAuth) {
          if (!props.cart.adding) {
             return () => {
-               NotificationManager.success(msg, '', 1500);
+               NotificationManager.success(msg, '', 1500, null, false);
             };
          }
       }
@@ -35,19 +35,21 @@ const RenderProducts = (props) => {
                    <div className="product-in-category">
                       {/*to={`/products/${item.category.slug}/${item.id}`}*/}
                       <div className="product-info">
-                         <img
-                             className="img-fluid"
-                             src={item.image} alt={`${item.name}`}
-                             // if user is not authenticated he can't see price and product details
-                             onClick={() => {
-                                if (props.user.authLogin && props.user.authLogin.isAuth) {
-                                   setOpen(true);
-                                   setProductItem(item)
-                                } else {
-                                   props.history.push('/login')
-                                }
-                             }}
-                         />
+                         <div>
+                            <img
+                                className="img-fluid"
+                                src={item.image} alt={`${item.name}`}
+                                // if user is not authenticated he can't see price and product details
+                                onClick={() => {
+                                   if (props.user.authLogin && props.user.authLogin.isAuth) {
+                                      setOpen(true);
+                                      setProductItem(item)
+                                   } else {
+                                      props.history.push('/login')
+                                   }
+                                }}
+                            />
+                         </div>
                          <div className="img-prod-detail">
                             <p className="trade_mark">
                                <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={36}/>
@@ -64,7 +66,8 @@ const RenderProducts = (props) => {
                                          {/*<button>Добавить</button>*/}
                                       </p>
                                       <span className="price-bigger">
-                                         <span className="price-normal">Цена:</span> <PriceRefactor price={item.minimum_quantity_price}/> сум
+                                         <span className="price-normal">Цена:</span> <PriceRefactor
+                                          price={item.minimum_quantity_price}/> сум
                                       </span>
                                    </React.Fragment>
                                    : null

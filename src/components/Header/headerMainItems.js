@@ -4,6 +4,7 @@ import {connect} from "react-redux";
 import {FaShoppingCart, FaBars} from "react-icons/fa";
 import {IoMdClose} from "react-icons/io";
 import {getCart} from "../../store/actions/cart";
+import {countTotalQuantity} from "../../UI/Refactors/Counters";
 
 const HeaderMainItems = (props) => {
 
@@ -69,15 +70,6 @@ const HeaderMainItems = (props) => {
          to: "/cart"
       }
    ];
-
-   const countTotalQuantity = (products) => {
-      let total = 0;
-
-      products.forEach((p) => {
-         total += p.pack_quantity;
-      });
-      return total;
-   };
 
    const renderLinks = (links) => {
 

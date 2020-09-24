@@ -254,6 +254,7 @@ class Register extends Component {
                                        className="check-rules"
                                        to="/rules"
                                        target="_blank"
+                                       onClick={e => this.setState({checkRules: true})}
                                     >
                                        <input
                                           name="check-rules"

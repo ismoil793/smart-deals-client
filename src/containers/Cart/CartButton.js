@@ -6,6 +6,7 @@ import {connect} from "react-redux";
 import ProductNameRefactor from "../../UI/Refactors/ProductNameRefactor";
 import {getCart} from "../../store/actions/cart";
 import PriceRefactor from "../../UI/Refactors/PriceRefactor";
+import {countTotalPrice, countTotalQuantity} from "../../UI/Refactors/Counters";
 
 class CartButton extends Component {
 
@@ -27,24 +28,6 @@ class CartButton extends Component {
    //    console.log(this.props)
    //    console.log(nextProps)
    // }
-
-   countAllInCart = (products) => {
-      let count = 0;
-
-      products.forEach((p) => {
-         count += p.pack_quantity;
-      });
-      return count;
-   };
-
-   countTotalPrice = (products) => {
-      let total = 0;
-
-      products.forEach((p) => {
-         total += p.total_price;
-      });
-      return total;
-   };
 
    renderCartElements = (elements) => {
       return elements.map((item, i) => (
@@ -73,7 +56,7 @@ class CartButton extends Component {
                        title="Корзина"
                    >
                       <FiShoppingCart/>
-                      <span className="after">{this.countAllInCart(cart.products)}</span>
+                      <span className="after">{countTotalQuantity(cart.products)}</span>
                    </div>
 
                    {
@@ -81,7 +64,7 @@ class CartButton extends Component {
                           <div className="shop-cart">
                              <div className="shopping-cart">
                                 <div className="shopping-cart-header">
-                                   <FiShoppingCart/> <span className="badge">{this.countAllInCart(cart.products)}</span>
+                                   <FiShoppingCart/> <span className="badge">{countTotalQuantity(cart.products)}</span>
                                    <div className="shopping-cart-close"
                                         onClick={() => this.setState({isCartOpen: !this.state.isCartOpen})}>
                                       <AiOutlineCloseCircle/>
@@ -89,7 +72,7 @@ class CartButton extends Component {
                                    <div className="shopping-cart-total">
                                       <span className="lighter-text">Итого: </span>
                                       <span className="main-color-text">
-                                         <PriceRefactor price={this.countTotalPrice(cart.products)}/> сум
+                                         <PriceRefactor price={countTotalPrice(cart.products)}/> сум
                                       </span>
                                    </div>
                                 </div>

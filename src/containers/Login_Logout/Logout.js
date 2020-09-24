@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { logOutUser } from "../../store/actions/user";
+import {clearCart} from "../../store/actions/cart";
 import { Helmet } from "react-helmet";
 
 class Logout extends Component {
 
    logOut = () => {
-      this.props.dispatch(logOutUser())
+      this.props.dispatch(logOutUser());
+      this.props.dispatch(clearCart())
       this.props.history.push('/')
    };
 
