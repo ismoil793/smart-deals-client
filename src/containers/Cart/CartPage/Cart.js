@@ -41,7 +41,7 @@ class Cart extends Component {
          nextProps.dispatch(clearConfirmOrder());
          setTimeout(() => {
             nextProps.history.push("/profile");
-         }, 1500);
+         }, 1000);
          return ({checkoutSuccess: true})
       }
       return null
@@ -57,6 +57,7 @@ class Cart extends Component {
       if (address.trim().length === 0) {
          alert("Форма не прошла валидацию")
       } else {
+         console.log(typeof(delivery_date))
          this.props.dispatch(confirmOrder({delivery_date, comment, address}));
          this.props.dispatch(clearCart());
          this.clearOrder()

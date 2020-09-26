@@ -1,7 +1,7 @@
 import React from 'react';
 import { getCategories } from "../../store/actions/product";
-import { FaShoppingBag, FaSprayCan, FaWineBottle } from "react-icons/fa"
-import { GiWaterDrop, GiMilkCarton, GiNoodles, GiCakeSlice, GiCoffeeCup } from "react-icons/gi"
+import { FaShoppingBag, FaSprayCan, FaWineBottle, FaSeedling } from "react-icons/fa"
+import { GiWaterDrop, GiMilkCarton, GiNoodles, GiCakeSlice, GiCoffeeCup, GiSlicedBread,GiRoastChicken, GiSpray} from "react-icons/gi"
 import { connect } from "react-redux";
 import { Link, withRouter } from "react-router-dom";
 import Loader from "../../UI/Preloader/loader";
@@ -11,6 +11,10 @@ import Skeleton from "react-loading-skeleton";
 
 class Categories extends React.Component {
 
+   state = {
+      scrollY: 0
+   };
+
    icons = [
       <FaWineBottle />,
       <FaShoppingBag />,
@@ -19,11 +23,15 @@ class Categories extends React.Component {
       <GiNoodles style={{ fontSize: '18px' }} />,
       <GiCakeSlice style={{ fontSize: '18px' }} />,
       <GiCoffeeCup style={{ fontSize: '18px' }} />,
-      <GiWaterDrop />
+      <GiWaterDrop />,
+       <FaSeedling  />,
+       <GiSpray />,
+       <GiSlicedBread />,
+      <GiRoastChicken />,
    ];
 
    componentDidMount() {
-      this.props.dispatch(getCategories())
+      this.props.dispatch(getCategories());
    }
 
    renderCategoriesHome = (posts) => {
@@ -102,7 +110,9 @@ class Categories extends React.Component {
          case "Products":
             if (this.props.product && this.props.product.categories && this.props.product.categories.length > 0) {
                return (
-                  <div className="category-products-sidebar">
+                  <div
+                      className="category-products-sidebar"
+                  >
                      <h4>Выберите категорию</h4>
                      <nav>
                         <ul className="row">

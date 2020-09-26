@@ -433,6 +433,9 @@ div.img-prod-detail .price-bigger .price-normal {
 =========================================*/
 
 .category-products-sidebar {
+    position: sticky;
+    max-width: 350px;
+    top: 3%;
 }
 
 .category-products-sidebar nav ul {
@@ -457,7 +460,7 @@ div.img-prod-detail .price-bigger .price-normal {
     display: flex;
     align-items: center;
     color: #323841;
-    padding: 15px;
+    padding: 3% 0 3% 4%;
     transition: all 300ms ease;
     border-radius: 5px;
     border: 1px solid #778497;
@@ -466,6 +469,11 @@ div.img-prod-detail .price-bigger .price-normal {
 .category-products-sidebar nav ul li a svg {
     font-size: 15px;
 }
+
+.category-products-sidebar nav ul li a span {
+    overflow-wrap: anywhere;
+}
+
 
 .category-products-sidebar nav ul li a.active {
     /*background-color: #F45900;*/

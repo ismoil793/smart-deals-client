@@ -51,7 +51,7 @@ const Footer = (props) => {
       },
       {
          type: "nav-item",
-         text: "Мой профиль",
+         text: "Профиль",
          to: "/profile"
       },
       {
@@ -117,7 +117,7 @@ const Footer = (props) => {
 
                   </div>
                </div>
-               <div className="col-5 col-md-4">
+               <div className="col-4 col-md-4">
                   <div className="ftco-footer-widget mb-4 ml-md-5">
                      <h2 className="ftco-heading-2">Меню</h2>
                      <ul className="list-unstyled">
@@ -133,7 +133,7 @@ const Footer = (props) => {
                   </div>
                </div>
 
-               <div className="col-7 col-md-4">
+               <div className="col-8 col-md-4">
                   <div className="ftco-footer-widget mb-4">
                      <h2 className="ftco-heading-2">У вас есть вопросы?</h2>
                      <div className="block-23 mb-3">

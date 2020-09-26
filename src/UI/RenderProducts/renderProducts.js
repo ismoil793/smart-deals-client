@@ -52,7 +52,7 @@ const RenderProducts = (props) => {
                          </div>
                          <div className="img-prod-detail">
                             <p className="trade_mark">
-                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={36}/>
+                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={31}/>
                             </p>
                             <p>
                                {item.trade_mark}
@@ -65,10 +65,13 @@ const RenderProducts = (props) => {
                                          <span>{item.minimum_quantity}шт x {item.measurement}</span>
                                          {/*<button>Добавить</button>*/}
                                       </p>
-                                      <span className="price-bigger">
-                                         <span className="price-normal">Цена:</span> <PriceRefactor
-                                          price={item.minimum_quantity_price}/> сум
-                                      </span>
+                                      <p className="price-bigger">
+                                         <span className="price-normal">
+                                            Цена:
+                                            <span>&nbsp;<PriceRefactor price={item.minimum_quantity_price}/>&nbsp;</span>
+                                            сум
+                                         </span>
+                                      </p>
                                    </React.Fragment>
                                    : null
                             }

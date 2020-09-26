@@ -18,9 +18,12 @@ class CartCheck extends Component {
            orders.map((item, i) => (
                <li key={item.id + i}>
                   <div className="row">
-                     <div className="col-8">
-                        {item.name} 1л * 10
-                        <strong> x2</strong>
+                     <div className="col-5">
+                        {item.name}
+                     </div>
+                     <div className="col-3">
+                        {item.measurement} * {item.minimum_quantity}
+                        <strong> x{item.pack_quantity}</strong>
                      </div>
                      <div className="col-4">
                         <span>&nbsp;(<PriceRefactor price={item.total_price} /> сум)</span>
@@ -49,12 +52,13 @@ class CartCheck extends Component {
                    </div>
 
                    <div className="row">
-                      <div className="col-6">
+                      <div className="col-lg-7 col-12">
 
                          <div className="card check-wrapper p-2">
                             <div className="check-content">
                                <strong>Заказ <small>SD#{order.history_id}</small></strong>
-                               <p className="date">Дата оформления: {order.delivery_date}</p>
+                               {console.log(order)}
+                               <p className="date">Дата оформления: {order.ordered_date}</p>
                                <p className="date">Дата доставки: {order.delivery_date}</p>
                                <p><span className="check-status">Статус заказа:</span> {order.status}</p>
                                <p>Заказ от: <em>"{order.name}"</em> - {order.email}</p>
@@ -82,7 +86,7 @@ class CartCheck extends Component {
                          </div>
 
                       </div>
-                      <div className="col-6">
+                      <div className="col-lg-5 col-12">
                          <div className="sd-payment card bg-light p-2 h-100">
                             <p>Расчётный счёт на оплату: 12345678912345678901</p>
                             <p>Компания: "ООО Smart Deals"</p>

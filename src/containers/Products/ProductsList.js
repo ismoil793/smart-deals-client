@@ -33,13 +33,13 @@ class ProductsList extends Component {
       // Every time when store has no products to render I need to get new products from DB
       if (!this.props.products.list || !this.props.products.count) {
          this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 40, 0));
+         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 16, 0));
          this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
       }
       // When category slug changes and it is different from product.category.slug -> rerender component
       else if (this.props.products.list[0].category.slug !== this.props.match.params.slug) {
          this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 40, 0));
+         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 16, 0));
          this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
       }
    }
@@ -59,12 +59,11 @@ class ProductsList extends Component {
 
       if (nextProps.match.params.slug !== prevState.slug) {
 
-         if (document.querySelector('.products-list-scroll')) {
-            document.querySelector('.products-list-scroll').scrollTo(0, 0);
-         }
+         window.scrollTo(0, 0);
+
 
          nextProps.products.loading = true;
-         nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 40, 0));
+         nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 16, 0));
          nextProps.dispatch(getCountProductCategory(nextProps.match.params.slug));
 
          return ({slug: nextProps.match.params.slug})
@@ -125,24 +124,11 @@ class ProductsList extends Component {
                this.setState({
                   flag: true
                })
-            } else if(!this.props.products.getting) {
+            } else if (!this.props.products.getting) {
                this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
             }
          }
       }
-
-      // if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1500)) {
-      //    let count = this.props.products.list ? this.props.products.list.length : 0;
-      //    if (this.count) {
-      //       if (count === this.count) {
-      //          this.setState({
-      //             flag: true
-      //          })
-      //       } else {
-      //          this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
-      //       }
-      //    }
-      // }
    };
 
 
@@ -173,15 +159,10 @@ class ProductsList extends Component {
                        : null
                 }
 
-                {/*<div className="row position-relative">*/}
-                {/*   <LoaderDots/>*/}
-                {/*</div>*/}
-
-
-                <div className="row">
-                   {this.renderWarning()}
+                {/*<div className="row">*/}
+                {/*   {this.renderWarning()}*/}
                    {/*{*/}
-                   {/*   this.count > 20 ?*/}
+                   {/*   this.count > 16 ?*/}
                    {/*       <div className="col-lg-12">*/}
                    {/*          <button className="btn btn-info loadmore-btn" onClick={this.loadMore}>*/}
                    {/*             Показать больше*/}
@@ -189,7 +170,7 @@ class ProductsList extends Component {
                    {/*       </div>*/}
                    {/*       : null*/}
                    {/*}*/}
-                </div>
+                {/*</div>*/}
              </div>
          );
       } else {

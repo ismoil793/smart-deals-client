@@ -2,36 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/containers/History/CartCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/asset-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/build/asset-manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/build/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/precache-manifest.54637edfa91065a3d1beccc7be613d07.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/precache-manifest.1d164440ef18fdb8e87eaf5f37a28469.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/service-worker.js" beforeDir="false" afterPath="$PROJECT_DIR$/build/service-worker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.0178629c.chunk.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/static/js/main.0178629c.chunk.js.map" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.12109c9a.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.12109c9a.chunk.js.LICENSE.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/2.12109c9a.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.4f947896.chunk.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/static/js/main.4f947896.chunk.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/responsive.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/responsive.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/Refactors/DateFormatters.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/Refactors/DateFormatters.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Header/headerMainItems.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Cart/CartButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Cart/CartButton.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Footer/footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Footer/footer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Cart/CartPage/Cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Cart/CartPage/Cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Login_Logout/Logout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Categories/Categories.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Categories/Categories.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/History/CartCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/History/CartCheck.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Profile/Check/CartCheck.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/containers/Register/register.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Register/register.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hoc/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hoc/auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/cart.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/cart.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/actions/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/actions/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/order.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/order.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/reducers/product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/reducers/product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/types.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/types.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Profile/userProfile.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,7 +210,12 @@
       <workItem from="1600749375638" duration="576000" />
       <workItem from="1600838879101" duration="2329000" />
       <workItem from="1600853231722" duration="13179000" />
-      <workItem from="1600923984432" duration="6454000" />
+      <workItem from="1600923984432" duration="11043000" />
+      <workItem from="1600948607085" duration="30000" />
+      <workItem from="1601009454029" duration="302000" />
+      <workItem from="1601010331281" duration="5074000" />
+      <workItem from="1601109438261" duration="421000" />
+      <workItem from="1601113693122" duration="4174000" />
     </task>
     <servers />
   </component>

@@ -75,7 +75,7 @@ class UserProfile extends Component {
                                <tr>
                                   <th scope="col">#</th>
                                   <th scope="col">Сумма</th>
-                                  <th scope="col">Дата</th>
+                                  <th scope="col">Дата доставки</th>
                                   <th scope="col">Статус</th>
                                   <th scope="col"></th>
                                </tr>
