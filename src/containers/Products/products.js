@@ -10,7 +10,6 @@ import CartButton from "../Cart/CartButton";
 class Products extends React.Component {
 
    componentDidMount() {
-
       window.scrollTo(0, 0)
    }
 
