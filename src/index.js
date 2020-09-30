@@ -17,6 +17,7 @@ const composeEnhancers =
         }) : compose;
 
 const createStoreWithMiddleware = composeEnhancers(applyMiddleware(promiseMiddleware, ReduxThunk))(createStore);
+//const createStoreWithMiddleware = applyMiddleware(promiseMiddleware, ReduxThunk)(createStore);
 
 ReactDOM.render(
    <Provider store={createStoreWithMiddleware(reducers)}>
