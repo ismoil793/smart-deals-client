@@ -35,6 +35,12 @@
     .cart-table {
         overflow-x: scroll;
     }
+    /*--google translator--*/
+    .goog-te-gadget {
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+    }
 }
 
 @media (max-width: 767px) {
@@ -109,7 +115,12 @@
         margin: 0 auto;
     }
 
-    /* Category images homepahe */
+    .category-products-sidebar nav ul li a {
+        padding: 5px 0;
+    }
+
+
+    /* Category images homepage */
     .product .img-prod img {
         object-fit: contain;
     }
