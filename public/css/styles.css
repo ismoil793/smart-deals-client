@@ -472,6 +472,7 @@ div.img-prod-detail .price-bigger .price-normal {
 
 .category-products-sidebar nav ul li a span {
     overflow-wrap: anywhere;
+    word-break: break-word;
 }
 
 
