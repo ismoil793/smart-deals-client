@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import HelmetTitle from "../../UI/Helmet/Title";
+import HelmetTitle from "../../UI/Helmet/MetaDecorator";
 import {connect} from "react-redux";
 import {fetchOrder} from "../../store/actions/order";
 import Loader from "../../UI/Preloader/loader";

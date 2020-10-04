@@ -50,6 +50,7 @@ class ProductsList extends Component {
       *  to this.props.match.params.slug I should dispatch clearProducts
       *  so that next time componentDidMount will get data from DB
       */
+      this.props.dispatch(clearProductsInCategory());
       window.removeEventListener('scroll', this.handleScroll, false)
    }
 

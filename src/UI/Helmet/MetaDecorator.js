@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from "react-helmet";
 
-const HelmetTitle = ({ title, content }) => {
+const MetaDecorator = ({ title, content }) => {
     return (
         <Helmet>
             <title>{title}</title>
@@ -10,4 +10,4 @@ const HelmetTitle = ({ title, content }) => {
     );
 };
 
-export default HelmetTitle;
+export default MetaDecorator;

@@ -3,7 +3,7 @@ import { connect } from "react-redux"
 import { loginUser } from "../../store/actions/user";
 import { FaUserAlt, FaLock } from "react-icons/fa"
 import { Link } from "react-router-dom";
-import HelmetTitle from "../../UI/Helmet/Title"
+import HelmetTitle from "../../UI/Helmet/MetaDecorator"
 
 class Login extends Component {
 

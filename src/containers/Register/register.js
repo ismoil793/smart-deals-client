@@ -4,7 +4,7 @@ import { FaUserAlt, FaLock, FaEnvelope, FaPhoneAlt, FaTrademark } from "react-ic
 import { GrOrganization, GrDocumentPerformance } from "react-icons/gr"
 import { connect } from "react-redux";
 import { clearRegisterUser, registerUser } from "../../store/actions/user";
-import HelmetTitle from "../../UI/Helmet/Title";
+import HelmetTitle from "../../UI/Helmet/MetaDecorator";
 
 class Register extends Component {
 

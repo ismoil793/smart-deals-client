@@ -1,7 +1,7 @@
 import React from 'react';
 // import Benefits from "../Home/Benefits";
 import YandexMap from "../../UI/contactForm/YandexMap";
-import HelmetTitle from "../../UI/Helmet/Title"
+import HelmetTitle from "../../UI/Helmet/MetaDecorator"
 
 const About = () => {
    return (

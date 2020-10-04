@@ -3,7 +3,7 @@ import Categories from "../Categories/Categories";
 import Search from "./Search";
 import { withRouter } from "react-router-dom";
 import RenderProducts from "./ProductsList";
-import HelmetTitle from "../../UI/Helmet/Title";
+import HelmetTitle from "../../UI/Helmet/MetaDecorator";
 import CartButton from "../Cart/CartButton";
 
 

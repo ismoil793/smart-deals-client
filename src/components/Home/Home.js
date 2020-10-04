@@ -6,7 +6,7 @@ import ServiceTypes from "./ServiceTypes";
 // import {connect} from "react-redux";
 import Benefits from "./Benefits";
 import NewsLetter from "../../UI/NewsLetter/newsLetter";
-import HelmetTitle from "../../UI/Helmet/Title"
+import HelmetTitle from "../../UI/Helmet/MetaDecorator"
 import $ from "jquery";
 
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import HelmetTitle from "../../UI/Helmet/Title"
+import HelmetTitle from "../../UI/Helmet/MetaDecorator"
 
 const Rules = () => {
    return (

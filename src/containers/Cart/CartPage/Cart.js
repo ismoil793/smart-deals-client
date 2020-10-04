@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import ReactDatePicker from "../../../UI/ReactDatePicker/ReactDatePicker";
 import {connect} from "react-redux";
-import HelmetTitle from "../../../UI/Helmet/Title"
+import HelmetTitle from "../../../UI/Helmet/MetaDecorator"
 import {clearCart, getCart} from "../../../store/actions/cart";
 import PriceRefactor from "../../../UI/Refactors/PriceRefactor";
 import ControlButtons from "./ControlButtons";

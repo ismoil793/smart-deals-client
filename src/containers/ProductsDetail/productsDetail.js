@@ -4,7 +4,7 @@ import { clearProduct, getProduct } from "../../store/actions/product";
 import SkeletonUI from "../../UI/Skeleton/SkeletonUI";
 import { Link } from "react-router-dom";
 import ReactImageMagnify from 'react-image-magnify';
-import HelmetTitle from "../../UI/Helmet/Title";
+import HelmetTitle from "../../UI/Helmet/MetaDecorator";
 
 class ProductsDetail extends Component {
 

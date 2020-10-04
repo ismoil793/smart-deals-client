@@ -67,13 +67,10 @@ const Footer = (props) => {
    ];
 
    const renderLinks = (links) => {
-
       return links.map((item, i) => {
-
-
          return (
             <li key={i}>
-               <Link to={`${item.to}`} className="py-2 d-block">{item.text}</Link>
+               <Link to={`${item.to}`} className={`${i === 0 ? 'pb-2' : 'py-2'} d-block`}>{item.text}</Link>
             </li>
          )
       })

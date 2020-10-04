@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from "react-redux"
-import HelmetTitle from "../../UI/Helmet/Title"
+import HelmetTitle from "../../UI/Helmet/MetaDecorator"
 import {Link} from "react-router-dom";
 import {fetchOrderAll} from "../../store/actions/order";
 import PriceRefactor from "../../UI/Refactors/PriceRefactor";

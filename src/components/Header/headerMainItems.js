@@ -5,6 +5,7 @@ import {FaShoppingCart, FaBars} from "react-icons/fa";
 import {IoMdClose} from "react-icons/io";
 import {getCart} from "../../store/actions/cart";
 import {countTotalQuantity} from "../../UI/Refactors/Counters";
+import {googleTranslateEl} from "../../UI/Helpers/googleTranslate";
 
 const HeaderMainItems = (props) => {
 
@@ -12,6 +13,7 @@ const HeaderMainItems = (props) => {
 
    useEffect(() => {
       props.dispatch(getCart())
+      googleTranslateEl()
    }, []);
 
 

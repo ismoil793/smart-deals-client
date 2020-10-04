@@ -1,6 +1,6 @@
 import React from 'react';
 import ContactForm from "../../UI/contactForm/contactForm";
-import HelmetTitle from "../../UI/Helmet/Title"
+import HelmetTitle from "../../UI/Helmet/MetaDecorator"
 
 const Contacts = () => {
    return (
