@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {FaSearch} from "react-icons/fa";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom"
-import {getSearchProducts} from "../../store/actions/product";
+import {clearProductsInCategory, getSearchProducts} from "../../store/actions/product";
 
 class Search extends Component {
 
@@ -10,11 +10,26 @@ class Search extends Component {
       search: ''
    };
 
+   componentDidMount() {
+      if(this.props.match.params.slug === 'search') {
+         if(this.props.location.search) {
+            let search = this.props.location.search.replace("?", "");
+            this.props.dispatch(getSearchProducts(search));
+         }
+      }
+   }
+
+   componentWillUnmount() {
+      window.removeEventListener('scroll', this.handleScroll, false);
+      this.props.dispatch(clearProductsInCategory())
+   }
+
    submitForm = (e) => {
       e.preventDefault();
       if (this.state.search !== '' && this.state.search.length > 0) {
          this.props.products.loading = true;
          this.props.dispatch(getSearchProducts(this.state.search));
+         this.props.history.push(`/products/search?${this.state.search}`)
       }
    };
 

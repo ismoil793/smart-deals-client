@@ -1,5 +1,10 @@
 import React, {Component} from 'react';
-import {getCountProductCategory, getProductsInCategory, clearProductsInCategory} from "../../store/actions/product";
+import {
+   getCountProductCategory,
+   getProductsInCategory,
+   clearProductsInCategory,
+   getSearchProducts
+} from "../../store/actions/product";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
 import SkeletonUI from "../../UI/Skeleton/SkeletonUI";
@@ -22,6 +27,14 @@ class ProductsList extends Component {
       return width < 991;
    };
 
+   updateComponent = (slug) => {
+      if (slug !== 'search') {
+         this.props.dispatch(clearProductsInCategory());
+         this.props.dispatch(getProductsInCategory(slug, 16, 0));
+         this.props.dispatch(getCountProductCategory(slug));
+      }
+   };
+
    componentDidMount() {
 
       this.setState({
@@ -32,15 +45,11 @@ class ProductsList extends Component {
 
       // Every time when store has no products to render I need to get new products from DB
       if (!this.props.products.list || !this.props.products.count) {
-         this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 16, 0));
-         this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
+         this.updateComponent(this.props.match.params.slug)
       }
       // When category slug changes and it is different from product.category.slug -> rerender component
       else if (this.props.products.list[0].category.slug !== this.props.match.params.slug) {
-         this.props.dispatch(clearProductsInCategory());
-         this.props.dispatch(getProductsInCategory(this.props.match.params.slug, 16, 0));
-         this.props.dispatch(getCountProductCategory(this.props.match.params.slug));
+         this.updateComponent(this.props.match.params.slug)
       }
    }
 
@@ -50,20 +59,23 @@ class ProductsList extends Component {
       *  to this.props.match.params.slug I should dispatch clearProducts
       *  so that next time componentDidMount will get data from DB
       */
-      this.props.dispatch(clearProductsInCategory()); // added bcs it caused problems when
-      window.removeEventListener('scroll', this.handleScroll, false)
+      window.removeEventListener('scroll', this.handleScroll, false);
+      this.props.dispatch(clearProductsInCategory()); // added bcs previous logic caused problems
    }
 
 
    // instead of UNSAFE_componentWillReceiveProps(nextProps, nextContext):
    static getDerivedStateFromProps(nextProps, prevState) {
 
-      if (nextProps.match.params.slug !== prevState.slug) {
+      if (nextProps.match.params.slug === 'search') {
+         return ({slug: nextProps.match.params.slug})
+      }
+
+      else if (nextProps.match.params.slug !== prevState.slug) {
 
          window.scrollTo(0, 0);
-
-
          nextProps.products.loading = true;
+         nextProps.dispatch(clearProductsInCategory());
          nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 16, 0));
          nextProps.dispatch(getCountProductCategory(nextProps.match.params.slug));
 
@@ -125,7 +137,9 @@ class ProductsList extends Component {
                this.setState({
                   flag: true
                })
-            } else if (!this.props.products.getting) {
+            } else if (
+                !this.props.products.getting &&
+                this.props.match.params.slug !== 'search') {
                this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
             }
          }
@@ -153,7 +167,8 @@ class ProductsList extends Component {
 
 
                 {
-                   this.props.products.list.length !== this.props.products.count ?
+                   this.props.products.list.length !== this.props.products.count
+                   && this.props.match.params.slug !== 'search' ?
                        <div className="row position-relative">
                           <LoaderDots/>
                        </div>
@@ -162,15 +177,15 @@ class ProductsList extends Component {
 
                 {/*<div className="row">*/}
                 {/*   {this.renderWarning()}*/}
-                   {/*{*/}
-                   {/*   this.count > 16 ?*/}
-                   {/*       <div className="col-lg-12">*/}
-                   {/*          <button className="btn btn-info loadmore-btn" onClick={this.loadMore}>*/}
-                   {/*             Показать больше*/}
-                   {/*          </button>*/}
-                   {/*       </div>*/}
-                   {/*       : null*/}
-                   {/*}*/}
+                {/*{*/}
+                {/*   this.count > 16 ?*/}
+                {/*       <div className="col-lg-12">*/}
+                {/*          <button className="btn btn-info loadmore-btn" onClick={this.loadMore}>*/}
+                {/*             Показать больше*/}
+                {/*          </button>*/}
+                {/*       </div>*/}
+                {/*       : null*/}
+                {/*}*/}
                 {/*</div>*/}
              </div>
          );
