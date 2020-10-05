@@ -9,15 +9,21 @@ import {withRouter} from "react-router-dom";
 import SkeletonUI from "../../UI/Skeleton/SkeletonUI";
 import RenderProducts from "../../UI/RenderProducts/renderProducts";
 import LoaderDots from "../../UI/Preloader/LoaderDots";
+import InfiniteScroll from 'react-infinite-scroller';
+
 
 // import CartButton from "../Cart/CartButton";
 
 class ProductsList extends Component {
 
-   state = {
-      slug: this.props.match.params.slug,
-      flag: false
-   };
+   constructor(props) {
+      super(props);
+      this.state = {
+         slug: this.props.match.params.slug,
+         flag: false
+      };
+      this.handleScroll = this.handleScroll.bind(this)
+   }
 
    count = 0;
 
@@ -40,7 +46,9 @@ class ProductsList extends Component {
          flag: false
       });
 
-      window.addEventListener('scroll', this.handleScroll, true);
+      // if(!this.props.products.list && this.props.match.params.slug !== 'search') {
+      //    window.addEventListener('scroll', this.handleScroll, true);
+      // }
 
       this.updateComponent(this.props.match.params.slug)
 
@@ -48,17 +56,6 @@ class ProductsList extends Component {
       //    this.updateComponent(this.props.match.params.slug)
       // }
    }
-
-   componentWillUnmount() {
-      /* --------------THIS LOGIC IS NO MORE IN USE----------------------
-      *  if this.props.products.list[0].category name not equal
-      *  to this.props.match.params.slug I should dispatch clearProducts
-      *  so that next time componentDidMount will get data from DB
-      */
-      window.removeEventListener('scroll', this.handleScroll, false);
-      this.props.dispatch(clearProductsInCategory()); // added bcs previous logic caused problems
-   }
-
 
    // instead of UNSAFE_componentWillReceiveProps(nextProps, nextContext):
    static getDerivedStateFromProps(nextProps, prevState) {
@@ -68,18 +65,20 @@ class ProductsList extends Component {
       } else if (nextProps.match.params.slug !== prevState.slug) {
 
          window.scrollTo(0, 0);
+
          nextProps.products.loading = true;
          nextProps.dispatch(clearProductsInCategory());
          nextProps.dispatch(getProductsInCategory(nextProps.match.params.slug, 16, 0));
          nextProps.dispatch(getCountProductCategory(nextProps.match.params.slug));
 
          return ({slug: nextProps.match.params.slug})
-
-         //return ({slug: nextProps.match.params.slug, list: nextProps.products.list}) // <- this is setState equivalent
       }
-
       return null
+   }
 
+   componentWillUnmount() {
+      // window.removeEventListener('scroll', this.handleScroll, false);
+      this.props.dispatch(clearProductsInCategory()); // added bcs previous logic caused problems
    }
 
    renderWarning = () => {
@@ -110,7 +109,7 @@ class ProductsList extends Component {
       }
    };
 
-   handleScroll = (e) => {
+   handleScroll(e) {
       // const {scrollTop, clientHeight, scrollHeight} = e.currentTarget;
       // if (scrollHeight - scrollTop === clientHeight) {
       //    let count = this.props.products.list.length;
@@ -126,13 +125,12 @@ class ProductsList extends Component {
       // }
       if ((window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 1500)) {
          let count = this.props.products.list ? this.props.products.list.length : 0;
-         if (this.count && count) {
+         if (this.count && count && !this.state.flag) {
             if (count === this.count) {
                this.setState({
                   flag: true
                })
             } else if (!this.props.products.getting && this.props.match.params.slug !== 'search') {
-               console.log(this.state.slug)
                this.props.dispatch(getProductsInCategory(this.state.slug, 8, count, this.props.products.list));
             }
          }
@@ -142,7 +140,6 @@ class ProductsList extends Component {
 
    render() {
 
-      console.log(this.props.match.params.slug)
 
       if (this.props.products.list && this.props.products.list.length > 0 && !this.props.products.loading) {
 
@@ -156,19 +153,38 @@ class ProductsList extends Component {
                  // onScroll={e => this.handleScroll(e)}
              >
 
-                <div className="row">
-                   <RenderProducts {...this.props} list={this.props.products.list}/>
-                </div>
-
 
                 {
-                   this.props.products.list.length !== this.props.products.count
-                   && this.props.match.params.slug !== 'search' ?
-                       <div className="row position-relative">
-                          <LoaderDots/>
+                   this.state.slug === "search" ?
+                       <div className="row">
+                          <RenderProducts {...this.props} list={this.props.products.list}/>
                        </div>
-                       : null
+                       :
+                       <InfiniteScroll
+                           pageStart={0}
+                           loadMore={this.handleScroll}
+                           hasMore={this.count > this.props.products.list.length}
+                           loader={
+                              <div className="row position-relative" key={0}>
+                                 <LoaderDots/>
+                              </div>
+                           }
+                       >
+                          <div className="row">
+                             <RenderProducts {...this.props} list={this.props.products.list}/>
+                          </div>
+                       </InfiniteScroll>
                 }
+
+
+                {/*{*/}
+                {/*   this.props.products.list.length !== this.props.products.count*/}
+                {/*   && this.props.match.params.slug !== 'search' ?*/}
+                {/*       <div className="row position-relative">*/}
+                {/*          <LoaderDots/>*/}
+                {/*       </div>*/}
+                {/*       : null*/}
+                {/*}*/}
 
                 {/*<div className="row">*/}
                 {/*   {this.renderWarning()}*/}
