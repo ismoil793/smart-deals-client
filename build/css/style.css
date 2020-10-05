@@ -2425,7 +2425,7 @@ textarea.form-control {
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .form-text {
@@ -11726,7 +11726,7 @@ h5,
     font-weight: 500;
     /* color: #e3e3ea; */
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1px;
     opacity: 1 !important;
 }
@@ -14174,11 +14174,11 @@ textarea.form-control {
     box-shadow: 0 3px 10px 0 rgba(50, 56, 65, 0.05);
     position: relative;
     bottom: 10em;
-    padding: 5% 3%;
+    padding: 3% 1% 2% 1%;
 }
 
 .contact-section .form-wrapper img {
-    width: 98%;
+    width: 85%;
 }
 
 .contact-section .contact-info p a {
