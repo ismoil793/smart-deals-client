@@ -7,7 +7,9 @@ const ContactForm = () => {
           <div className="container">
              <div className="row block-9 form-wrapper">
                    <div className="col-md-7">
-                      <img src="/images/contact-us-manager.png" alt="contact-us-manager"/>
+                      <div className="d-flex align-items-center justify-content-center h-100">
+                         <img src="/images/contact-us-manager.png" alt="contact-us-manager"/>
+                      </div>
                    </div>
 
                    <div className="col-md-5">

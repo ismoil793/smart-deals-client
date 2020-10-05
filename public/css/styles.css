@@ -675,7 +675,7 @@ section.about-company .hero-wrap .overlay {
 }
 
 section.about-company .hero-wrap.hero-bread {
-    padding: 6em 0 18em 0;
+    padding: 4em 0 15em 0;
 }
 
 section.about-company .ftco-section {
@@ -683,7 +683,7 @@ section.about-company .ftco-section {
 }
 
 section.about-company .hero-wrap h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: #ffffff;
     font-family: "Fira Sans", cursive;
     font-weight: 500;
@@ -820,7 +820,7 @@ section.main-products {
 ===============================*/
 
 section.company-contacts .hero-wrap.hero-bread {
-    padding: 6em 0 15em 0;
+    padding: 4em 0 12em 0;
 }
 
 section.company-contacts .ftco-section {
@@ -828,7 +828,7 @@ section.company-contacts .ftco-section {
 }
 
 section.company-contacts .hero-wrap h1 {
-    font-size: 50px;
+    font-size: 40px;
     color: #ffffff;
     font-family: "Fira Sans", cursive;
     font-weight: 500;
