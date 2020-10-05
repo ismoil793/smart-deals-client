@@ -11726,7 +11726,7 @@ h5,
     font-weight: 500;
     /* color: #e3e3ea; */
     color: #fff;
-    text-transform: uppercase;
+    text-transform: capitalize;
     letter-spacing: 1px;
     opacity: 1 !important;
 }

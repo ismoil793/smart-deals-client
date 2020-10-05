@@ -53,7 +53,7 @@ const HeaderMainItems = (props) => {
       },
       {
          type: "nav-item",
-         text: "мой Профиль",
+         text: "Личный кабинет",
          to: "/profile"
       },
       {

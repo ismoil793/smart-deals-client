@@ -51,7 +51,7 @@ const Footer = (props) => {
       },
       {
          type: "nav-item",
-         text: "Профиль",
+         text: "Личный кабинет",
          to: "/profile"
       },
       {
