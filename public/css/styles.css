@@ -384,6 +384,10 @@ div.img-prod-detail .price-bigger .price-normal {
     outline: none;
 }
 
+.products-container .product-in-category .cart-buttons.cart-btn-special {
+    bottom: 70px;
+}
+
 .products-container .product-in-category .cart-buttons:hover button svg {
     fill: #358678;
 }

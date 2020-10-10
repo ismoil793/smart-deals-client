@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="39c9aac6-4300-4539-9d62-423c9ecc03dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UI/contactForm/contactForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/contactForm/contactForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/UI/RenderProducts/renderProducts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Contacts/contacts.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Contacts/contacts.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/containers/Products/ProductsList.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -207,7 +208,10 @@
       <workItem from="1601635240814" duration="1096000" />
       <workItem from="1601798006263" duration="10898000" />
       <workItem from="1601822214679" duration="12330000" />
-      <workItem from="1601872409334" duration="8246000" />
+      <workItem from="1601872409334" duration="9102000" />
+      <workItem from="1601959289495" duration="1099000" />
+      <workItem from="1601973145941" duration="20000" />
+      <workItem from="1602354564109" duration="418000" />
     </task>
     <servers />
   </component>

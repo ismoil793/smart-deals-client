@@ -68,7 +68,8 @@ const RenderProducts = (props) => {
                                       <p className="price-bigger">
                                          <span className="price-normal">
                                             Цена:
-                                            <span>&nbsp;<PriceRefactor price={item.minimum_quantity_price}/>&nbsp;</span>
+                                            <span>&nbsp;<PriceRefactor
+                                                price={item.minimum_quantity_price}/>&nbsp;</span>
                                             сум
                                          </span>
                                       </p>
@@ -77,7 +78,10 @@ const RenderProducts = (props) => {
                             }
                          </div>
                       </div>
-                      <div className="cart-buttons">
+                      <div
+                          className={`${props.user.authLogin && props.user.authLogin.isAuth ?
+                              'cart-buttons' : 'cart-buttons cart-btn-special'}`}
+                      >
                          <button
                              disabled={props.cart.adding}
                              onClickCapture={createNotification('Продукт добавлен в корзину')}

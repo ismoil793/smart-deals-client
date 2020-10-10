@@ -13,8 +13,8 @@ const Contacts = () => {
             <div className="container container-changed">
                <div className="row no-gutters slider-text align-items-start justify-content-center">
                   <div className="col-md-12 text-center">
-                     <h1 className="mb-0 bread">Свяжитесь с нами</h1>
-                     <h4>Оставьте ваши контакты</h4>
+                     <h1 className="mb-0 bread">Обратная связь</h1>
+                     <h4>Свяжитесь с нами</h4>
                   </div>
                </div>
             </div>

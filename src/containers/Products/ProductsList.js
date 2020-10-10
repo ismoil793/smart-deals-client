@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {
    getCountProductCategory,
    getProductsInCategory,
-   clearProductsInCategory
+   clearProductsInCategory, getSearchProducts
 } from "../../store/actions/product";
 import {connect} from "react-redux";
 import {withRouter} from "react-router-dom";
@@ -139,7 +139,7 @@ class ProductsList extends Component {
 
 
    render() {
-
+      console.log(this.state.slug)
 
       if (this.props.products.list && this.props.products.list.length > 0 && !this.props.products.loading) {
 
