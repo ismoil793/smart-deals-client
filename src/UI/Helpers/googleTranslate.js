@@ -25,6 +25,7 @@ export function googleTranslateEl() {
       $("iframe").contents().find('.goog-te-menu2 span:contains(Russian)')
           .before('<img src="/images/lang/ru.png" alt="" style="width: 20px; height: 15px" />').text('RU');
 
+
       // Change the padding of the languages
       $("iframe").contents().find('.goog-te-menu2-item div').css('padding', '15px')
           .css( 'display', 'flex').css('align-items', 'center').css('justify-content', 'space-around')
