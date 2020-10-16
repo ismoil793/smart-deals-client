@@ -27,7 +27,7 @@ export function googleTranslateEl() {
 
 
       // Change the padding of the languages
-      $("iframe").contents().find('.goog-te-menu2-item div').css('padding', '15px')
+      $("iframe").contents().find('.goog-te-menu2-item div').css('padding', '15px 15px 15px 5px')
           .css( 'display', 'flex').css('align-items', 'center').css('justify-content', 'space-around')
           .css('width', '100%');
 
