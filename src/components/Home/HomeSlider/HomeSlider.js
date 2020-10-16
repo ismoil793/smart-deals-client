@@ -38,7 +38,7 @@ const HomeSlider = () => {
                            data-scrollax-parent="true">
 
                          <div className={`col-md-12 ${i === 0 ? 'text-left' : 'text-center'}`}>
-                            <h1 className="mb-2">Smart Deals</h1>
+                            <h1 className="mb-2 notranslate">Smart Deals</h1>
                             <h2 className="subheading mb-4">
                                {i === 2 ? 'Решение для вашего бизнеса!' //'big sizes. bigger savings'
                                    : i === 1 ? 'Чем больше покупок, тем выгоднее'

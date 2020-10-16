@@ -37,7 +37,7 @@ export function loginUser({email, password}) {
    return async dispatch => {
       const request = await axios.post(`${URL}/api/v1/account/login/`, {email, password})
           .then(response => response.data).catch(e => {
-             return {message: "Логин или пароль введён неверно!"}
+             return {message: "Что-то пошло не так..."}
           });
 
       if (request && request.token) {

@@ -222,7 +222,6 @@ class Cart extends Component {
                                   <button
                                       className="btn"
                                       onClick={this.clearOrder}
-                                      onClickCapture={this.createNotification("Оформление прошло успешно")}
                                   >
                                      Отменить
                                   </button>

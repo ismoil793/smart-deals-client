@@ -9,8 +9,7 @@ export function googleTranslateEl() {
       $("iframe").contents().find(".goog-te-menu2-item div, .goog-te-menu2-item:link div, .goog-te-menu2-item:visited div, .goog-te-menu2-item:active div, .goog-te-menu2 *")
           .css({
              'color': '#544F4B',
-             'font-family': 'Montserrat, Roboto, sans-serif',
-             'width':'100%'
+             'font-family': 'Montserrat, Roboto, sans-serif'
           });
       // Change menu's padding
       $("iframe").contents().find('.goog-te-menu2-item-selected').css('display', 'none');
@@ -19,13 +18,17 @@ export function googleTranslateEl() {
       $("iframe").contents().find('.goog-te-menu2').css('padding', '0px');
 
       // Change menu items Title from
-      $("iframe").contents().find('.goog-te-menu2 span:contains(English)').text('EN');
-      $("iframe").contents().find('.goog-te-menu2 span:contains(Uzbek)').text('UZ');
-      $("iframe").contents().find('.goog-te-menu2 span:contains(Russian)').text('RU');
-
+      $("iframe").contents().find('.goog-te-menu2 span:contains(English)')
+          .before('<img src="/images/lang/en.png" alt="" style="width: 20px; height: 20px" />').text('EN');
+      $("iframe").contents().find('.goog-te-menu2 span:contains(Uzbek)')
+          .before('<img src="/images/lang/uz.png" alt="" style="width: 20px; height: 15px" />').text('UZ');
+      $("iframe").contents().find('.goog-te-menu2 span:contains(Russian)')
+          .before('<img src="/images/lang/ru.png" alt="" style="width: 20px; height: 15px" />').text('RU');
 
       // Change the padding of the languages
-      $("iframe").contents().find('.goog-te-menu2-item div').css('padding', '15px');
+      $("iframe").contents().find('.goog-te-menu2-item div').css('padding', '15px')
+          .css( 'display', 'flex').css('align-items', 'center').css('justify-content', 'space-around')
+          .css('width', '100%');
 
       // Change the width of the languages
       $("iframe").contents().find('.goog-te-menu2-item').css('width', '100%');
@@ -33,9 +36,15 @@ export function googleTranslateEl() {
 
       // Change hover effects
       $("iframe").contents().find(".goog-te-menu2-item div").hover(function () {
-         $(this).css('background-color', '#4385F5').find('span.text').css('color', 'white');
+         $(this).css('background-color', '#4385F5')
+             .css( 'display', 'flex').css('align-items', 'center').css('justify-content', 'space-around')
+             .css('width', '100%')
+             .find('span.text').css('color', 'white');
       }, function () {
-         $(this).css('background-color', 'white').find('span.text').css('color', '#544F4B');
+         $(this).css('background-color', 'white')
+             .css( 'display', 'flex').css('align-items', 'center').css('justify-content', 'space-around')
+             .css('width', '100%')
+             .find('span.text').css('color', '#544F4B');
       });
 
       // Change Google's default blue border
@@ -47,7 +56,7 @@ export function googleTranslateEl() {
       // Change the iframe's size and position?
       $(".goog-te-menu-frame").css({
          'height': '90px',
-         'width': '100px'
+         'width': '99px'
       });
       // Change iframes's size
       $("iframe").contents().find('.goog-te-menu2').css({

@@ -33,32 +33,34 @@ class ReactDatePicker extends Component {
    render() {
 
       return (
-          <DatePicker
-              selected={this.state.startDate}
-              minDate={addDays(new Date(), 1)}
-              maxDate={addDays(new Date(), 20)}
-              locale="ru"
-              // showTimeSelect
-              dateFormat="Pp"
-              // timeIntervals="60"
-              inline
-              // excludeTimes={[
-              //     ...excludeTimes(),
-              //    setHours(setMinutes(new Date(), 0), 23),
-              // ]}
-              onChange={date => {
-                 // if(date !== this.state.startDate) {
-                 if (date < new Date()) {
-                    this.setState({startDate: addDays(new Date(), 1)});
-                    this.props.getDate(addDays(new Date(), 1))
-                 } else {
-                    this.setState({startDate: date});
-                    this.props.getDate(date)
-                 }
-                 // }
-              }}
-              // showDisabledMonthNavigation
-          />
+          <div className="notranslate">
+             <DatePicker
+                 selected={this.state.startDate}
+                 minDate={addDays(new Date(), 1)}
+                 maxDate={addDays(new Date(), 20)}
+                 locale="ru"
+                 // showTimeSelect
+                 dateFormat="Pp"
+                 // timeIntervals="60"
+                 inline
+                 // excludeTimes={[
+                 //     ...excludeTimes(),
+                 //    setHours(setMinutes(new Date(), 0), 23),
+                 // ]}
+                 onChange={date => {
+                    // if(date !== this.state.startDate) {
+                    if (date < new Date()) {
+                       this.setState({startDate: addDays(new Date(), 1)});
+                       this.props.getDate(addDays(new Date(), 1))
+                    } else {
+                       this.setState({startDate: date});
+                       this.props.getDate(date)
+                    }
+                    // }
+                 }}
+                 // showDisabledMonthNavigation
+             />
+          </div>
       )
    }
 }
