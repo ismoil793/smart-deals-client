@@ -161,7 +161,7 @@ class Cart extends Component {
                       <div className="col-md-6">
 
                          <div className="react-datepicker-wrapper">
-                            <h4>Выберить дату доставки</h4>
+                            <h4>Выберите дату доставки</h4>
                             <ReactDatePicker getDate={this.getDate}/>
                          </div>
 
