@@ -95,7 +95,7 @@ const HeaderMainItems = (props) => {
 
          if (item.to === '/cart') {
             return (
-                <li key={i} className={`nav-item cta cta-colored ${active}`}>
+                <li key={i} onClick={() => setIsOpen(false)} className={`nav-item cta cta-colored ${active}`}>
                    <Link to="/cart" className="nav-link">
                       <FaShoppingCart/>&nbsp;
                       <span>
@@ -110,7 +110,7 @@ const HeaderMainItems = (props) => {
             )
          } else {
             return (
-                <li key={i} className={`nav-item ${active}`}>
+                <li key={i} onClick={() => setIsOpen(false)} className={`nav-item ${active}`}>
                    <Link to={item.to} className="nav-link">
                       {item.text}
                    </Link>

@@ -57,7 +57,6 @@ class CartCheck extends Component {
                          <div className="card check-wrapper p-2">
                             <div className="check-content">
                                <strong>Заказ <small>SD#{order.history_id}</small></strong>
-                               {console.log(order)}
                                <p className="date">Дата оформления: {order.ordered_date}</p>
                                <p className="date">Дата доставки: {order.delivery_date}</p>
                                <p><span className="check-status">Статус заказа:</span> {order.status}</p>

@@ -17,7 +17,7 @@ class UserProfile extends Component {
          return list.map((item, i) => (
              <tr key={i}>
                 <th scope="row">{item.history_id}</th>
-                <td><PriceRefactor price={item.total_price_sum} /> сум</td>
+                <td className="notranslate"><PriceRefactor price={item.total_price_sum} /> сум</td>
                 <td>{item.delivery_date}</td>
                 <td>{item.status}</td>
                 <td><Link to={`/profile/check/${item.history_id}`} className="btn btn-secondary">Подробнее</Link></td>
