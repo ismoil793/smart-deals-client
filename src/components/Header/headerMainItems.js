@@ -98,7 +98,7 @@ const HeaderMainItems = (props) => {
                 <li key={i} onClick={() => setIsOpen(false)} className={`nav-item cta cta-colored ${active}`}>
                    <Link to="/cart" className="nav-link">
                       <FaShoppingCart/>&nbsp;
-                      <span>
+                      <span className="notranslate">
                         {
                            props.user.authLogin && props.user.authLogin.isAuth
                            && props.cart.cart && props.cart.cart.products ?

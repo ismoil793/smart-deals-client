@@ -34,8 +34,11 @@ class CartButton extends Component {
           <li className="clearfix" key={i}>
              <img src={`${item.image}`} alt={item.name}/>
              <span className="item-name"><ProductNameRefactor name={item.name} chars={30}/></span>
-             <span className="item-price"><PriceRefactor price={item.total_price}/> сум</span>
-             <span className="item-quantity">Кол-во: {item.pack_quantity}</span>
+             <span className="item-price notranslate"><PriceRefactor price={item.total_price}/>&nbsp;сум</span>
+             <span className="item-quantity notranslate">
+                Кол-во:&nbsp;
+                {item.pack_quantity}
+             </span>
           </li>
       ))
    };
@@ -56,7 +59,7 @@ class CartButton extends Component {
                        title="Корзина"
                    >
                       <FiShoppingCart/>
-                      <span className="after">{countTotalQuantity(cart.products)}</span>
+                      <span className="after notranslate">{countTotalQuantity(cart.products)}</span>
                    </div>
 
                    {
@@ -64,15 +67,18 @@ class CartButton extends Component {
                           <div className="shop-cart">
                              <div className="shopping-cart">
                                 <div className="shopping-cart-header">
-                                   <FiShoppingCart/> <span className="badge">{countTotalQuantity(cart.products)}</span>
+                                   <FiShoppingCart/>&nbsp;<span className="badge notranslate">
+                                   {countTotalQuantity(cart.products)}
+                                </span>
                                    <div className="shopping-cart-close"
                                         onClick={() => this.setState({isCartOpen: !this.state.isCartOpen})}>
                                       <AiOutlineCloseCircle/>
                                    </div>
                                    <div className="shopping-cart-total">
-                                      <span className="lighter-text">Итого: </span>
+                                      <span className="lighter-text">Итого:&nbsp;</span>
                                       <span className="main-color-text">
-                                         <PriceRefactor price={countTotalPrice(cart.products)}/> сум
+                                         <PriceRefactor price={countTotalPrice(cart.products)}/>&nbsp;
+                                         сум
                                       </span>
                                    </div>
                                 </div>
