@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react';
 import {Link, withRouter} from "react-router-dom";
 import {connect} from "react-redux";
-import {FaShoppingCart, FaBars} from "react-icons/fa";
+import {FaShoppingCart, FaBars, FaSearch} from "react-icons/fa";
 import {IoMdClose} from "react-icons/io";
 import {getCart} from "../../store/actions/cart";
 import {countTotalQuantity} from "../../UI/Refactors/Counters";
@@ -10,9 +10,24 @@ import {googleTranslateEl} from "../../UI/Helpers/googleTranslate";
 const HeaderMainItems = (props) => {
 
    const [isOpen, setIsOpen] = useState(false);
+   const [searchVal, setSearchVal] = useState("");
+
+   const handleSearchVal = (e) => {
+      setSearchVal(e.target.value)
+   };
+
+   const handleSearch = (e) => {
+      e.preventDefault();
+      if (searchVal) {
+         props.history.push(`/products/search?${searchVal}`);
+         setSearchVal("")
+      }
+   };
 
    useEffect(() => {
-      props.dispatch(getCart())
+      if(props.user.authLogin && props.user.authLogin.isAuth) {
+         props.dispatch(getCart());
+      }
       googleTranslateEl()
    }, []);
 
@@ -23,32 +38,42 @@ const HeaderMainItems = (props) => {
          text: "Продукты",
          to: "/products/napitki"
       },
+      // {
+      //    type: "nav-item",
+      //    text: "О нас",
+      //    to: "/about"
+      // },
+      // {
+      //    type: "nav-item",
+      //    text: "Контакты",
+      //    to: "/contacts"
+      // },
       {
          type: "nav-item",
-         text: "О нас",
-         to: "/about"
+         text: "Поставщикам",
+         to: "/providers"
       },
       {
          type: "nav-item",
-         text: "Контакты",
-         to: "/contacts"
+         text: "Покупателям",
+         to: "/customers"
       },
       {
          type: "nav-item",
          text: "Вход",
          to: "/login"
       },
-      {
-         type: "nav-item",
-         text: "Регистрация",
-         to: "/register"
-      }
+      // {
+      //    type: "nav-item",
+      //    text: "Регистрация",
+      //    to: "/register"
+      // }
    ];
 
    const privateLinks = [
       {
          type: "nav-item",
-         text: "Продукты",
+         text: "Продукции",
          to: "/products/napitki"
       },
       {
@@ -124,9 +149,10 @@ const HeaderMainItems = (props) => {
        <React.Fragment>
           <nav className="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light"
                id="ftco-navbar">
-             <div className="container">
-                <Link to="/" className="navbar-brand"><img className="sd-logo" src="/images/smart-deals-logo.png"
-                                                           alt="Smart Deals Logo"/></Link>
+             <div className="container container-changed">
+                <Link to="/" onClick={() => setIsOpen(false)} className="navbar-brand">
+                   Hopme
+                </Link>
                 <button
                     className="navbar-toggler"
                     onClick={() => isOpen ? setIsOpen(false) : setIsOpen(true)}
@@ -151,7 +177,19 @@ const HeaderMainItems = (props) => {
                       props.user.authLogin &&
                       props.user.authLogin.isAuth ?
                           <ul className="navbar-nav ml-auto">
-
+                             <li className={`nav-item cta cta-colored special-search`}>
+                                <form onSubmit={e => handleSearch(e)}>
+                                   <input
+                                       type="search"
+                                       name="search"
+                                       className="search-homepage"
+                                       placeholder="Поиск"
+                                       value={searchVal}
+                                       onChange={e => handleSearchVal(e)}
+                                   />
+                                   <FaSearch onClick={handleSearch}/>
+                                </form>
+                             </li>
                              <li id="google_translate_element" className={`nav-item cta cta-colored`}>
                              </li>
                              {renderLinks(privateLinks)}
@@ -159,7 +197,19 @@ const HeaderMainItems = (props) => {
                           </ul>
                           :
                           <ul className="navbar-nav ml-auto">
-
+                             <li className={`nav-item cta cta-colored special-search`}>
+                                <form onSubmit={e => handleSearch(e)}>
+                                   <input
+                                       type="search"
+                                       name="search"
+                                       className="search-homepage"
+                                       placeholder="Поиск"
+                                       value={searchVal}
+                                       onChange={e => handleSearchVal(e)}
+                                   />
+                                   <FaSearch onClick={handleSearch}/>
+                                </form>
+                             </li>
                              <li id="google_translate_element" className={`nav-item cta cta-colored`}>
                              </li>
                              {renderLinks(publicLinks)}

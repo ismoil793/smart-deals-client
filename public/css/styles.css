@@ -53,6 +53,31 @@ header nav {
     box-shadow: 0 7px 15px -5px rgba(0, 0, 0, 0.07) !important;
 }
 
+header .container.container-changed {
+    max-width: 1300px;
+}
+
+header .search-homepage {
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    left: 25%;
+    width: 20%;
+    border: 2px solid #E9E9E9;
+    border-radius: 100px;
+    outline: none;
+    padding-left: 2.2%;
+}
+
+header li.special-search svg{
+    position: absolute;
+    transform: translateY(-50%) rotate(90deg);
+    top: 50%;
+    left: 26%;
+    color: #006634;
+    cursor: pointer;
+}
+
 header .bg-primary {
     font-family: "Roboto", sans-serif;
     background-color: #ffffff;
@@ -73,14 +98,14 @@ header ul.navbar-nav .nav-item:hover .nav-link {
 
 header ul.navbar-nav .nav-item.active .nav-link {
     /*color: #45c0ae;*/
-    color: #fff;
+    color: #006634;
     font-weight: bold;
 }
 
-.ftco-navbar-light .navbar-brand:hover,
-.ftco-navbar-light .navbar-brand:focus {
-    color: #88ad3f;
-}
+/*.ftco-navbar-light .navbar-brand:hover,*/
+/*.ftco-navbar-light .navbar-brand:focus {*/
+/*    color: #88ad3f;*/
+/*}*/
 
 header #ftco-overlay {
     display: none;
@@ -102,7 +127,7 @@ header #ftco-overlay {
 }
 
 .goog-te-gadget-simple .goog-te-menu-value span {
-    color: #fff !important;
+    color: #313841 !important;
     border: none !important;
 }
 

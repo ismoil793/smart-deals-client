@@ -35,10 +35,6 @@ class Home extends React.Component {
 
             <HomeSlider />
 
-            <Benefits />
-
-            <ServiceTypes />
-
             <div className="container pt-5">
                <div className="row justify-content-center mb-3 pb-3">
                   <div className="col-md-12 heading-section text-center">
@@ -52,9 +48,16 @@ class Home extends React.Component {
 
             <Categories componentName={"Home"} />
 
-            <Partners />
 
-            <NewsLetter />
+            <ServiceTypes />
+
+
+
+            <Benefits />
+
+            {/*<Partners />*/}
+
+            {/*<NewsLetter />*/}
 
          </main>
       )
