@@ -27,7 +27,7 @@ const About = () => {
 
                 <div className="col-lg-5 order-2 order-lg-1">
                    <div className="phone-address">
-                      <h4>Телофон</h4>
+                      <h4>Телефон</h4>
                       <p>+998 97 754-71-17</p>
                       <h4>Адрес</h4>
                       <p>г. Ташкент улица Ойбек, 18</p>
