@@ -11734,6 +11734,7 @@ h5,
     text-transform: capitalize;
     letter-spacing: 1px;
     opacity: 1 !important;
+    font-family: "Fira Sans", sans-serif;
 }
 
 .ftco-navbar-light .navbar-nav > .nav-item > .nav-link:hover {
@@ -12383,15 +12384,17 @@ h5,
 }
 
 .btn.btn-primary {
-    background: #323841;
+    /* background: #323841; */
+    background-color: #2B8842;
     border: none;
     color: #fff;
 }
 
 .btn.btn-primary:hover {
     border: none;
-    background: #ff5722;
-    color: #eee;
+    /* background: #ff5722; */
+    background: #25783A;
+    color: #fff;
 }
 
 .btn.btn-primary.btn-outline-primary {

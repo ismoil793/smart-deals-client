@@ -1,8 +1,8 @@
-import React, {Component} from 'react';
-import {FaSearch} from "react-icons/fa";
-import {connect} from "react-redux";
-import {withRouter} from "react-router-dom"
-import {clearProductsInCategory, getSearchProducts} from "../../store/actions/product";
+import React, { Component } from 'react';
+import { FaSearch } from "react-icons/fa";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom"
+import { clearProductsInCategory, getSearchProducts } from "../../store/actions/product";
 
 class Search extends Component {
 
@@ -11,8 +11,8 @@ class Search extends Component {
    };
 
    componentDidMount() {
-      if(this.props.match.params.slug === 'search') {
-         if(this.props.location.search) {
+      if (this.props.match.params.slug === 'search') {
+         if (this.props.location.search) {
             let search = this.props.location.search.replace("?", "");
             this.props.dispatch(getSearchProducts(search));
          }
@@ -42,20 +42,20 @@ class Search extends Component {
    render() {
 
       return (
-          <div className="products-search">
-             <h4>Поиск</h4>
-             <form className="search-form" onSubmit={this.submitForm}>
+         <div className="products-search">
+            <h4>Поиск</h4>
+            <form className="search-form" onSubmit={this.submitForm}>
 
-                <input
-                    onChange={this.searchHandler}
-                    type="text"
-                    placeholder="Название товара"
-                    value={this.state.search}
-                />
-                <button type="submit"><FaSearch/></button>
+               <input
+                  onChange={this.searchHandler}
+                  type="text"
+                  placeholder="Название товара или бренда..."
+                  value={this.state.search}
+               />
+               <button type="submit"><FaSearch /></button>
 
-             </form>
-          </div>
+            </form>
+         </div>
       );
    }
 }

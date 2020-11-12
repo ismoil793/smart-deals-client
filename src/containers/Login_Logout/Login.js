@@ -53,7 +53,7 @@ class Login extends Component {
 
                      <form className="login-box" onSubmit={this.submitForm} autoComplete="on">
 
-                        <h2>Войти</h2>
+                        <h2>Авторизация</h2>
 
                         <div className="form-group">
                            <FaUserAlt />
@@ -78,7 +78,10 @@ class Login extends Component {
                         </div>
 
                         <div className="buttons">
-                           <Link className="btn btn-primary form-control" to="/register">Регистрация</Link>
+                           {/* <Link className="btn btn-primary form-control" to="/register">Зарегестрироваться</Link> */}
+                           <Link className="link-primary" to="/register">
+                              Нет аккаунта? <span> Пройдите регистрацию</span>
+                           </Link>
                            <button className="btn btn-primary form-control" type="submit">Войти</button>
                         </div>
 

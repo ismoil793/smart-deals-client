@@ -1,3 +1,7 @@
+:root {
+    --main-color: #206532;
+}
+
 html {
     position: relative !important;
     top: 0 !important;
@@ -27,13 +31,13 @@ section {
 }
 
 ::-webkit-scrollbar {
-    width: 12px;
+    width: 8px;
     background-color: #f5f5f5;
 }
 
 ::-webkit-scrollbar-thumb {
-    /*border-radius: 2px;*/
-    background-color: #5c5d5f;
+    border-radius: 2px;
+    background-color: var(--main-color);
 }
 
 /*=============================
@@ -257,14 +261,17 @@ section.login-user form.login-box {
 
 section.login-user form.login-box h2 {
     color: #3f8794;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-weight: 500;
 }
 
 section.login-user form.login-box .form-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #3caeb7;
+    /* border: 2px solid #3caeb7; */
+    border: 2px solid var(--main-color);
+    margin-bottom: 5%;
     padding: 0 20px;
     border-radius: 20px;
 }
@@ -285,7 +292,8 @@ section.login-user form.login-box .form-group .form-control.box-input {
 
 .login-box button.form-control,
 .login-box a.form-control {
-    background: #45c0ae !important;
+    /* background: #45c0ae !important; */
+    background: #25783A !important;
     color: #ffffff !important;
     /*border: 2px solid #E95A00;*/
     transition: 0.25s;
@@ -296,6 +304,20 @@ section.login-user form.login-box .form-group .form-control.box-input {
 .login-box .buttons button.form-control {
     width: 45%;
 }
+.login-box .buttons a {
+    width: 45%;
+    color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+
+.login-box .buttons a span{
+    color: #3091F4;
+    text-decoration: underline; 
+}
+
 
 .login-box a.form-control {
     background: rgba(50, 56, 65, 0.6) !important;
@@ -304,7 +326,8 @@ section.login-user form.login-box .form-group .form-control.box-input {
 
 .login-box button.form-control:hover,
 .login-box a.form-control:hover {
-    background: #e95a00 !important;
+    /* background: #e95a00 !important; */
+    background:var(--main-color) !important;
     color: #ffffff !important;
 }
 
@@ -527,36 +550,41 @@ div.img-prod-detail .price-bigger .price-normal {
 
 .products-search .search-form input {
     width: 70%;
-    height: 40px;
-    border-radius: 5px;
+    height: 50px;
     outline: none;
     border: 2px solid #eee;
     transition: all 200ms ease-out;
-    padding-left: 10px;
+    border-radius: 22px;
+    box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.04), 0px 8px 8px 0px rgba(0,0,0,0.04);
+    padding-left: 30px;
 }
 
 .products-search .search-form input:focus {
-    border: 2px solid #f45900;
+    border: 2px solid var(--main-color);
 }
 
 .products-search .search-form button {
-    height: 40px;
-    width: 10%;
+    height: 45px;
+    width: 8%;
     margin-left: 10px;
     border-radius: 5px;
     outline: none;
     cursor: pointer;
     border: none;
-    background-color: #a3d3da;
+    background-color: #408C42;
     transition: all 200ms ease-out;
+    
+    border-radius: 22px;
+    box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.04), 0px 8px 8px 0px rgba(0,0,0,0.04);
 }
 
 .products-search .search-form button:hover {
-    border: 2px solid #52adb9;
-    background-color: #71bbc6;
+    border: 2px solid var(--main-color);
+    background-color: var(--main-color);
 }
 
 .products-search .search-form button svg {
+    font-size: 20px;
     fill: #ffffff;
 }
 
@@ -578,16 +606,18 @@ section.register-user form.register-box {
 
 section.register-user form.register-box h2 {
     color: #3f8794;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 
 section.register-user form.register-box .form-group {
     display: flex;
     justify-content: center;
     align-items: center;
-    border: 2px solid #3caeb7;
+    /* border: 2px solid #3caeb7; */
+    border: 2px solid var(--main-color);
     padding: 0 20px;
     border-radius: 20px;
+    margin-bottom: 5%;
 }
 
 section.register-user form.register-box .form-group svg {
@@ -606,9 +636,10 @@ section.register-user form.register-box .form-group .form-control.box-input {
 
 .register-box button.form-control,
 .register-box a.form-control {
-    background: #ff690f !important;
+    /* background: #ff690f !important; */
+    background: #367738 !important;
     color: #ffffff !important;
-    border: 2px solid #e95a00;
+    border: 2px solid var(--main-color);
     transition: 0.25s;
     width: 50%;
     border-radius: 20px;
@@ -633,7 +664,8 @@ section.register-user form.register-box .form-group .form-control.box-input {
 
 .register-box button.form-control:hover,
 .register-box a.form-control:hover {
-    background: #e95a00 !important;
+    background: var(--main-color) !important;
+    border: 2px solid var(--main-color);
     color: #ffffff !important;
 }
 
@@ -1406,7 +1438,7 @@ li.react-datepicker__time-list-item--disabled {
          Not Found 404
 ===============================*/
 .not-found {
-    padding: 6% 0;
+    padding: 10% 0;
 }
 
 /*=============================
@@ -1451,7 +1483,8 @@ li.react-datepicker__time-list-item--disabled {
 
 footer {
     /* background-color: #313841; */
-    background-color: #72a7d3;
+    /* background-color: #72a7d3; */
+    background-color: #3F8B41;
     color: #eeeeee !important;
 }
 
@@ -1557,7 +1590,8 @@ footer .switch-case span {
 }
 
 .ftco-footer .ftco-footer-widget ul li a:hover {
-    color: #f45900;
+    /* color: #f45900; */
+    text-decoration: underline;
 }
 
 /*Dlete this for test only*/

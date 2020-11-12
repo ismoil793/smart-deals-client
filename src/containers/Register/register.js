@@ -110,7 +110,7 @@ class Register extends Component {
 
                      <form onSubmit={(e) => this.submitForm(e)} className="register-box" autoComplete="on">
 
-                        <h2>Зарегистрироваться</h2>
+                        <h2>Регистрация нового пользователя</h2>
 
                         <div className="container">
                            <div className="row">
@@ -254,7 +254,7 @@ class Register extends Component {
                                        className="check-rules"
                                        to="/rules"
                                        target="_blank"
-                                       onClick={e => this.setState({checkRules: true})}
+                                       onClick={e => this.setState({ checkRules: true })}
                                     >
                                        <input
                                           name="check-rules"
