@@ -30,16 +30,6 @@ const Footer = (props) => {
          type: "nav-item",
          text: "Контакты",
          to: "/contacts"
-      },
-      {
-         type: "nav-item",
-         text: "Вход",
-         to: "/login"
-      },
-      {
-         type: "nav-item",
-         text: "Регистрация",
-         to: "/register"
       }
    ];
 
@@ -51,18 +41,13 @@ const Footer = (props) => {
       },
       {
          type: "nav-item",
-         text: "Личный кабинет",
-         to: "/profile"
+         text: "О нас",
+         to: "/about"
       },
       {
          type: "nav-item",
          text: "Контакты",
          to: "/contacts"
-      },
-      {
-         type: "nav-item",
-         text: "Выйти",
-         to: "/logout"
       }
    ];
 
@@ -87,36 +72,36 @@ const Footer = (props) => {
             {/*      </div>*/}
             {/*   </div>*/}
             {/*</div>*/}
-            <div className="row mb-5">
+            <div className="row mb-2">
                <div className="col-md">
-                  <div className="ftco-footer-widget mb-4">
+                  <div className="ftco-footer-widget">
                      <h2 className="ftco-heading-2">Smart Deals</h2>
                      <p>Высококачественные товары и услуги.</p>
 
-                        <ul
-                           className="ftco-footer-social list-unstyled float-md-left float-lft mt-5"
-                        >
-                           <li className="">
-                              <a href="https://google.com" rel="noopener noreferrer" target="_blank">
-                                 <FaTelegramPlane />
-                              </a></li>
-                           <li className="">
-                              <a href="https://google.com" rel="noopener noreferrer" target="_blank">
-                                 <FaFacebookF />
-                              </a>
-                           </li>
-                           <li className="">
-                              <a href="https://google.com" rel="noopener noreferrer" target="_blank">
-                                 <FaInstagram />
-                              </a>
-                           </li>
-                        </ul>
+                     <ul
+                        className="ftco-footer-social list-unstyled float-md-left float-lft mt-4"
+                     >
+                        <li className="">
+                           <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+                              <FaTelegramPlane />
+                           </a></li>
+                        <li className="">
+                           <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+                              <FaFacebookF />
+                           </a>
+                        </li>
+                        <li className="">
+                           <a href="https://google.com" rel="noopener noreferrer" target="_blank">
+                              <FaInstagram />
+                           </a>
+                        </li>
+                     </ul>
 
                   </div>
                </div>
                <div className="col-4 col-md-4">
                   <div className="ftco-footer-widget mb-4 ml-md-5">
-                     <h2 className="ftco-heading-2">Меню</h2>
+                     <h2 className="ftco-heading-2">Навигация</h2>
                      <ul className="list-unstyled">
 
                         {

@@ -49,7 +49,8 @@ class Home extends React.Component {
             <Categories componentName={"Home"} />
 
 
-            <ServiceTypes />
+            {/* <ServiceTypes /> */}
+
 
 
 
