@@ -16,6 +16,9 @@
         padding: 5px;
         display: none;
     }
+    .navbar-expand-lg .navbar-nav .special-search {
+        display: none;
+    }
 }
 
 @media (max-width: 992px) {

@@ -37,6 +37,11 @@ class Cart extends Component {
    }
 
    static getDerivedStateFromProps(nextProps, prevState) {
+
+      if (nextProps.user.authLogin && nextProps.user.authLogin.isAuth) {
+         nextProps.dispatch(getCart());
+      }
+
       if (nextProps.order.checkout && nextProps.order.checkout.checkout) {
          nextProps.dispatch(clearConfirmOrder());
          setTimeout(() => {
