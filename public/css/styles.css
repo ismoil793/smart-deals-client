@@ -452,8 +452,8 @@ div.img-prod-detail .price-bigger .price-normal {
     width: 100%;
     transition: all 300ms ease;
     font-weight: 500;
-    border: 1px solid #308f82;
-    background: #76b2bd;
+    border: 1px solid var(--main-color);
+    background: #3D8540;
     color: #fff;
     border-radius: 15px;
 }
@@ -508,7 +508,7 @@ div.img-prod-detail .price-bigger .price-normal {
 }
 
 .category-products-sidebar nav ul li a {
-    background-color: #e9f3f5;
+    background-color: #fff;
     display: flex;
     align-items: center;
     color: #323841;
@@ -530,7 +530,7 @@ div.img-prod-detail .price-bigger .price-normal {
 
 .category-products-sidebar nav ul li a.active {
     /*background-color: #F45900;*/
-    background-color: #313841;
+    background-color: var(--main-color);
     color: #ffffff;
 }
 
@@ -1164,7 +1164,7 @@ section.partners {
     position: absolute;
     bottom: 35px;
     right: 0;
-    background-color: #f45900;
+    background-color: #3D8540;
     color: #ffffff;
     width: 25px;
     height: 25px;
@@ -1172,8 +1172,8 @@ section.partners {
 }
 
 .cart-button:hover {
-    color: #fff;
-    background-color: #76b2bd;
+    color: #666;
+    background-color: #DDDDDD;
     opacity: 1;
 }
 
@@ -1209,12 +1209,12 @@ section.partners {
 }
 
 .main-color-text {
-    color: #76b2bd;
+    color: var(--main-color);
     font-size: 16px;
 }
 
 .shop-cart .badge {
-    background-color: #76b2bd;
+    background-color: #3D8540;
     border-radius: 10px;
     color: #ffffff;
     display: inline-block;
@@ -1263,7 +1263,7 @@ section.partners {
 
 .shop-cart ul.shopping-cart-items::-webkit-scrollbar-thumb {
     /*border-radius: 2px;*/
-    background-color: #76b2bd;
+    background-color: var(--main-color);
 }
 
 .shop-cart .shopping-cart-items li {
@@ -1293,7 +1293,7 @@ section.partners {
 }
 
 .shop-cart .shopping-cart-items .item-price {
-    color: #76b2bd;
+    color: var(--main-color);
     margin-right: 8px;
 }
 
@@ -1316,7 +1316,7 @@ section.partners {
 }
 
 .shop-cart .button {
-    background: #76b2bd;
+    background: var(--main-color);
     color: white;
     text-align: center;
     padding: 12px;
