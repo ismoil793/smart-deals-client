@@ -336,6 +336,7 @@ section.login-user form.login-box .form-group .form-control.box-input {
 ========================================*/
 .products-container {
     padding: 2% 0 5% 0;
+    transition: height 250ms ease;
 }
 
 .products-container .product-in-category {
@@ -373,6 +374,10 @@ section.login-user form.login-box .form-group .form-control.box-input {
     font-weight: 500;
     line-height: 22px;
     min-height: 22px;
+
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .products-container .product-in-category .product-info div.img-prod-detail span {
@@ -396,6 +401,10 @@ div.img-prod-detail .price-bigger .price-normal {
 
 .products-container .product-in-category .product-info div {
     width: 100%;
+}
+
+.render-products-wrap-transition {
+    transition: all 1s ease;
 }
 
 .products-container .product-in-category .product-info img {
@@ -874,6 +883,10 @@ section.main-products {
 .loadmore-btn:hover {
     /*background-color: #C64A00;*/
     background-color: #38a796;
+}
+
+.dots-loader-wrap {
+    transition: all 1s ease;
 }
 
 /*=============================
@@ -1486,6 +1499,7 @@ footer {
     /* background-color: #72a7d3; */
     background-color: #3F8B41;
     color: #eeeeee !important;
+    transition: all 250ms ease;
 }
 
 footer h2 {

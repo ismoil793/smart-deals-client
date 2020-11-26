@@ -52,7 +52,7 @@ const RenderProducts = (props) => {
                          </div>
                          <div className="img-prod-detail">
                             <p className="trade_mark">
-                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={31}/>
+                               <ProductNameRefactor name={item.name} trade_mark={item.trade_mark} chars={40}/>
                             </p>
                             <p>
                                {item.trade_mark}

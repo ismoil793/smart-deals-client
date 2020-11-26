@@ -139,7 +139,6 @@ class ProductsList extends Component {
 
 
    render() {
-      console.log(this.state.slug)
 
       if (this.props.products.list && this.props.products.list.length > 0 && !this.props.products.loading) {
 
@@ -150,13 +149,17 @@ class ProductsList extends Component {
          return (
              <div
                  className="col-lg-12 products-list-scroll"
+                 style={{
+                    marginBottom: this.props.products.getting ? '40%' : '0%'
+                 }}
+                 // above styles ar necessary for correcting the style bug issue when scrolling
                  // onScroll={e => this.handleScroll(e)}
              >
 
 
                 {
                    this.state.slug === "search" ?
-                       <div className="row">
+                       <div className="row render-products-wrap-transition">
                           <RenderProducts {...this.props} list={this.props.products.list}/>
                        </div>
                        :
@@ -165,7 +168,7 @@ class ProductsList extends Component {
                            loadMore={this.handleScroll}
                            hasMore={this.count > this.props.products.list.length}
                            loader={
-                              <div className="row position-relative" key={0}>
+                              <div className="row position-relative dots-loader-wrap" key={0}>
                                  <LoaderDots/>
                               </div>
                            }
